@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ancestor_descendant选择器(父子选择器)</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        
+        #bottom {
+            background-image: url(images/bg_bottom.jpg);
+            width: 800px;
+            height: 58px;
+            clear: both;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 12px;
+        }
+        
+        .copyright {
+            color: #FFFFFF;
+            list-style: none;
+            line-height: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("div ul").addClass("copyright")
+        })
+    </script>
+</head>
+
+<body>
+    <div id="bottom">
+        <ui>
+            <li>技术服务热线：400-675-1066 传真：0431-84978981 企业邮箱：mingrisoft@mingrisoft.com</li>
+            <li>Copyright &copy; www.mrbccd.com All Rights Reserved! </li>
+        </ui>
+    </div>
+    <ul>
+        <li>技术服务热线：400-675-1066 传真：0431-84978981 企业邮箱：mingrisoft@mingrisoft.com</li>
+        <li>Copyright &copy; www.mrbccd.com All Rights Reserved! </li>
+    </ul>
+</body>
+
+</html>

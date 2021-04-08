@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>调用方法输出演员个人简介</title>
+<style type="text/css">
+*{
+font-size:18px;
+line-height:30px;}
+</style>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function Actor(name,work,achievement){
+	this.name = name;						//对象的name属性
+	this.work = work;						//对象的work属性
+	this.achievement = achievement;						//对象的achievement属性
+	this.introduction = function(){//定义introduction()方法
+		document.write("中文名："+this.name);//输出name属性值
+		document.write("<br>代表作品："+this.work);//输出work属性值
+		document.write("<br>主要成就："+this.achievement);//输出achievement属性值
+	}
+}
+var Actor1 = new Actor("威尔·史密斯","《独立日》、《黑衣人》","奥斯卡金像奖最佳男主角提名");	//创建对象Actor1
+Actor1.introduction();//调用introduction()方法
+</script>
+</body>
+</html>

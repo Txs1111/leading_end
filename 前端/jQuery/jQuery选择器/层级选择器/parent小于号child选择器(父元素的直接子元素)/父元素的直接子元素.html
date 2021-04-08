@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent>child选择器(父元素的直接子元素)</title>
+    <style type="text/css">
+        input {
+            margin: 5px;
+        }
+        
+        .input {
+            font-size: 12px;
+            color: #333333;
+            background-color: #cef;
+            border: 1px solid #000000;
+        }
+    </style>
+    <script type="text/javascript" src="../../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#change").click(function() {
+                $("form>input").addClass("input")
+            })
+            $("#default").click(function() {
+                $("form>input").removeClass("input")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form action="" id="form1" name="form1" method="POST">
+        姓&nbsp;&nbsp;名：<input type="text" name="name" id="name"><br/> 籍&nbsp;&nbsp;贯：
+        <input type="text" name="native" id="native"><br/> 生&nbsp;&nbsp;日：
+        <input type="text" name="birthday" id="birthday"><br/> E-mail：
+        <input type="text" name="email" id="email"><br/>
+        <span>
+            <input type="button" name="change" id="change" value="换肤">
+        </span>
+        <input type="button" name="default" id="default" value="恢复默认">
+    </form>
+</body>
+
+</html>

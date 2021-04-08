@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>利用自定义方法显示数组中的全部数据</title>
+</head>
+
+<body background="bg.gif">
+<h3>输出数组中所有数组元素</h3>
+<script type="text/javascript">
+Array.prototype.outAll=function(ar){//自定义outAll()方法
+	for(var i=0;i<this.length;i++){//定义for循环语句
+		document.write(this[i]);//输出数组元素
+		document.write(ar);//输出数组元素之间的分隔符
+	}
+}
+var arr=new Array(1,2,3,4,5,6,7,8);//定义数组
+arr.outAll(" ");//调用自定义的outAll()方法
+</script>
+</body>
+</html>

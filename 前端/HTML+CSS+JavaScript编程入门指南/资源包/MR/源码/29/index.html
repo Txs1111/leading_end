@@ -1,0 +1,501 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>365影视网</title>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/AjaxRequest.js"></script>
+<script type="text/javascript">
+/******************错误处理的函数*******************************/
+function onerror(){
+	alert("您的操作有误！");
+}
+/******************实例化Ajax对象的函数*******************************/
+function getInfo(){
+	var loader=new net.AjaxRequest("check.php?nocache="+new Date().getTime(),deal_getInfo,onerror,"GET");
+}
+/************************回调函数**************************************/
+function deal_getInfo(){
+	document.getElementById("showInfo").innerHTML=this.req.responseText;
+}
+window.onload=function(){
+	getInfo();	//调用getInfo()函数获取最新消息
+	window.setInterval("getInfo()", 600000);	//每隔10分钟调用一次getInfo()函数
+}
+</script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$(".scroll").hover(function(){//鼠标指向滚动区域
+		clearTimeout(timeID);//中止超时，即停止滚动
+	},function(){//鼠标离开滚动区域
+		timeID=setInterval('autoScroll()',3000);   //设置超时函数，每过3秒执行一次函数
+	});
+});
+function autoScroll(){   
+	$(".scroll").find(".list").animate({   //自定义动画效果
+ 		marginTop : "-25px"   
+	},500,function(){   
+		$(this).css({"margin-top" : "0px"}).find("li:first").appendTo(this);   //把列表第一行内容移动到列表最后
+	})   
+}   
+var timeID=setInterval('autoScroll()',3000);   //设置超时函数，每过3秒执行一次函数
+
+$(document).ready(function() {		
+	$(".tab_content").hide();							//将class值为tab_content的div隐藏
+	$("ul.tabs li a:first").addClass("active"); 				//为第一个选项卡添加样式
+	$(".tab_content:first").show(); 						//将第一个class值为tab_content的div显示
+	$("ul.tabs li a").hover(function() {						//将鼠标移到某选项卡上
+		$("ul.tabs li a").removeClass("active"); 				//移除样式
+		$(this).addClass("active"); 						//为当前的选项卡添加样式
+		$(".tab_content").hide(); 						//将所有class值为tab_content的div隐藏
+		var activeTab = $(this).attr("name"); 		//获取当前选项卡的name属性值
+		$(activeTab).show();							//将相同id值的div显示
+	});
+});
+</script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<table class="top_box" width="1206" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+  <tr>
+    <td width="860" height="98" style="cursor: pointer" onClick="javascript:location='index.html'"><img src="images/ball.png"></td>	
+  </tr>
+  <tr>
+	  <td colspan="6" height="1" bgcolor="#e5e5e5"></td>
+  </tr>
+  <tr>
+  	<td colspan="6" align="center" valign="top">
+	<!--导航栏-->
+<div>
+<script type="text/javascript">
+function showadv(par,par2){
+	document.getElementById("a0").style.display = "none";//隐藏id为a0的元素
+	document.getElementById("a0bg").style.backgroundImage="";	//设置id为a0bg的元素的背景图片为空
+	document.getElementById("a1").style.display = "none";//隐藏id为a1的元素
+	document.getElementById("a1bg").style.backgroundImage="";//设置id为a1bg的元素的背景图片为空
+	document.getElementById("a2").style.display = "none";//隐藏id为a2的元素
+	document.getElementById("a2bg").style.backgroundImage="";//设置id为a2bg的元素的背景图片为空
+	document.getElementById("a3").style.display = "none";//隐藏id为a3的元素
+	document.getElementById("a3bg").style.backgroundImage="";//设置id为a3bg的元素的背景图片为空
+	document.getElementById("a4").style.display = "none";//隐藏id为a4的元素
+	document.getElementById("a4bg").style.backgroundImage="";//设置id为a4bg的元素的背景图片为空
+	document.getElementById("a5").style.display = "none";//隐藏id为a5的元素
+	document.getElementById("a5bg").style.backgroundImage="";//设置id为a5bg的元素的背景图片为空
+	document.getElementById("a6").style.display = "none";//隐藏id为a6的元素
+	document.getElementById("a6bg").style.backgroundImage="";//设置id为a6bg的元素的背景图片为空
+	document.getElementById(par).style.display = "";	//显示指定的元素
+	document.getElementById(par2).style.backgroundImage = "url(images/i13.gif)";	//设置指定元素的背景图片
+}
+</script>
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+      <tr>
+        <td><div class="i01w">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td width="166" height="42" align="center" id="a0bg">
+					<span id="a0color" onMouseOver="showadv('a0','a0bg')">
+						<a href="index.html">首页</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+                <td id="a1bg" align="center" width="166">
+					<span id="a1color" onMouseOver="showadv('a1','a1bg')">
+						<a href="love.html">爱情片</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+                <td id="a2bg" align="center" width="166">
+					<span id="a2color" onMouseOver="showadv('a2','a2bg')">
+						<a href="action.html">动作片</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+                <td id="a3bg" align="center" width="166">
+					<span id="a3color" onMouseOver="showadv('a3','a3bg')">
+						<a href="scienceFiction.html">科幻片</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+                <td id="a4bg" align="center" width="166">
+					<span id="a4color" onMouseOver="showadv('a4','a4bg')">
+						<a href="horror.html">恐怖片</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+				<td id="a5bg" align="center" width="166">
+					<span id="a5color" onMouseOver="showadv('a5','a5bg')">
+						<a href="art.html">文艺片</a>
+					</span>
+				</td>
+                <td width="1"><img src="images/i14.gif" width="1" height="25" /></td>
+                <td id="a6bg" align="center" width="166">
+					<span id="a6color" onMouseOver="showadv('a6','a6bg')">
+						<a href="cartoon.html">动漫</a>
+					</span>
+				</td>
+              </tr>
+            </table>
+        </div></td>
+      </tr>
+      <tr>
+        <td><table width="100%" height="41" cellpadding="0" cellspacing="0" id="a0" border="0">
+            <tr>
+              <td align="left" style="padding-left:12px">欢迎来到365影视网</td>
+            </tr>
+          </table>
+            <table id="a1" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td  style="padding-left:97px" align="left"><ul class="i02w">
+                    <li>爱情喜剧</li>
+                  <li>古典爱情</li>
+                  <li>现代爱情</li>
+                </ul></td>
+              </tr>
+            </table>
+          <table id="a2" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td style="padding-left:292px" align="left"><ul class="i02w">
+                    <li><a href="#">枪战片</a></li>
+                  <li><a href="#">武侠片</a></li>
+				  <li><a href="#">魔幻片</a></li>
+                </ul></td>
+              </tr>
+          </table>
+          <table id="a3" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td style="padding-left:456px"><ul class="i02w">
+                    <li><a href="#">外星人</a></li>
+                  <li><a href="#">自然灾难</a></li>
+				  <li><a href="#">生物变异</a></li>
+                </ul></td>
+              </tr>
+          </table>
+          <table id="a4" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td style="padding-left:636px"><ul class="i02w">
+                    <li><a href="#">惊悚片</a></li>
+                  <li><a href="#">恐怖片</a></li>
+				  <li><a href="#">悬疑片</a></li>
+                </ul></td>
+              </tr>
+          </table>
+          <table id="a5" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td style="padding-right:160px"><ul class="i03w">
+                  <li>音乐片</li>
+                  <li>歌舞片</li>
+                  <li>纪录片</li>
+                </ul></td>
+              </tr>
+          </table>
+		  <table id="a6" style="display: none" height="41" cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td style="padding-right:2px"><ul class="i03w">
+                  <li>历史动漫</li>
+                  <li>搞笑动漫</li>
+                  <li>英雄动漫</li>
+                </ul></td>
+              </tr>
+          </table></td>
+      </tr>
+    </table>
+  </div>
+	<!-- ----------------------------------- -->
+	</td>
+  </tr>
+  <tr>
+    <td colspan="6"  bgcolor="#e5e5e5" valign="top">
+		<div class="banner" style="width: 100%">
+			<div id='tabs'>
+				<a name="i" href="#"><img src="video/13.png" width="100%" height="320" /></a>
+				<a name="i" href="#"><img src="video/14.png" width="100%" height="320" /></a>			
+			</div>
+		</div>
+	</td>
+  </tr>
+</table>
+
+<div class="top_box">
+	<div id="kind">
+		<ul class="kind">
+			<li onMouseOver="showadv('a1')">按地区</li>
+			<li onMouseOver="showadv('a2')">按语言</li>
+			<li onMouseOver="showadv('a3')">按明星</li>
+		</ul>
+		<div class="sibkind">
+		<div id="a1">
+			<ul class="adv">
+				<li>内地</li>
+				<li>香港</li>
+				<li>美国</li>
+				<li>韩国</li>
+				<li>欧洲</li>
+				<li>泰国</li>
+				<li>其他</li>
+			</ul>
+		</div>
+		<div id="a2">
+			<ul class="adv">
+				<li>中文</li>
+				<li>英文</li>
+			</ul>
+		</div>
+		<div id="a3">
+			<ul class="adv">
+				<li>杰森.斯坦森</li>
+				<li>阿兰.德龙</li>
+				<li>阿诺德.施瓦辛格</li>
+				<li>亚当.桑德勒</li>
+				<li>汤姆.克鲁斯</li>
+				<li>基努.里维斯</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<span class="hot">热门专题</span>
+	<div id="showInfo"></div>
+</div>
+
+<table class="top_box" width="1206" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr>
+	<td>&nbsp;</td>
+    <td width="920" valign="top">
+<!--最新影视-->
+	  <table width="100%" height="50" border="0" style="margin-left:0;">
+	    <tr>
+		  <td align="left" valign="bottom" style="font-size:22px;">电影</td>
+		</tr>
+	  </table>
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-left:0;">
+        <tr>
+          <td width="40%">
+		  <table width="98%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+		    <tr><td><a href="see/see1.html" target="_blank"><img src="video/1.jpg" width="400" height="420" border="0" /></a></td></tr>
+			<tr><td height="40" valign="bottom" style="padding-left:20px; font-size:20px; color: #333333"><a href="see/see1.html" target="_blank">终结者5</a></td></tr>
+			<tr><td height="40" valign="middle" style="padding-left:20px; font-size:14px; color: #7a7a7a">未来战争终结者</td></tr>
+		  </table>
+		  </td>
+		  <td width="54%" align="center">
+		    <table width="100%" border="0">
+
+        <tr>
+          <td width="49%" align="center">
+		  <!--显示影视资料 -->
+		  <table width="97%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="margin:0px 0px 8px 0px;">
+		  	<tr>
+				<td align="center"><a href="see/see2.html" target="_blank"><img name="news" src="video/2.jpg" width="100%" height="172" alt="" border="0" /></a></td>
+			</tr>
+			<tr><td height="32" align="left" valign="bottom" style="padding-left:10px; font-size:18px; color: #333333"><a href="see/see2.html" target="_blank">午夜邂逅</a></td></tr>
+			<tr><td height="32" align="left" valign="middle" style="padding-left:10px; font-size:14px; color: #7a7a7a">克里斯.埃文斯导演处女作</td></tr>
+		  </table>
+		  </td>
+		  <td width="49%" align="center">
+		  <!--显示影视资料 -->
+		  <table width="97%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="margin:0px 0px 8px 0px;">
+		  	<tr>
+				<td align="center"><a href="see/see3.html" target="_blank"><img name="news" src="video/3.jpg" width="100%" height="172" alt="" border="0" /></a></td>
+			</tr>
+			<tr><td height="32" align="left" valign="bottom" style="padding-left:10px; font-size:18px; color: #333333"><a href="see/see3.html" target="_blank">我是传奇</a></td></tr>
+			<tr><td height="32" align="left" valign="middle" style="padding-left:10px; font-size:14px; color: #7a7a7a">末世科幻动作电影</td></tr>
+		  </table>
+		  </td>
+		</tr>
+		<tr>
+          <td width="49%" align="center">
+		  <!--显示影视资料 -->
+		  <table width="97%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="margin:0px 0px 8px 0px;">
+		  	<tr>
+				<td align="center"><a href="see/see4.html" target="_blank"><img name="news" src="video/4.jpg" width="100%" height="172" alt="" border="0" /></a></td>
+			</tr>
+			<tr><td height="32" align="left" valign="bottom" style="padding-left:10px; font-size:18px; color: #333333"><a href="see/see4.html" target="_blank">史密斯夫妇</a></td></tr>
+			<tr><td height="32" align="left" valign="middle" style="padding-left:10px; font-size:14px; color: #7a7a7a">完美间谍夫妻档</td></tr>
+		  </table>
+		  </td>
+		  <td width="49%" align="center">
+		  <!--显示影视资料 -->
+		  <table width="97%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="margin:0px 0px 8px 0px;">
+		  	<tr>
+				<td align="center"><a href="see/see5.html" target="_blank"><img name="news" src="video/5.jpg" width="100%" height="172" alt="" border="0" /></a></td>
+			</tr>
+			<tr><td height="32" align="left" valign="bottom" style="padding-left:10px; font-size:18px; color: #333333"><a href="see/see5.html" target="_blank">一线声机</a></td></tr>
+			<tr><td height="32" align="left" valign="middle" style="padding-left:10px; font-size:14px; color: #7a7a7a">一线声机保持通话</td></tr>
+		  </table>
+		  </td>
+		</tr>
+      </table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	<td width="270" valign="top">
+	<!--影视排行 -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:0px;margin-left:5%;">
+	<tr>
+		<td align="left" height="50" style="font-size:22px;" valign="bottom">电影排行</td>
+		<td align="center" valign="bottom">
+		  <ul class="tabs">
+		  	<li><a name="#tab1">热播</a></li>
+			<li><a name="#tab2">经典</a></li>
+		  </ul>
+		</td>
+	</tr>
+</table>
+<div id="tab1" class="tab_content">
+<table width="95%" border="0" cellpadding="0" cellspacing="0" style="position:relative; margin-top: 2px;margin-left:5%;">
+<script>
+	var num = 1;//定义影片排名变量
+    //定义影片名称数组
+	var nameArr = new Array("终结者5","飓风营救","我是传奇","一线声机","罗马假日","史密斯夫妇","午夜邂逅");
+    //定义影片主演数组
+	var dnumArr = new Array("阿诺德.施瓦辛格","连姆.尼森","威尔.史密斯","杰森.斯坦森","格里高利.派克","布拉德.皮特","克里斯.埃文斯");
+	for(var i=0; i<nameArr.length; i++){
+		document.write('<tr height="43">');
+		document.write('<td width="26" align="center" class="f_td">'+(num++)+'</td>');//输出影片排名
+		document.write('<td width="75" align="left" class="f_td"><a href="#">'+nameArr[i]+'</td>');//输出影片名称
+		document.write('<td width="90" align="right" class="f_td">'+dnumArr[i]+'</td></tr>');//输出影片主演
+	}
+</script>
+</table>
+</div>
+<div id="tab2" class="tab_content">
+<table width="95%" border="0" cellpadding="0" cellspacing="0" style="position:relative; margin-top: 2px;margin-left:5%;">
+<script>
+	var num = 1;//定义影片排名变量
+	//定义影片名称数组
+	var nameArr = new Array("机械师2：复活","变形金刚","暮光之城","怦然心动","电话情缘","超凡蜘蛛侠","雷神");
+	//定义影片主演数组
+	var dnumArr = new Array("杰森.斯坦森","希亚.拉博夫","克里斯汀.斯图尔特","玛德琳.卡罗尔","杰西.麦特卡尔菲","安德鲁.加菲尔德","克里斯.海姆斯沃斯");
+	for(var i=0; i<nameArr.length; i++){
+		document.write('<tr height="43">');
+		document.write('<td width="26" align="center" class="f_td">'+(num++)+'</td>');//输出影片排名
+		document.write('<td width="75" align="left" class="f_td"><a href="#">'+nameArr[i]+'</td>');//输出影片名称
+		document.write('<td width="90" align="right" class="f_td">'+dnumArr[i]+'</td></tr>');//输出影片主演
+	}
+</script>
+</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:0px;margin-left:5%;">
+	<tr><td align="left" height="50" style="font-size:22px;" valign="bottom">即将上线</td></tr>
+</table>
+<div class="scroll">   
+	<ul class="list">   
+ 		<li><a href="#">《荒野大镖客》重磅来袭</a></li>   
+		<li><a href="#">《星球大战外传》科幻迷不容错过</a></li>   
+		<li><a href="#">《野鹅敢死队》重现战场</a></li>  
+		<li><a href="#">《九死一生》原始丛林探险</a></li>   
+		<li><a href="#">《荒野猎人》莱昂纳多复仇与熊搏斗</a></li> 
+	</ul>   
+</div>
+	</td>
+	  <td>&nbsp;</td>
+  </tr>
+</table>
+
+<div id="demo" class="top_box" style="overflow: hidden; width: 1206px; height: 264px">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td id="demo1"><table cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see6.html" target="_blank">
+				  <img src="video/6.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see6.html" target="_blank">机械师2：复活</a></div>
+			  <div class="content">冷面杀手铁汉柔情</div></td>
+          <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see7.html" target="_blank">
+				  <img src="video/7.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see7.html" target="_blank">变形金刚</a></div>
+			  <div class="content">以动画为基础的创新作品</div></td>
+          <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see8.html" target="_blank">
+				  <img src="video/8.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see8.html" target="_blank">暮光之城</a></div>
+			  <div class="content">吸血鬼的爱情故事</div></td>
+          <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see9.html" target="_blank">
+				  <img src="video/9.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see9.html" target="_blank">怦然心动</a></div>
+			  <div class="content">男孩女孩间的有趣战争</div></td>
+          <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see10.html" target="_blank">
+				  <img src="video/10.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see10.html" target="_blank">飓风营救</a></div>
+			  <div class="content">老特工重新出山</div></td>
+		  <td width="191" height="200" style="padding-right:10px">
+			  <a href="see/see11.html" target="_blank">
+				  <img src="video/11.jpg" width="191" height="200" border="0" />
+			  </a>
+			  <div class="title"><a href="see/see11.html" target="_blank">罗马假日</a></div>
+			  <div class="content">好莱坞黑白电影经典之作</div></td>
+        </tr>
+      </table></td>
+      <td id="demo2"></td>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+var speed=30;//设置超时时间
+demo2.innerHTML=demo1.innerHTML;//设置id为demo2的元素的HTML内容
+//设置图片向左滚动
+function Marquee(){
+	if(demo2.offsetWidth-demo.scrollLeft<=0){
+		demo.scrollLeft-=demo1.offsetWidth;
+	}else{
+		demo.scrollLeft++;
+	}
+}
+var MyMar=setInterval(Marquee,speed);//实现图片滚动
+//鼠标移入图片时停止滚动
+demo.onmouseover=function(){
+	clearInterval(MyMar);
+}
+//鼠标移出图片时继续滚动
+demo.onmouseout=function(){
+	MyMar=setInterval(Marquee,speed);
+}
+</script>
+
+<div align="center">
+<img src="images/call.png" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="5,7,60,26" href="call.html" target="_blank" />
+</map>
+</div>
+<table id="float" width="81" cellspacing="0">
+  <tr>
+    <td><img src="images/ra_01.png" width="81" height="12" /></td>
+  </tr>
+  <tr>
+    <td align="center" background="images/ra_03.gif">
+	  <table width="100%" border="0">
+        <tr>
+          <td height="65" align="center" valign="top">
+		    <a href="#">
+			  <img src="images/365App.png" width="59" height="63" border="0"/>
+			</a>
+		  </td>
+        </tr>
+        <tr>
+          <td height="15" align="center" valign="top"></td>
+        </tr>
+        <tr>
+          <td height="85" align="center" valign="top">
+		    <img src="images/erweima.png" width="59" height="81" border="0"/>
+		  </td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+  <tr>
+    <td><img src="images/ra_02.png" width="81" height="11" /></td>
+  </tr>
+</table>
+
+<script type="text/javascript" src="js/float.js"></script>
+</body>

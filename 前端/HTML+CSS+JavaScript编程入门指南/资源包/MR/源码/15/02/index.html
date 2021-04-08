@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断2010年2月份的天数</title>
+</head>
+
+<body>
+<script type="text/javascript">
+var year=2010;//定义变量
+var month=0;//定义变量
+if((year%4==0 && year%100!=0)||year%400==0){   //判断指定年是否为闰年
+	month=29;//为变量赋值
+}else{
+	month=28;//为变量赋值
+}
+alert("2010年2月份的天数为"+month+"天");//输出结果
+</script>
+
+</body>
+</html>

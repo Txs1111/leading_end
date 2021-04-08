@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../vue-2.4.0.js"></script>
+    <div>
+        <div id="compute">
+            <!-- <font style="float:left;">请输入第一个数:</font> -->
+            <input type="number" name="" id="" v-model="one" style="width:50px;float: left;">
+            <!-- <font style="float:left;">选择运算符:</font> -->
+            <select style="float:left;" v-model="op">
+                <option  >+</option>
+                <option  >*</option>
+                <option  >/</option>
+                <option  >-</option>
+            </select>
+            <!-- <font style="float:left;">选择第二个数:</font> -->
+            <input type="number" name="" id="" v-model="two" style="width:50px;float: left;">
+
+            <!-- <font>结果为:</font> -->
+            <input type="number" name="" id="" v-model="areas" style="width:50px;">
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: "#compute",
+            data: {
+                one: '',
+                two: '',
+                r: '',
+                op: ''
+            },
+            computed: {
+                areas: function() {
+                    var areas = '';
+                    switch (this.op) {
+                        case '+':
+                            areas = parseInt(this.one) + parseInt(this.two);
+                            break;
+                        case '-':
+                            areas = parseInt(this.one) - parseInt(this.two);
+                            break;
+                        case '*':
+                            areas = parseInt(this.one) * parseInt(this.two);
+                            break;
+                        case '/':
+                            areas = parseInt(this.one) / parseInt(this.two);
+                            break;
+                    }
+                    if (Object.is(areas, NaN)) {
+                        areas = '';
+                    }
+                    return areas;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

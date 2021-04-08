@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <style>
+        .active {
+            color: red;
+        }
+        
+        .hide {
+            display: none;
+        }
+    </style>
+    <div id="app">
+        <!--<h1 :class="['red','thin']">这是一个邪恶的h1</h1>-->
+        <h1 :class="['red','thin',isactice?'active':'']">这是一个邪恶的h1</h1>
+        <button @click="xianshi">显示</button>
+        <button @click="guanbi">关闭</button>
+        <div :class="['hide',isactice?'show':" "]">
+            <!--加引号防止class内标签被识别为变量-->
+            <ul>
+                <li>红烧肉</li>
+                <li>大叔俺</li>
+                <li>渴望</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        vue = new Vue({
+            el: "#app",
+            data: {
+                isactice: 0
+            },
+            methods: {
+                xianshi: {
+
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

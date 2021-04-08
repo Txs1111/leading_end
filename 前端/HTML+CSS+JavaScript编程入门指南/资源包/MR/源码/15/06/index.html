@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出5000米比赛需要跑完整的圈数</title>
+<script type="text/javascript">
+	var distance=400;//定义表示距离的变量
+	var count=0;//定义表示圈数的变量
+	while(distance<=5000){
+		count++;//圈数加1
+		distance=(count+1)*400;//每跑一圈就重新计算距离
+	}
+	document.write("5000米比赛需要跑完整的"+count+"圈");//输出最后的圈数
+</script>
+</head>
+<body background="bg.gif">
+</body>
+</html>

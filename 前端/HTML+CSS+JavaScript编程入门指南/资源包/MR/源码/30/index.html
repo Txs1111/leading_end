@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var screenAmount = $(".container ul li").length / 5;//计算屏幕数量
+	$(".container ul li:lt(5)").clone().appendTo(".container ul");//复制前5个元素
+	var nowScreen = 0;	//屏幕号
+	$(".rightBtn").click(function(){
+		if(nowScreen < screenAmount - 1){
+			nowScreen ++ ;//屏幕号加1
+			$(".container").animate({"left" : -775 * nowScreen} , 800);//定义动画
+		}else{
+			nowScreen = 0;
+			$(".container").animate({"left" : -775 * screenAmount} , 800 , function(){
+				$(this).css("left",0);//元素回到初始位置
+			});
+		}
+		$(".hd .right span").html(nowScreen + 1 + "/" + screenAmount);//显示屏幕号
+	});
+	$(".leftBtn").click(function(){
+		if(nowScreen > 0){
+			nowScreen -- ;//屏幕号减1
+			$(".container").animate({"left" : -775 * nowScreen} , 800);//定义动画
+		}else{
+			nowScreen = screenAmount - 1;
+			$(".container").css("left" , -775 * screenAmount).animate({"left" : -775 * (screenAmount - 1)},800);//移动到复制的5个元素并执行动画
+		}
+		$(".hd .right span").html(nowScreen + 1 + "/" + screenAmount);//显示屏幕号
+	});
+	//每隔5秒钟自动触发元素的click事件
+	var timer = setInterval(function(){$(".rightBtn").trigger("click")}, 5000);
+	//鼠标进入元素停止移动
+	$(".is-on").mouseenter(function() {
+		clearInterval(timer);
+	});
+	//鼠标离开元素恢复移动
+	$(".is-on").mouseleave(function() {
+		timer = setInterval(function(){$(".rightBtn").trigger("click")}, 5000);
+	});
+});
+$(document).ready(function() {
+	var len = $(".banner").find("a");//获取广告图片
+	var pos = 0;//定义变量值为0
+	setInterval(function(){
+		len.eq(pos).hide();//隐藏元素
+    	pos++;//变量值加1
+    	if(pos == len.length) pos=0;//变量值重新定义为0
+    	len.eq(pos).show();//显示元素
+	},3000);//每隔3秒钟切换元素
+});
+$(document).ready(function() {		
+	$(".hot-film-main div").hide();							//隐藏热门电影和最新电影
+	$(".hot-film ul li a:first").addClass("active"); 		//为第一个标签添加样式
+	$(".hot-film-list").show(); 						//显示热门电影
+	$(".hot-film ul li a").click(function() {			//鼠标单击某标签
+		//为当前的标签添加样式并移除另一标签样式
+		$(this).addClass("active").parent().siblings().find("a").removeClass("active");	
+		var index = $(this).parent().index();//获取当前标签索引
+		$(".hot-film-main div").eq(index).show().siblings().hide();//控制热门电影和最新电影的显示或隐藏
+	});
+});
+</script>
+</head>
+<body>
+<div id="nav">
+	<div class="nav-logo"><a href="index.html">豆瓣电影</a></div>
+	<div class="nav-items">
+		<ul>
+			<li><a href="javascript:;">影讯 & 购票</a></li>
+			<li><a href="javascript:;">选电影</a></li>
+			<li><a href="javascript:;">电视剧</a></li>
+			<li><a href="javascript:;">排行榜</a></li>
+			<li><a href="javascript:;">分类</a></li>
+			<li><a href="javascript:;">影评</a></li>
+			<li><a href="javascript:;">2018年度榜单</a></li>
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<div id="left">
+	<div class="is-on">
+		<div class="hd">
+			<h2>正在热映</h2>
+			<div class="right">
+				<span>1/3</span>
+				<a class="leftBtn" href="javascript:;"></a>
+				<a class="rightBtn" href="javascript:;"></a>
+			</div>
+		</div>
+		<div class="bd">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="detail/mnyys.html"><img src="images/1.jpg" alt="" /></a>
+						<p><a href="detail/mnyys.html">美女与野兽</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star40"></span></span>
+							<span class="score">7.2</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/thwj.html"><img src="images/2.jpg" alt="" /></a>
+						<p><a href="detail/thwj.html">头号玩家</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">8.7</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/fwhyj.html"><img src="images/3.jpg" alt="" /></a>
+						<p><a href="detail/fwhyj.html">飞屋环游记</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">8.9</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/mtyj.html"><img src="images/4.jpg" alt="" /></a>
+						<p><a href="detail/mtyj.html">摩天营救</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star35"></span></span>
+							<span class="score">6.4</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/yhhwd.html"><img src="images/5.jpg" alt="" /></a>
+						<p><a href="detail/yhhwd.html">银河护卫队</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star40"></span></span>
+							<span class="score">8.0</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/crzdy2.html"><img src="images/6.jpg" alt="" /></a>
+						<p><a href="detail/crzdy2.html">超人总动员2</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star40"></span></span>
+							<span class="score">8.1</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/jqrzdy.html"><img src="images/7.jpg" alt="" /></a>
+						<p><a href="detail/jqrzdy.html">机器人总动员</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">9.3</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/jtmdt.html"><img src="images/8.jpg" alt="" /></a>
+						<p><a href="detail/jtmdt.html">惊天魔盗团</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star40"></span></span>
+							<span class="score">7.5</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/cmdsj.html"><img src="images/9.jpg" alt="" /></a>
+						<p><a href="detail/cmdsj.html">楚门的世界</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">9.2</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/dmkj.html"><img src="images/10.jpg" alt="" /></a>
+						<p><a href="detail/dmkj.html">盗梦空间</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">9.3</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/fkdwc.html"><img src="images/11.jpg" alt="" /></a>
+						<p><a href="detail/fkdwc.html">疯狂动物城</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">9.1</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/fczlm.html"><img src="images/12.jpg" alt="" /></a>
+						<p><a href="detail/fczlm.html">复仇者联盟</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star40"></span></span>
+							<span class="score">8.1</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/hxjy.html"><img src="images/13.jpg" alt="" /></a>
+						<p><a href="detail/hxjy.html">火星救援</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star45"></span></span>
+							<span class="score">8.4</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/jcs.html"><img src="images/14.jpg" alt="" /></a>
+						<p><a href="detail/jcs.html">巨齿鲨</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star30"></span></span>
+							<span class="score">5.9</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+					<li>
+						<a href="detail/tqyj.html"><img src="images/15.jpg" alt="" /></a>
+						<p><a href="detail/tqyj.html">通勤营救</a></p>
+						<div class="rating">
+							<span class="starrating"><span class="star35"></span></span>
+							<span class="score">6.6</span>
+						</div>
+						<a href="javascript:;" class="goupiao">选座购票</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<a href="javascript:;"><img src="images/banner1.jpg" /></a>
+		<a href="javascript:;"><img src="images/banner2.jpg" /></a>
+	</div>
+	<div class="hot-film">
+		<div class="hot-film-top">
+			<h2>最近热门的电影</h2>
+			<ul>
+				<li><a>热门</a></li>
+				<li><a>最新</a></li>
+			</ul>
+		</div>
+		<div class="hot-film-main">
+			<div class="hot-film-list">
+				<ul>
+					<li>
+						<a href="detail/thwj.html">
+							<img src="images/2.jpg" alt="" />
+						</a>
+						<p><a href="detail/thwj.html">头号玩家</a>
+						<span class="score">8.7</span></p>
+					</li>
+					<li>
+						<a href="detail/fwhyj.html">
+							<img src="images/3.jpg" alt="" />
+						</a>
+						<p><a href="detail/fwhyj.html">飞屋环游记</a>
+						<span class="score">8.9</span></p>
+					</li>
+					<li>
+						<a href="detail/yhhwd.html">
+							<img src="images/5.jpg" alt="" />
+						</a>
+						<p><a href="detail/yhhwd.html">银河护卫队</a>
+						<span class="score">8.0</span></p>
+					</li>
+					<li>
+						<a href="detail/crzdy2.html">
+							<img src="images/6.jpg" alt="" />
+						</a>
+						<p><a href="detail/crzdy2.html">超人总动员2</a>
+						<span class="score">8.1</span></p>
+					</li>
+					<li>
+						<a href="detail/jtmdt.html">
+							<img src="images/8.jpg" alt="" />
+						</a>
+						<p><a href="detail/jtmdt.html">惊天魔盗团</a>
+						<span class="score">7.5</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="new-film-list">
+				<ul>
+					<li>
+						<a href="detail/cmdsj.html">
+							<img src="images/9.jpg" alt="" />
+						</a>
+						<p><a href="detail/cmdsj.html">楚门的世界</a>
+						<span class="score">9.2</span></p>
+					</li>
+					<li>
+						<a href="detail/dmkj.html">
+							<img src="images/10.jpg" alt="" />
+						</a>
+						<p><a href="detail/dmkj.html">盗梦空间</a>
+						<span class="score">9.3</span></p>
+					</li>
+					<li>
+						<a href="detail/fkdwc.html">
+							<img src="images/11.jpg" alt="" />
+						</a>
+						<p><a href="detail/fkdwc.html">疯狂动物城</a>
+						<span class="score">9.1</span></p>
+					</li>
+					<li>
+						<a href="detail/fczlm.html">
+							<img src="images/12.jpg" alt="" />
+						</a>
+						<p><a href="detail/fczlm.html">复仇者联盟</a>
+						<span class="score">8.1</span></p>
+					</li>
+					<li>
+						<a href="detail/hxjy.html">
+							<img src="images/13.jpg" alt="" />
+						</a>
+						<p><a href="detail/hxjy.html">火星救援</a>
+						<span class="score">8.4</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div id="aside">
+	<div class="billboard">
+		<div class="billboard-title"><h2>一周口碑榜</h2></div>
+		<div class="billboard-content">
+			<ul>
+				<li><span class="order">1</span><span class="title"><a href="detail/fczlm.html">复仇者联盟</a></span></li>
+				<li><span class="order">2</span><span class="title"><a href="detail/thwj.html">头号玩家</a></span></li>
+				<li><span class="order">3</span><span class="title"><a href="detail/mnyys.html">美女与野兽</a></span></li>
+				<li><span class="order">4</span><span class="title"><a href="detail/yhhwd.html">银河护卫队</a></span></li>
+				<li><span class="order">5</span><span class="title"><a href="detail/dmkj.html">盗梦空间</a></span></li>
+				<li><span class="order">6</span><span class="title"><a href="detail/fwhyj.html">飞屋环游记</a></span></li>
+				<li><span class="order">7</span><span class="title"><a href="detail/hxjy.html">火星救援</a></span></li>
+				<li><span class="order">8</span><span class="title"><a href="detail/jqrzdy.html">机器人总动员</a></span></li>
+				<li><span class="order">9</span><span class="title"><a href="detail/cmdsj.html">楚门的世界</a></span></li>
+				<li><span class="order">10</span><span class="title"><a href="detail/fkdwc.html">疯狂动物城</a></span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="contact-title"><h2>合作联系</h2></div>
+		<div class="contact-content">
+			<ul>
+				<li>电影合作邮箱：movie@mr.com</li>
+				<li>电视剧合作邮箱：tv@mr.com</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>
+<div style="clear:both"></div>
+<div id="bottom">
+	<span class="copyright">@ 2001 - 2018 mingrisoft.com all rights reserved 吉林省明日科技有限公司</span>
+	<span class="about">
+		<ul>
+			<li>关于明日</li>
+			<li>联系我们</li>
+			<li>免责声明</li>
+			<li>帮助中心</li>
+			<li>移动应用</li>
+			<li>明日广告</li>
+			<li>合作共赢</li>
+		</ul>
+	</span>
+</div>
+</body>
+</html>

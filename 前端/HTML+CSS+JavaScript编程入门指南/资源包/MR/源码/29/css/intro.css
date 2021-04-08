@@ -1,0 +1,25 @@
+*{
+margin:0px;
+padding:0px;
+}
+.moviedetail{
+	font-size: 20px;
+	color: #2bb673; 
+	border-bottom: 4px solid #2bb673; 
+	line-height: 54px; 
+	margin: 0 0 6px 0px; 
+	padding-bottom: 10px
+}
+.pic{
+margin:15px 0px;
+border:1px #CCCCCC solid;
+}
+body{
+font-size:18px;}
+.moviename{
+font-size:24px; 
+font-weight:bolder;
+}.movieintro{
+font-size:14px; 
+line-height:30px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try...catch.finally</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var str = "I like javascript"
+        try {
+            document.write(str.charat(5)) //应用的方法名错误，应该是charAt（5）
+        } catch (error) {
+            alert("运行时有异常发生！！")
+        } finally {
+            alert("结束try...catch...finally语句")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算选手的最终得分</title>
+</head>
+
+<body background="bg.jpeg">
+    <script type="text/javascript">
+        var scoreArr = new Array(95, 90, 89, 91, 96); //定义分数数组
+        var scoreStr = ""; //定义分数字符串变量
+        for (var i = 0; i < scoreArr.length; i++) {
+            scoreStr += scoreArr[i] + "分 "; //对所有分数进行连接
+        }
+
+        function ascOrder(x, y) { //定义比较函数
+            if (x < y) { //如果第一个参数值小于第二个参数值
+                return 1; //返回1
+            } else {
+                return -1; //返回-1
+            }
+        }
+        scoreArr.sort(ascOrder); //为分数进行降序排序
+        var newArr = scoreArr.slice(1, scoreArr.length - 1); //去除最高分和最低分
+        var totalScore = 0; //定义总分变量
+        for (var i = 0; i < newArr.length; i++) {
+            totalScore += newArr[i]; //计算总分
+        }
+        document.write("五位评委打分：" + scoreStr); //输出5位评委的打分
+        document.write("<br>去掉一个最高分：" + scoreArr[0] + "分"); //输出去掉的最高分
+        document.write("<br>去掉一个最低分：" + scoreArr[scoreArr.length - 1] + "分"); //输出去掉的最低分
+        document.write("<br>选手最终得分：" + totalScore / newArr.length + "分"); //输出选手最终得分
+    </script>
+    </table>
+</body>
+
+</html>

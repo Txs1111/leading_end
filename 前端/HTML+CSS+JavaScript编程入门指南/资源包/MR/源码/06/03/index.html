@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单自动验证</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div class="mr-cont">
+  <h2>收货信息填写</h2>
+  <!--单击提交时,页面跳转至"login.html"页面-->
+  <form action="login.html">
+    <div>姓名：
+      <!--单行文本框-->
+      <input type="text"><span class="red">*****必填项</span>
+    </div>
+    <div>电话：
+      <input type="text"><span class="red">*****必填项</span>
+    </div>
+    <div>是否允许代收：
+      <!--单选按钮-->
+      <label>是<input type="radio" name="receive" checked></label>
+      <label>否<input type="radio" name="receive"></label>
+    </div>
+    <div class="addr">地址：
+      <input type="text" placeholder="--省" size="5">__
+      <input type="text" placeholder="--市" size="5">
+    </div>
+    <div>
+      <p>具体地址：<span class="red">*****必填项</span></p>
+      <textarea></textarea>
+    </div>
+    <div id="btn">
+      <!--提交按钮，单击提交表单信息-->
+      <input type="submit" value="提交">
+      <!--普通按钮，通过onclick调用处理程序-->
+      <input type="button" value="保存" onClick="alert('保存信息成功')">
+      <!--重置按钮，单击后表单恢复默认状态-->
+      <input type="reset" value="重填">
+    </div>
+  </form>
+</div>
+</body>
+</html>

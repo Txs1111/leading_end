@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>抖音秀</title>
+    <link rel="stylesheet" href="assets/css/H5FullscreenPage.css">
+    <link rel="stylesheet" href="assets/css/page-animation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/video.css">
+</head>
+<body >
+<!--页头区域-->
+<div class="m-header">
+    <div  class="header-nav" style="background-color: #58575761"><h1  class="text">
+        抖音秀</h1>
+        <div  class="mine"><i  class="icon-tubiao11"></i>
+        </div>
+    </div>
+</div>
+<!--页头区域-->
+
+<!--视频区域-->
+<div class="H5FullscreenPage-wrap">
+    <div class="item item1">
+        <video class="background_video" loop="loop">
+            <source src="video/1.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="video_controls">
+                <span class="play" title="0">
+                    <img src="assets/play.png">
+                </span>
+                <span class="pause" title="0">
+                    <img src="assets/pause.png">
+                </span>
+        </div>
+    </div>
+    <div class="item item2">
+        <video class="background_video" loop="loop">
+            <source src="video/2.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="video_controls">
+                <span class="play" title="1">
+                    <img src="assets/play.png">
+                </span>
+                <span class="pause" title="1">
+                    <img src="assets/pause.png">
+                </span>
+        </div>
+    </div>
+    <div class="item item3">
+        <video class="background_video" loop="loop">
+            <source src="video/3.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="video_controls">
+                <span class="play" title="2">
+                    <img src="assets/play.png">
+                </span>
+                <span class="pause" title="2">
+                    <img src="assets/pause.png">
+                </span>
+        </div>
+    </div>
+
+</div>
+<!--视频区域-->
+
+<!--挂件区域-->
+<div  class="play-page">
+    <div class="turnoff">
+        <ul>
+            <li><a class="control-icon"><img id="avatar" src="assets/people.jpeg"
+                                             class="author-avatar"></a></li>
+            <li class="control-icon"><i class="icon-xin"><p class="statistics-num">533</p></i> <span></span></li>
+            <li class="control-icon"><i class="icon-wodepinglun"><p class="statistics-num">211</p></i> <span></span>
+            </li>
+            <li onclick="shareId();"><a   class="icon-fenxiang control-icon"></a></li>
+        </ul>
+    </div>
+    <div class="share-background" style="display: none;">
+        <div class="share-pannel"><h4>分享</h4>
+            <div style="height: 60%;">
+                <ul>
+
+                    <li class="share-item">
+                        <div id="share-url"><a><i class="icon-lianjie"></i>
+                            <p>复制链接</p></a></div>
+                    </li>
+                </ul>
+            </div>
+            <div onclick="shareCancel();" class="share-cancel"><p>取消</p></div>
+        </div>
+    </div>
+</div>
+<!--挂件区域-->
+
+<!--页脚区域-->
+<style>
+    .appFoot {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: black;
+        border-top: thin solid #555454;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    .appFoot {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: black;
+        border-top: thin solid #555454;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    .appFoot a.on {
+        color: #c7c7c7;
+    }
+
+    .appFoot a {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        color: #c7c7c7;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .g_wrap {
+        text-shadow: -2px 0 rgba(0, 255, 255, .5), 2px 0 rgba(255, 0, 0, .5);
+    }
+
+    .main {
+        position: relative;
+        color: #362732;
+        background: #fff;
+        border-radius: 8px;
+        border-left: 2px solid rgba(23, 255, 232, .7);
+        border-right: 2px solid rgba(254, 44, 85, .7);
+    }
+</style>
+<div  class="appFoot">
+    <a  href="#/" class="router-link-exact-active router-link-active on">
+        <span  style="padding-bottom: 7px">首页</span></a>
+    <a  href="#/category" class="">
+        <span  style="padding-bottom: 7px">关注</span></a>
+    <a  href="#/more" class="">
+        <span  style="padding-bottom: 7px"><div class="main">
+            <div class="g_wrap">≡抖音</div>
+        </div></span></a>
+    <a  href="#/more" class="">
+        <span  style="padding-bottom: 7px">消息</span></a>
+    <a  href="#/more" class="">
+        <span  style="padding-bottom: 7px">我</span></a>
+</div>
+<!--页脚区域-->
+
+<script src="assets/js/bideo.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/zepto.min.js"></script>
+<script type="text/javascript" src="assets/js/H5FullscreenPage.js"></script>
+<script type="text/javascript">
+    H5FullscreenPage.init({
+        'type': 2,
+        'pageShow': function (dom) {
+        },
+        'pageHide': function (dom) {//console.log(dom);
+        }
+    });
+
+    function shareId(){
+        var shareDOM=document.querySelector('.share-background');
+        shareDOM.style.display= 'block';
+    }
+
+    function shareCancel(){
+        var shareDOM=document.querySelector('.share-background');
+        shareDOM.style.display= 'none';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style type="text/css">
+        .default {
+            border: 1px solid #003a75;
+            background-color: yellow;
+            margin: 5px;
+            width: 90px;
+            float: left;
+            font-size: 12px;
+            padding: 5px;
+        }
+        
+        .change {
+            background-color: #C50210;
+            color: #FFF;
+        }
+    </style>
+    <script type="text/javascript" src="../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input[type=button]").click(function() {
+                $("div,#span").addClass("change")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p class="default">p元素</p>
+    <div class="default">div元素</div>
+    <span class="default" id="span">span元素</span>
+    <input type="button" value="为div元素和ID为span的元素换肤">
+</body>
+
+</html>

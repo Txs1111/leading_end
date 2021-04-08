@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../vue-2.4.0.js"></script>
+
+<body>
+    <!-- <div id="app">
+        <table border="1" align="center" width="400px">
+            <caption>
+                <h2>前端语言列表</h2>
+            </caption>
+            <tr>
+                <td>序号</td>
+                <td>内容</td>
+            </tr>
+            <tr align="center" v-for="(item,i) in list">
+                <td>{{i+1}}</td>
+                <td>{{item}}</td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var Vu = new Vue({
+            el: "#app",
+            data: {
+                list: ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'Vue']
+            },
+            methods: {}
+        });
+    </script> -->
+    <h1>遍历对象</h1>
+    <div id="a">
+        <table border="1" align="center" width="400px">
+            <caption>
+                <h2>学生信息</h2>
+            </caption>
+            <tr>
+                <td>学号</td>
+                <td>姓名</td>
+                <td>年龄</td>
+            </tr>
+            <tr align="center" v-for="(user) in listObj">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+            </h2>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var vue = new Vue({
+            el: "#a",
+            data: {
+                listObj: [{
+                    id: 1,
+                    name: "刘冰",
+                    age: 25
+                }, {
+                    id: 1,
+                    name: "刘冰",
+                    age: 25
+                }, {
+                    id: 1,
+                    name: "刘冰",
+                    age: 25
+                }, {
+                    id: 1,
+                    name: "刘冰",
+                    age: 25
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>

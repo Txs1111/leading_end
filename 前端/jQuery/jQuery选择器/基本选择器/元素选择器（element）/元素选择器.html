@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素选择器</title>
+    <script type="text/javascript" src="../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input[type='button']").click(function() {
+                $("div").eq(0).html("<img src='images/strawberry1.jpg'> 这里长出一片草莓")
+                $("div").get(1).innerHTML = "<img src='images/fish1.jpg'> 这里的鱼没有了 "
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div><img src="images/strawberry.jpg" alt="">这里种了一棵草莓</div>
+    <div><img src="images/fish.jpg" alt="">这里养了一条鱼</div>
+    <input type="button" value="若干年后">
+</body>
+
+</html>

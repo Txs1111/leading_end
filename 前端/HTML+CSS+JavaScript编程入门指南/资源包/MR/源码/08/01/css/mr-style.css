@@ -1,0 +1,89 @@
+@charset "utf-8";
+#mr-content{					/*使用ID选择器设置页面布局*/
+	width:1200px;
+	height:480px;
+	margin: 0 auto;
+	border:1px solid red;
+	text-align:left; 
+	font-size: 12px;/*设置文本对齐方式*/
+	}
+.mr-img1{					/*使用类选择器设置图片浮动*/
+	float:left;
+	}
+.mr-right{					/*使用类选择器设置页面布局*/
+	width:960px;				/*设置宽度*/
+	height:527px;				/*设置高度*/
+	float:left;				/*设置浮动*/
+	position:relative;		/*设置定位*/
+	}
+.mr-right *{
+	position: absolute;
+}
+[att=a],[att=b],[att=c],[att=d],[att=e]{
+	width:180px; 				/*设置宽度*/
+	height:182px;	           /*设置高度*/
+}
+[att=a]{ 					/*使用属性选择器设置第1张手机图片位置及大小*/
+	left:140px;
+	top:20px;
+	}
+[att=b]{						/*使用属性选择器设置第2张手机图片位置及大小*/
+	left:700px;
+	top:20px;
+	}
+[att=c]{						/*使用属性选择器设置第3张手机图片位置及大小*/
+	left:400px;
+	top:180px;
+	}
+[att=d]{						/*使用属性选择器设置第4张手机图片位置及大小*/
+	left:100px;
+	top:250px;
+	}
+[att=e]{						/*使用属性选择器设置第5张手机图片位置及大小*/
+	left:650px;
+	top:230px;
+	}
+.mr-car1{					/*使用类选择器设置第1个购物车小图标位置*/
+	left: 330px;
+	top: 170px;
+	}
+.mr-car2{					/*使用类选择器设置第2个购物车小图标位置*/
+	left:890px;
+	top:170px;
+	}
+.mr-car3{					/*使用类选择器设置第3个购物车小图标位置*/
+	left:590px;
+	top:330px;
+	}
+.mr-car4{					/*使用类选择器设置第4个购物车小图标位置*/
+	left:290px;
+	top:380px;
+	}
+.mr-car5{					/*使用类选择器设置第5个购物车小图标位置*/
+	left:840px;
+	top:380px;
+	}
+.mr-price1{					/*使用类选择器设置第1个手机品牌文字的位置*/
+	left:50px;
+	top:170px;
+}
+.mr-price2{					/*使用类选择器设置第2个手机品牌文字的位置*/
+	left:620px;
+	top:170px;
+}
+.mr-price3{					/*使用类选择器设置第3个手机品牌文字的位置*/
+	left:0p;
+	top:350px;
+}			
+.mr-price4{					/*使用类选择器设置第4个手机品牌文字的位置*/
+	left:350px;
+	top:300px;
+}	
+.mr-price5{					/*使用类选择器设置第5个手机品牌文字的位置*/
+	left:560px;
+	top:360px;
+}
+span{						/*使用元素选择器设置5个手机价格字体颜色以及大小*/
+	font-size: 10px;
+	color: #706A6A;
+}

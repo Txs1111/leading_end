@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断某女职工是否已退休</title>
+<script type="text/javascript">
+var sex="女";//定义表示性别的变量
+var age=58;//定义表示年龄的变量
+if(sex=="男"){//如果是男职工就执行下面的内容
+	if(age>=60){//如果男职工在60岁以上
+		alert("该男职工已经退休"+(age-60)+"年");//输出字符串
+	}else{//如果男职工在60岁以下
+		alert("该男职工并未退休");//输出字符串
+	}
+}else{//如果是女职工就执行下面的内容
+	if(age>=55){//如果女职工在55岁以上
+		alert("该女职工已经退休"+(age-55)+"年");//输出字符串
+	}else{//如果女职工在55岁以下
+		alert("该女职工并未退休");//输出字符串
+	}
+}
+</script>
+</head>
+<body>
+</body>
+</html>

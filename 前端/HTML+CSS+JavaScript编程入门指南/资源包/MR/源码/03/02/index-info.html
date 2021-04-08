@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>添加图像</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>如图为商品详情</h1>
+
+                <p class="mr-code-info">
+                    通过width属性可以设置图片显示的宽度，默认情况下，改变宽度的同时，其高度也会等比例进行调整。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+			    <!-- 这里填写你的HTML代码-->
+       
+              <div class="mr-content">
+				<img src="images/img.jpg" alt="" width="350"><br/>
+				<img src="images/img.jpg" alt="" width="50">
+				</div>
+              
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+
+<div class="mr-content">
+<img src="images/img.jpg" alt="" width="350"><br/>
+<img src="images/img.jpg" alt="" width="50">
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+
+.mr-content{
+	width: 1100px;
+	height:420px;
+	border: 1px solid red;
+	margin: 0 auto;
+	background: url(../images/bg.jpg) no-repeat right top;
+	text-align: left;
+}
+
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

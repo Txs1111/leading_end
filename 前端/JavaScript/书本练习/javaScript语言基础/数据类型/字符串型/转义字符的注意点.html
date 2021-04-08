@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转义字符的注意点</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.write("<pre>2021-1-22 00:51:21\n2021-1-22 00:51:32</pre>")
+        document.write("2021-1-22 00:53:05\n2021-1-22 00:53:15")
+        alert("2021-1-22 00:54:37\n2021-1-22 00:54:53")
+        document.write("<p>\\n在警告框中会产生换行。但是在document.write();语句中使用转义字符时，只有将其放在格式化文本块中才会起作用")
+    </script>
+</body>
+
+</html>

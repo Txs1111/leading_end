@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error对象</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var str = "I like javascript"
+        try {
+            document.write(str.charat(5)) //应用的方法名错误，应该是charAt（5）
+        } catch (error) { //可以不用exception只是命名而已
+            alert("实际的错误消息为：" + error.message + "\n错误类型的字符串为：" + error.name)
+        } finally {
+            // document.write("实际的错误消息为：" + error.message + "\n错误类型的字符串为：" + error.name)
+            document.write("注释中不能运行是因为error对象不存在")
+        }
+    </script>
+</body>
+
+</html>

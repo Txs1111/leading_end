@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>对元素内容进行设置</title>
+<style>
+body{
+	font-size:14px;
+}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+		$("#div1").text("<span style='color:#FF0000'>重新设置的文本内容</span>");//为<div>标记重新设置文本内容
+		$("#div2").html("<span style='color:#FF0000'>重新设置的HTML内容</span>");//为<div>标记重新设置HTML内容
+   });
+</script>
+
+</head>
+
+<body>
+应用text()方法设置的内容
+<div id="div1">
+<span id="clock">默认显示的文本</span>
+</div>
+<br />应用html()方法设置的内容
+<div id="div2">
+<span id="clock">默认显示的文本</span>
+</div>
+</body>
+</html>

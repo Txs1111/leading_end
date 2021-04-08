@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>输出图书信息(应用Object创建对象)</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var book = new Object(); //创建一个空对象
+        book.getBookInfo = getBookInfo; //定义对象的方法
+        function getBookInfo(name, type, price) {
+            //输出图书的书名、类型及价格
+            document.write("书名：" + name + "<br>类型：" + type + "<br>价格：" + price);
+        }
+        book.getBookInfo("JavaScript入门经典", "JavaScript", "80"); //调用对象的方法
+    </script>
+</body>
+
+</html>

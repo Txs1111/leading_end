@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>获取选手的平均分</title>
+<script type="text/javascript">
+function getAverage(score1,score2,score3){//定义含有3个参数的函数
+	var average=(score1+score2+score3)/3;						//获取3个参数的平均值
+	return average;										//返回average变量的值
+}
+function getResult(score1,score2,score3){//定义含有3个参数的函数
+	document.write("3个评委给出的分数分别为："+score1+"分、"+score2+"分、"+score3+"分<br>");//输出传递的3个参数值
+	var result=getAverage(score1,score2,score3);				//调用getAverage()函数
+	document.write("周星星的最后得分为："+result+"分");	//输出函数的返回值
+}
+</script>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+	getResult(91,89,93);								//调用getResult()函数
+</script>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出当前的日期和时间</title>
+</head>
+
+<body background="bg.jpeg">
+<h2>输出当前日期和时间</h2>
+<script type="text/javascript">
+var now=new Date();//创建日期对象
+var year=now.getFullYear();//获取当前年份
+var month=now.getMonth()+1;//获取当前月份
+var date=now.getDate();//获取当前日期
+var day=now.getDay();//获取当前星期
+var week="";//初始化变量
+switch(day){
+	case 1://如果变量day的值为1
+		week="星期一";//为变量赋值
+		break;//退出switch语句
+	case 2://如果变量day的值为2
+		week="星期二";//为变量赋值
+		break;//退出switch语句
+	case 3://如果变量day的值为3
+		week="星期三";//为变量赋值
+		break;//退出switch语句
+	case 4://如果变量day的值为4
+		week="星期四";//为变量赋值
+		break;//退出switch语句
+	case 5://如果变量day的值为5
+		week="星期五";//为变量赋值
+		break;//退出switch语句
+	case 6://如果变量day的值为6
+		week="星期六";//为变量赋值
+		break;//退出switch语句
+	default://默认值
+		week="星期日";//为变量赋值
+		break;//退出switch语句
+}
+var hour=now.getHours();//获取当前小时数
+var minute=now.getMinutes();//获取当前分钟数
+var second=now.getSeconds();//获取当前秒数
+//为字体设置样式
+document.write("<span style='font-size:24px;font-family:楷体;color:#FF9900'>");
+document.write("今天是："+year+"年"+month+"月"+date+"日 "+week);//输出当前的日期和星期
+document.write("<br>现在是："+hour+":"+minute+":"+second);//输出当前的时间
+document.write("</span>");//输出</span>结束标记
+</script>
+</body>
+</html>

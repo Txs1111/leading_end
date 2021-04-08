@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类名选择器</title>
+    <script type="text/javascript" src="../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var myClass = $(".myClass")
+            myClass.css("background-color", "#C50210")
+            myClass.css("color", "#FFF");
+        })
+    </script>
+</head>
+
+<body>
+    <div class="myClass">注意我的样式</div>
+    <div>我的样式是默认的</div>
+</body>
+
+</html>

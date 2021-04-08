@@ -1,0 +1,45 @@
+@charset "utf-8";
+.mr-content{
+	width:900px;
+	height:900px;
+	margin:0 auto;
+	border:1px solid red;
+	text-align:center;
+	}
+img{
+	width:150px;
+	height:300px;
+	padding-top:20px;
+	}
+.mr-content .mr-block{
+	width:430px;
+	height:430px;
+	float:left;
+	border:10px #FF8080 dashed;
+	color:#804040;
+	text-align:center;
+	}
+.mr-content .mr-block .mr-img1:hover{
+	-moz-transform:rotate(30deg);				/*Firefox下顺时针旋转30度*/
+	-webkit-transform:rotate(30deg);			/*Chrome下顺时针旋转30度*/
+	-o-transform:rotate(30deg);				/*Opera下顺时针旋转30度*/
+	-ms-transform:rotate(30deg);				/*IE下顺时针旋转30度*/	
+	}
+.mr-content .mr-block .mr-img2:hover{
+	-moz-transform:scaleX(2);			/*Firefox下在X轴上进行缩放*/
+	-webkit-transform:scaleX(2);			/*Chrome下在X轴上进行缩放*/
+	-o-transform:scaleX(2);				/*Opera下在X轴上进行缩放*/
+	-ms-transform:scaleX(2);				/*IE下在X轴上进行缩放*/
+	}
+.mr-content .mr-block .mr-img3:hover{
+	-moz-transform:translateX(60px);		     /*Firefox下在X轴上进行平移*/
+	-webkit-transform:translateX(60px);		/*Chrome下在X轴上进行平移*/
+	-o-transform:translateX(60px);			/*Opera下在X轴上进行平移*/
+	-ms-transform:translateX(60px);			/*IE下在X轴上进行平移*/
+	}
+.mr-content .mr-block .mr-img4:hover{
+	-moz-transform:skew(3deg,30deg);			/*Firefox下在X和Y轴上进行倾斜*/
+	-webkit-transform:skew(3deg,30deg);		/*Chrome下在X和Y轴上进行倾斜*/
+	-o-transform:skew(3deg,30deg);				/*Opera下在X和Y轴上进行倾斜*/
+	-ms-transform:skew(3deg,30deg);			/*IE下在X和Y轴上进行倾斜*/	
+	}

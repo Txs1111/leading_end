@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>我的开心小农场</title>
+<style type="text/css">
+	#bg{		/*控制页面背景*/
+		width:456px;
+		height:266px;
+		background-image:url(images/plowland.jpg);
+		border:#999 1px solid;
+		padding:5px;
+	}
+	img{		/*控制图片*/
+		position:absolute;
+		top:85px;
+		left:195px;
+	}
+	#seed{		/*控制播种按钮*/
+		background-image:url(images/btn_seed.png);
+		width:56px;
+		height:56px;
+		position:absolute;
+		top:229px;
+		left:49px;
+		cursor:pointer;
+	}
+	#grow{		/*控制生长按钮*/
+		background-image:url(images/btn_grow.png);
+		width:56px;
+		height:56px;
+		position:absolute;
+		top:229px;
+		left:154px;
+		cursor:pointer;
+	}
+	#bloom{		/*控制开花按钮*/
+		background-image:url(images/btn_bloom.png);
+		width:56px;
+		height:56px;
+		position:absolute;
+		top:229px;
+		left:259px;
+		cursor:pointer;
+	}
+	#fruit{		/*控制结果按钮*/
+		background-image:url(images/btn_fruit.png);
+		width:56px;
+		height:56px;
+		position:absolute;
+		top:229px;
+		left:368px;
+		cursor:pointer;
+	}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#seed").bind("click",function(){			//绑定播种按钮的单击事件
+			$("img").remove();						//移除img元素
+			$("#bg").prepend("<img src='images/seed.png' />");
+		});	
+		$("#grow").bind("click",function(){			//绑定生长按钮的单击事件
+			$("img").remove();						//移除img元素
+			$("#bg").append("<img src='images/grow.png' />");
+		});	
+		$("#bloom").bind("click",function(){		//绑定开花按钮的单击事件
+			$("img").replaceWith("<img src='images/bloom.png' />");
+		});
+		$("#fruit").bind("click",function(){			//绑定结果按钮的单击事件
+			$("<img src='images/fruit.png' />").replaceAll("img");
+		});								
+	});
+</script>
+</head>
+
+<body>
+<div id="bg">
+    <span id="seed"></span>
+    <span id="grow"></span>
+    <span id="bloom"></span>
+    <span id="fruit"></span>
+</div>
+</body>
+</html>

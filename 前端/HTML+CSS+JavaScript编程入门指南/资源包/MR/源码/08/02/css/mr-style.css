@@ -1,0 +1,67 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:12px;
+	}
+#mr-content{                      /*在页面中只有一个mr-content，所以使用ID选择器*/
+	width:1090px;                   /*设置整体页面宽度为1200像素*/
+	height:390px;                   /*设置整体页面高度为411像素*/
+	margin:0 auto;                   /*设置内容在浏览器中自适应*/
+	background:#ffd800;                   /*设置整体页面的背景颜色*/
+	border:1px solid red;                   /*设置整体内容边框*/
+	text-align:left;                   /*文字的对其方式为想做对齐*/
+	}
+.mr-top{			                   /*设置标题“热卖爆款”的属性*/
+	width:1073px;		                   /*设置宽度*/
+	height:60px;                   /*设置高度*/
+	padding:20px 0 0 10px;			/*设置内边距*/
+	color:#8a5223;					/*设置字体颜色*/
+	font-size:36px;					/*设置字体大小*/
+	font-weight:bolder;				/*设置内字体粗细*/
+	}
+.mr-bottom{				
+	width:1200px;                   /*设置内容部分宽度*/
+	height:336px;                   /*设置内容部分高度*/
+	}
+.mr-block1{			
+	width:260px;					/*设置宽度*/
+	height:300px;					/*设置高度*/
+	float:left;						/*设置浮动*/
+	text-align: center;
+	margin-left:10px;				/*设置向左的外边距*/
+	background:#FFF;				/*设置背景*/
+	}
+.mr-img{		
+	height:178px;                   /*图片高度*/
+	text-align: center;
+	padding-top:30px;                   /*图片的内边距*/
+	}
+.mr-title{                        /*图片中手机型号和名称的样式*/
+	text-align: center;
+	height:14px;                   /*设置高度*/
+	padding:37px 0 0 20px;        /*设置内边距*/
+	color:#666;                   /*设置文字颜色*/
+	}
+.mr-title+div{
+	width: 200px;
+	margin: 0 auto;
+}
+.mr-mon{
+	float:left;                   /*设置浮动*/
+	padding:5px 0 0 24px;         /*设置内边距*/
+	color:#f52e1f;               /*设置字体颜色*/
+	font-size:18px;               /*设置字体大小*/
+	font-weight:bolder;          /*在页面中只有一个mr-content，所以使用ID选择器*/
+	}
+.mr-minute{
+	width:48px;                   /*设置宽度*/
+	height:30px;                   /*设置高度*/
+	text-align: center;
+	line-height:30px;              /*设置文字行高*/
+	float:left;                   /*设置浮动*/
+	margin-left:10px;
+	background:#f52e1f;
+	color:#FFF;
+	}

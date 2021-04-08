@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GB2312">
+<title>输出多层星号金字塔形图案</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var star=function(n){//定义匿名函数
+	for(var i=1; i<=n; i++){//定义外层for循环语句
+		for(var j=1; j<=n-i; j++){//定义内层for循环语句
+			document.write("&nbsp;");//输出空格
+		}
+		for(var j=1; j<=i; j++){//定义内层for循环语句
+			document.write("*&nbsp;");//输出*和空格
+		}
+		document.write("<br>");//输出换行标记
+	}
+}
+star(6);//调用函数并传递参数
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>媒体播放时的方法</title>
+  <style>
+    h1 {
+      font-size: x-large;
+      margin: 6px 0px 6px 0px;
+    }
+
+    video {
+     max-width: 445px;
+     height:auto;
+      border: double 8px lightgray;
+    }
+
+    .videoContainer {
+      max-width: 445px;
+      margin:0 auto;
+    }
+
+    #positionBar {
+      height: 28px;
+      color:#333;
+      font-weight: bolder;
+      background: #33FFFF;
+      text-align: center;
+    }
+
+    #positionBar span {
+      display: inline-block;
+      margin-top: 7px;
+    }
+
+    #durationBar {
+     margin:0 auto;
+      border: solid 1px #333;
+      width: 60%;
+      margin-bottom: 5px;
+      box-shadow:15px 10px 30px #333;
+    }
+
+    #bufferBar {
+      background: lightsteelblue;
+      position: absolute;
+    }
+.btn {
+  width:50%;
+  margin:0 auto;
+ margin-top:28px;
+}
+   .btn button{
+
+    
+   }
+  </style>
+
+  
+</head>
+
+<body>
+<div class="videoContainer">
+<!-- timeupdate事件：当前播放位置（currentTime属性）改变   -->
+  <video id="videoPlayer"  ontimeupdate="progressUpdate()" >
+    <source src="butterfly.mp4" type="video/mp4">
+    <source src="butterfly.webm" type="video/webm">
+  </video>
+</div>
+
+<div class="barContainer">
+  <div id="durationBar">
+    <div id="positionBar"><span id="displayStatus">进度条.</span></div>
+  </div>
+</div>
+
+<div class="btn">
+  <button onclick="play()">播放</button>
+  <button onclick="pause()">暂停</button>
+  <button onclick="stop()">停止</button>
+  <button onclick="speedUp()">加速播放</button>
+  <button onclick="slowDown()">减速播放</button>
+  <button onclick="normalSpeed()">正常速度</button>
+</div>
+
+</body>
+<script>
+    var video;
+    var display;
+
+    window.onload = function() {
+      video = document.getElementById("videoPlayer");//获取videoPlayer元素
+
+      display = document.getElementById("displayStatus");
+
+      video.onplaying = function() {
+       //alert(1);
+      }
+      video.onpause = function() {
+        display.innerHTML = "暂停";
+      }
+    }
+    //进程更新函数
+	//currentTime属性自然改变，触发ontimeupdate事件
+
+//  1. 获取视频的当前时间点，将它保存在currentTime属性中
+//  2.（当前时间点/视频的总的播放时间）保存到durantion属性中
+//  3. 转换为#positionBar 百分比长度。
+//  时间变化显示于进度条中：
+    function progressUpdate() {
+      var positionBar = document.getElementById("positionBar");
+		//currentTime--当前的播放位置
+		//duration--媒介时长
+		//(video.currentTime / video.duration * 100)得到一个浮点数
+		//即： positionBar.style.width=百分数，它 长度是相对于#durationBar而言的
+      positionBar.style.width = (video.currentTime / video.duration * 100)  + "%";//播放时进度条的宽
+      displayStatus.innerHTML = (Math.round(video.currentTime*100)/100) ;//播放时进度条的文字
+    }
+
+    function play() {//播放函数
+      video.play();
+    }
+
+    function pause() {
+      video.pause();
+    }
+//currentTime人为地改变当前播放位置改变，触发timeUpdate事件
+    function stop() {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    function speedUp() {
+      video.play();
+      video.playbackRate = 2;
+    }
+
+    function slowDown() {
+      video.play();
+      video.playbackRate = 0.5;
+    }
+
+    function normalSpeed() {
+      video.play();
+      video.playbackRate = 1;
+    }
+
+  </script>
+</html>

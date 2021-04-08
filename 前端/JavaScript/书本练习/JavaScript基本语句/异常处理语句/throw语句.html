@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw语句</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        try {
+            var num = 1 / 0
+            if (num == "Infinity") {
+                throw new Error("除数不可以为0")
+            }
+        } catch (error) {
+            alert(error.message)
+        }
+    </script>
+</body>
+
+</html>

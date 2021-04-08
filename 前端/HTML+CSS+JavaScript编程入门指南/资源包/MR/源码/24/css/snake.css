@@ -1,0 +1,8 @@
+  *                         { margin:0; padding:0; font-family:Verdana,宋体; font-size:12px;}
+  table#map { width:auto; height:auto; margin:0 auto; border-collapse:collapse; border-spacing:0; background-color:#EAEAEA; clear:both; background:#74AFE0}
+  td                 { width:10px; height:10px; border:1px solid black;}
+  .snakehead         { background-color: orangered;}
+  .snakebody         { background-color:#FFCC00;}
+  .snakefood         { background-color: orangered;}
+  .box        { width:310px; margin:0 auto; padding:3em 0; list-style:none;}
+  .box>span{ float:left; height:30px; margin-right:1.5em; line-height:30px;}

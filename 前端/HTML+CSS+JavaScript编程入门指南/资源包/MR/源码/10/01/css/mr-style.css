@@ -1,0 +1,107 @@
+.bg{
+	width: 1000px;
+	height:465px;
+	margin:0 auto;
+	background-image: url("../images/1.jpg");
+	background-position: 10px top;
+	background-repeat: no-repeat;
+	background-color: #fd7a72;
+	border:2px solid red;
+	margin: 0 auto;
+}
+.loginform{
+	width: 362px;
+    height: 431px;
+    background: #F8F8F8;
+	margin-left:57%;
+	text-align: left;
+	font-size: 14px;
+	}
+form{
+	width:90%;
+	margin:0 auto;
+	text-align:cenetr;
+	}
+input[type="text"]{
+		width:91%;
+		height:43px;
+		background:#fff;
+		padding-left: 42px;
+		font-size:14px;
+		border:none;
+		}
+.title{
+		height:50px;
+		text-align:center;
+		line-height:50px;
+		}
+.mr-icon-user{
+	position: relative;
+    top: 39px;
+    left: 15px;
+    color: #B9B3B3;
+	}
+.user-pass{
+	width:100%;
+	}
+input[type="password"]{
+	width:91%;
+	height:43px;
+	padding-left: 42px;
+	font-size:14px;
+	background:#fff;
+	border:none;
+	margin-top:20px;
+	}
+.mr-icon-lock{
+	position: relative;
+    top: 39px;
+    left: 15px;
+    color: #B9B3B3;
+	}
+.login-links{
+	width: 90%;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    line-height: 30px;
+	font-size:14px;
+	}
+.login-links a{
+	text-decoration:none;
+	font-size:14px;
+	color:#ccc;
+	}
+.login{
+	width:90%;
+	}
+input[type="submit"]{
+	height:43px;
+	width:100%;
+	text-align:center;
+	margin-left:20px;	
+	background:#0e90d2;
+	margin-top:10px;
+	border:none;
+	color:#fff;
+	}
+.btn-group{
+	width:90%;
+	height:45px;
+	margin-left:20px;
+	margin-top:20px;
+	}
+.btn-group li{
+	list-style:none;
+	float:left;
+	padding:0 10px 0;
+	}
+.btn-group li span{
+	padding-left:10px;
+	color:#070505;
+	}
+.btn-group li i{
+	color:#0e90d2;
+	
+	}

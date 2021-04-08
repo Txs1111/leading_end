@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运动员信息</title>
+</head>
+
+<body>
+    <h1 style="font-size:24px;">梅西</h1>
+    <script type="text/javascript">
+        function Player(height, weight, sport, team, character) {
+            this.height = height
+            this.weight = weight
+            this.sport = sport
+            this.team = team
+            this.character = character
+        }
+        var player1 = new Player("170cm", "67kg", "足球", "巴塞罗那", "技术出色，意识好")
+        document.write("球员身高：" + player1.height + "<br>")
+        document.write("球员体重：" + player1.weight + "<br>")
+        document.write("运动项目：" + player1.sport + "<br>")
+        document.write("所属球队：" + player1.team + "<br>")
+        document.write("专业特点：" + player1.character + "<br>")
+    </script>
+</body>
+
+</html>

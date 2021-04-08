@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*css document*/
+.mr-cont{
+    width: 800px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}

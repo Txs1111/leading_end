@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工厂函数$()</title>
+    <script type="text/javascript" src="../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input[type='button']").click(function() {
+                var inputValue = $("#testInput").val();
+                alert(inputValue);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="testInput" name="test" value="">
+    <input type="button" value="输入的值为">
+</body>
+
+</html>

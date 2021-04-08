@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可见性过滤器</title>
+    <script type="text/javascript" src="../../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var visibliVal = $("input:visible").val()
+            var hiddenVal1 = $("input:hidden:eq(0)").val()
+            var hiddenVal2 = $("input:hidden:eq(1)").val()
+            alert(visibliVal + "\n" + hiddenVal1 + "\n" + hiddenVal2)
+        })
+    </script>
+</head>
+
+<body>
+    <input type="text" value="显示对的input元素">
+    <input type="text" value="不显示对的input元素" style="display: none">
+    <input type="hidden" value="我是隐藏域">
+</body>
+
+</html>

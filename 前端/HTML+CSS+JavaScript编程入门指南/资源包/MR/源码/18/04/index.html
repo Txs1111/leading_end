@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出2016电影票房排行榜前五名</title>
+<style type="text/css">
+.left{
+padding-left:10px;}
+</style>
+</head>
+
+<body background="bg.gif">
+<table cellspacing="1" bgcolor="#CC00FF">
+  <tr height="30" bgcolor="#FFFFFF">
+   <td align="center" width="50">排名</td>
+   <td align="center" width="210">影片</td>
+   <td align="center" width="100">票房</td>
+  </tr>
+<script type="text/javascript">
+var movieArr=new Array("魔兽","美人鱼","西游记之孙悟空三打白骨精","疯狂动物城","美国队长3");//定义影片数组movieArr
+var boxofficeArr=new Array(14.7,33.9,12,15.3,12.5);		//定义票房数组boxofficeArr
+var sortArr=new Array(14.7,33.9,12,15.3,12.5);	//定义票房数组sortArr
+function ascOrder(x,y){//定义比较函数
+	if(x<y){//如果第一个参数值小于第二个参数值
+		return 1;//返回1
+	}else{
+		return -1;//返回-1
+	}
+}
+sortArr.sort(ascOrder);//为票房进行降序排序
+for(var i=0; i<sortArr.length; i++){//定义外层for循环语句
+	for(var j=0; j<sortArr.length; j++){//定义内层for循环语句
+		if(sortArr[i]==boxofficeArr[j]){//分别获取排序后的票房在原票房数组中的索引
+			document.write("<tr height=26 bgcolor='#FFFFFF'>");//输出<tr>标记
+			document.write("<td align='center'>"+(i+1)+"</td>");//输出影片排名
+			document.write("<td class='left'>"+movieArr[j]+"</td>");//输出票房对应的影片名称
+			document.write("<td align='center'>"+sortArr[i]+"亿元</td>");//输出票房
+			document.write("</tr>");//输出</tr>标记
+		}
+	}
+}
+</script>
+</table>
+</body>
+</html>

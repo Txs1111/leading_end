@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算今天距离明年元旦的天数</title>
+<script type="text/javascript">
+var date1=new Date(); //创建当前的日期对象
+var theNextYear=date1.getFullYear()+1;						//获取明年的年份
+date1.setFullYear(theNextYear);	//设置日期对象date1中的年份
+date1.setMonth(0);//设置日期对象date1中的月份
+date1.setDate(1);//设置日期对象date1中的日期
+var date2=new Date(); //创建当前的日期对象
+var date3=date1.getTime()-date2.getTime();//获取两个日期相差的毫秒数
+var days=Math.ceil(date3/(24*60*60*1000)); //将毫秒数转换成天数
+alert("今天距离明年元旦还有"+days+"天");//输出结果 
+</script>
+</head>
+<body>
+</body>
+</html>

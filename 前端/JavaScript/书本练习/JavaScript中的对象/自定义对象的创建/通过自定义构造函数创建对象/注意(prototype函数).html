@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Student(name, sex, age) {
+            this.name = name
+            this.sex = sex
+            this.age = age
+        }
+        Student.prototype.show = function() {
+            alert("姓名：" + this.name + "\n性别：" + this.sex + "\n年龄：" + this.age)
+        }
+        var student1 = new Student("张三", "男", 25)
+        student1.show()
+    </script>
+</body>
+
+</html>

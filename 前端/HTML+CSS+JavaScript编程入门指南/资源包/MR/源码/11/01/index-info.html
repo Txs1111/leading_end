@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文本框text</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>如图所示，四张图片分别实现旋转，伸缩，平移，倾斜的效果。</h1>
+
+                <p class="mr-code-info">
+                   应用transform属性的rotate函数可以实现2D旋转。应用transform属性的函数可以实现缩放。应用transform属性的translate函数可以实现2D平移。应用transform属性的skew函数可以实现倾斜。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+			    <!-- 这里填写你的HTML代码-->
+       
+               <div class="mr-content">
+                <div class="mr-block">
+                <h2>旋转</h2>
+                <img src="images/10-1.jpg" alt="img1" class="mr-img1">
+                </div>
+                <div class="mr-block">
+                <h2>缩放</h2>
+                <img src="images/10-1a.jpg" alt="img1" class="mr-img2">
+                </div>
+                <div class="mr-block">
+                <h2>平移</h2>
+                <img src="images/10-1b.jpg" alt="img1" class="mr-img3">
+                </div>
+                <div class="mr-block">
+                <h2>倾斜</h2>
+                <img src="images/10-1c.jpg" alt="img1" class="mr-img4">
+                </div>
+                </div>
+              
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+
+<div class="mr-content">
+<div class="mr-block">
+<h2>旋转</h2>
+<img src="images/10-1.jpg" alt="img1" class="mr-img1">
+</div>
+<div class="mr-block">
+<h2>缩放</h2>
+<img src="images/10-1a.jpg" alt="img1" class="mr-img2">
+</div>
+<div class="mr-block">
+<h2>平移</h2>
+<img src="images/10-1b.jpg" alt="img1" class="mr-img3">
+</div>
+<div class="mr-block">
+<h2>倾斜</h2>
+<img src="images/10-1c.jpg" alt="img1" class="mr-img4">
+</div>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+
+.mr-content{
+	width:900px;
+	height:900px;
+	margin:0 auto;
+	border:1px solid red;
+	text-align:center;
+	}
+img{
+	width:150px;
+	height:300px;
+	padding-top:20px;
+	}
+.mr-content .mr-block{
+	width:430px;
+	height:430px;
+	float:left;
+	border:10px #FF8080 dashed;
+	color:#804040;
+	text-align:center;
+	}
+.mr-content .mr-block .mr-img1:hover{
+	-moz-transform:rotate(30deg);				/*Firefox下顺时针旋转30度*/
+	-webkit-transform:rotate(30deg);			/*Chrome下顺时针旋转30度*/
+	-o-transform:rotate(30deg);				/*Opera下顺时针旋转30度*/
+	-ms-transform:rotate(30deg);				/*IE下顺时针旋转30度*/	
+	}
+.mr-content .mr-block .mr-img2:hover{
+	-moz-transform:scaleX(2);			/*Firefox下在X轴上进行缩放*/
+	-webkit-transform:scaleX(2);			/*Chrome下在X轴上进行缩放*/
+	-o-transform:scaleX(2);				/*Opera下在X轴上进行缩放*/
+	-ms-transform:scaleX(2);				/*IE下在X轴上进行缩放*/
+	}
+.mr-content .mr-block .mr-img3:hover{
+	-moz-transform:translateX(60px);		     /*Firefox下在X轴上进行平移*/
+	-webkit-transform:translateX(60px);		/*Chrome下在X轴上进行平移*/
+	-o-transform:translateX(60px);			/*Opera下在X轴上进行平移*/
+	-ms-transform:translateX(60px);			/*IE下在X轴上进行平移*/
+	}
+.mr-content .mr-block .mr-img4:hover{
+	-moz-transform:skew(3deg,30deg);			/*Firefox下在X和Y轴上进行倾斜*/
+	-webkit-transform:skew(3deg,30deg);		/*Chrome下在X和Y轴上进行倾斜*/
+	-o-transform:skew(3deg,30deg);				/*Opera下在X和Y轴上进行倾斜*/
+	-ms-transform:skew(3deg,30deg);			/*IE下在X和Y轴上进行倾斜*/	
+	}
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

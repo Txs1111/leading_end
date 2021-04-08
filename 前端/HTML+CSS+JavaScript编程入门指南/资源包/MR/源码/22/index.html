@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>别踩白块儿</title>
+<link rel="stylesheet" href="css/Block.css">
+</head>
+<body>
+<div class="main" id="main">
+	<div class="block_box" id="block_box"></div>
+	<div class="cover" id="cover">
+		<h1>别踩白块儿</h1>
+		<span id="start">开始</span>
+	</div>
+</div>
+<script src="js/Block.js"></script>
+<script type="text/javascript">
+	var block_box = document.getElementById('block_box');//获取元素
+	var block = new Block(block_box);//创建对象实例
+	block.init();//调用初始化方法
+	var cover = document.getElementById('cover');//获取元素
+	var start = document.getElementById('start');//获取元素
+	start.onclick = function(){//单击开始
+		block.start();//调用方法开始游戏
+		cover.style.display = 'none';//隐藏元素
+	}
+</script>
+</body>
+</html>

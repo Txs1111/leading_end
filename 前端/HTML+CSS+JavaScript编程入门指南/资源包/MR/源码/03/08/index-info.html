@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>设置图像热区链接</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link href="css/mr-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>单击图片不同位置，图片跳转到不同页面</h1>
+
+                <p class="mr-code-info">
+                    设置图像热区链接需要先定义映射图像的名称，然后再引用这个映射图像。在area标记中定义热区的位置和链接，其中shape用来定义热区形状，可以取值为rect（矩形区域）、circle（圆形区域）以及poly（多边形区域）；coords参数则用来设置区域坐标，对于不同形状来说，coords设置的方式也不相同。coords参数需要按照顺序（可以是逆时针，也可以是顺时针）取各个点的x、y坐标值。由于定义坐标比较复杂而且难以控制，一般情况下都使用可视化软件进行这种参数的设置。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+<div id="mr-cont">
+<img class="addr" src="img/big.png" usemap="mr-hotpoint" />
+<map name="mr-hotpoint"><!--left、top、right和bottom，-->
+<area shape="rect" coords="45,126,143,203" href="img/ad.jpg" title="电脑精装" target="_blank"/>
+<area shape="rect"coords="410,80,508,174" href="img/ad4.png"title="常用家电" target="_blank" />
+<area shape="rect" coords="30,250,130,350" href="img/ad1.png" title="手机数码" target="_blank"  />
+<area shape="rect" coords="430,224,528,318" href="img/ad3.png" title="鲜货直达"target="_blank"/>
+</map>
+</div>
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+<!-- 这里填写你的HTML代码-->
+
+<div id="mr-cont">
+<img class="addr" src="img/big.png" usemap="mr-hotpoint" />
+<map name="mr-hotpoint"><!--left、top、right和bottom，-->
+<area shape="rect" coords="45,126,143,203" href="img/ad.jpg" title="电脑精装" target="_blank"/>
+<area shape="rect"coords="410,80,508,174" href="img/ad4.png"title="常用家电" target="_blank" />
+<area shape="rect" coords="30,250,130,350" href="img/ad1.png" title="手机数码" target="_blank"  />
+<area shape="rect" coords="430,224,528,318" href="img/ad3.png" title="鲜货直达"target="_blank"/>
+</map>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+<!-- 这里填写你的CSS代码-->
+
+#mr-cont {
+	background: #fd7a72;
+	text-align: center
+}                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

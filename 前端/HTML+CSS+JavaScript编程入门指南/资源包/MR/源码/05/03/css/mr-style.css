@@ -1,0 +1,105 @@
+.mr-box {
+	width: 1000px;
+	height: 500px;
+	background-image: url(../images/2.jpg);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-size: 100% 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+/*主导航样式*/
+.mr-nav>ul, ol {
+	width: 93%;
+	margin: 0 auto;
+}
+.mr-nav {
+	background: #DD2727;
+	height: 37px;
+	width: 1000px;
+}
+.mr-nav li {/*导航栏的li的样式*/
+	width: 176px;
+	list-style: none;
+	float: left;
+	line-height: 37px;
+}
+.mr-hover:hover {  /*当鼠标移动上去时导航栏变色*/
+	background: rgba(255,255,255,0.1);
+}
+.mr-shopbox ul {
+	padding-top: 4px;
+	padding-left: 20px;
+}
+.mr-nav li a {
+	text-decoration: none;  /*无下划线*/
+	font-size: 17px;
+	font-weight: 500;    /*字体粗细*/
+	padding: 6px 17px;  /*内边距*/
+	color: #222;
+	font-family: "微软雅黑";
+}
+.mr-nav li:hover ul div, .mr-nav li:hover ol div {
+	display: block;
+}
+.mr-nav li ol div {
+	width: 179px;
+	display: none;
+	background: rgba(255,255,255,0.5);
+}
+.mr-nav li ul div {
+	width: 185px;
+	display: block;
+	background: rgba(255,255,255,0.5);
+}
+.mr-shopbox li {
+	width: 153px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	margin-top: 15px;
+	border: 1px solid #CB0C10;
+	border-radius: 10px;
+}
+.mr-shopbox li:hover {
+	background: #CB0C10;
+}
+.mr-item {
+	background: #fff;
+}
+/* 商品分类子导航栏*/
+.mr-item li {
+	width: 100%;
+}
+.mr-item li a {  /* li的所有子元素a的样式*/
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #000;
+}
+.mr-item li:hover {  /*鼠标滑过li时的样式*/
+	background: #fff;
+}
+.mr-item li a:hover {  /*鼠标滑过a时*/
+	color: #DD2727
+}
+/*春节特卖子导航*/
+.mr-shopbox li a {
+	text-decoration: none;
+	COLOR: #FFF;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+.mr-shopbox {
+	background: rgba(0,0,0,1);/*背景色*/
+	width: 234px;
+	height: 432px;
+}
+
+.mr-border {
+	width: 1097px;
+	height: 541px;
+	border: 2px solid red;
+	margin: 0 auto;
+}

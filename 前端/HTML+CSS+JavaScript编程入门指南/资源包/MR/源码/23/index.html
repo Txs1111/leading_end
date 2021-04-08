@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>jQuery五子棋游戏</title>
+	<style>
+	
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/chess.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="chessboard" id="chessboard"></div>
+	<div class="right">
+		<a id="play_btn" class="btn" href="#">开&nbsp;&nbsp;&nbsp;始</a>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function() {
+	Gobang.init();//游戏初始化
+});
+var Gobang = {
+	NO_CHESS: 0,//无棋位置的值
+	BLACK_CHESS: -1,//黑棋的值
+	WHITE_CHESS: 1,//白棋的值
+	chessArr: [],	//记录棋子
+	chessboardHtml: "",//棋盘HTML
+	playerColor: "black",	//玩家棋子颜色
+	comColor: "white",	//计算机棋子颜色
+	isPlayerTurn: true, //轮到玩家下棋
+	isGameStart: false,	//游戏是否已经开始
+	isGameOver: false, //游戏是否已经结束
+	playerLastChess: [], //玩家最后下子位置
+	comLastChess: [], //计算机最后下子位置
+	init: function () {
+		//初始化棋盘
+		for(var i=0;i<15*15;i++){
+			var div=$("<div></div>");
+			$("div.chessboard").append(div);
+		}
+		this.chessboardHtml = $("div.chessboard").html();//设置棋盘内容
+		var _t = this;
+		//单击操作按钮
+		$(".right a").click(function (event) {
+			event.preventDefault();
+			_t.resetChessBoard();//重置棋盘
+			if (_t.isGameStart) {	//如果游戏已经开始
+				_t.gameOver();//游戏结束
+			} else {
+				_t.gameStart();//游戏开始
+			}
+		});
+		this.resetChessBoard();//重置棋盘
+	},
+	//重置棋盘
+	resetChessBoard: function () {
+		$("div.chessboard").html(this.chessboardHtml);//设置棋盘内容
+		this.isGameOver = false;
+		//初始化棋子状态
+		var i, j;
+		for (i = 0; i < 15; i++) {
+			this.chessArr[i] = [];
+			for (j = 0; j < 15; j++) {
+				this.chessArr[i][j] = this.NO_CHESS;
+			}
+		}
+		//玩家下棋
+		var _t = this;
+		$("div.chessboard div").click(function () {
+			if (!_t.isPlayerTurn || _t.isGameOver) {
+				return;
+			}
+			if (!_t.isGameStart) {
+				_t.gameStart();//开始游戏
+			}
+			var index = $(this).index(),
+				i = Math.floor(index / 15),
+				j = index % 15;
+			if (_t.chessArr[i][j] === _t.NO_CHESS) {//如果当前位置没有棋子
+				_t.playChess(i, j, _t.playerColor);//下子
+				//根据单击的位置移除指定的样式
+				if (i === 0 && j === 0) {
+					$(this).removeClass("hover-up-left");
+				}
+				else if (i === 0 && j === 14) {
+					$(this).removeClass("hover-up-right");
+				}
+				else if (i === 14 && j === 0) {
+					$(this).removeClass("hover-down-left");
+				}
+				else if (i === 14 && j === 14) {
+					$(this).removeClass("hover-down-right");
+				}
+				else if (i === 0) {
+					$(this).removeClass("hover-up");
+				}
+				else if (i === 14) {
+					$(this).removeClass("hover-down");
+				}
+				else if (j === 0) {
+					$(this).removeClass("hover-left");
+				}
+				else if (j === 14) {
+					$(this).removeClass("hover-right");
+				}
+				else {
+					$(this).removeClass("hover");
+				}
+				_t.playerLastChess = [i, j];
+				_t.isPlayerWin(i, j);//判断玩家是否取胜
+			}
+		});
+		//鼠标在棋盘上的移动效果
+		$("div.chessboard div").hover(
+			function () {
+				if (!_t.isPlayerTurn || _t.isGameOver) { return; }
+				var index = $(this).index(),
+					i = Math.floor(index / 15),
+					j = index % 15;
+				if (_t.chessArr[i][j] === _t.NO_CHESS) {//如果当前位置没有棋子
+					//根据鼠标指向的位置添加指定的样式
+					if (i === 0 && j === 0) {
+						$(this).addClass("hover-up-left");
+					}
+					else if (i === 0 && j === 14) {
+						$(this).addClass("hover-up-right");
+					}
+					else if (i === 14 && j === 0) {
+						$(this).addClass("hover-down-left");
+					}
+					else if (i === 14 && j === 14) {
+						$(this).addClass("hover-down-right");
+					}
+					else if (i === 0) {
+						$(this).addClass("hover-up");
+					}
+					else if (i === 14) {
+						$(this).addClass("hover-down");
+					}
+					else if (j === 0) {
+						$(this).addClass("hover-left");
+					}
+					else if (j === 14) {
+						$(this).addClass("hover-right");
+					}
+					else {
+						$(this).addClass("hover");
+					}
+				}
+			},
+			function () {
+				if (!_t.isPlayerTurn || _t.isGameOver) { return; }
+				var index = $(this).index(),
+					i = Math.floor(index / 15),
+					j = index % 15;
+					//根据鼠标移开的位置移除指定的样式
+					if (i === 0 && j === 0) {
+						$(this).removeClass("hover-up-left");
+					}
+					else if (i === 0 && j === 14) {
+						$(this).removeClass("hover-up-right");
+					}
+					else if (i === 14 && j === 0) {
+						$(this).removeClass("hover-down-left");
+					}
+					else if (i === 14 && j === 14) {
+						$(this).removeClass("hover-down-right");
+					}
+					else if (i === 0) {
+						$(this).removeClass("hover-up");
+					}
+					else if (i === 14) {
+						$(this).removeClass("hover-down");
+					}
+					else if (j === 0) {
+						$(this).removeClass("hover-left");
+					}
+					else if (j === 14) {
+						$(this).removeClass("hover-right");
+					}
+					else {
+						$(this).removeClass("hover");
+					}
+			}
+		);
+	},
+	//游戏开始
+	gameStart: function () {
+		this.isGameStart = true;
+		$("#play_btn").html("重&nbsp;&nbsp;&nbsp;玩");//设置按钮文字
+	},
+	//游戏结束
+	gameOver: function () {
+		this.isGameStart = false;
+		$("#play_btn").html("开&nbsp;&nbsp;&nbsp;始");//设置按钮文字
+	},
+	//下棋
+	playChess: function (i, j, color) {
+		this.chessArr[i][j] = color === "black" ? this.BLACK_CHESS : this.WHITE_CHESS;
+		if (color === this.comColor) {
+			$("div.chessboard div." + color + "-last").addClass(color).removeClass(color + "-last");
+			$("div.chessboard div:eq(" + (i * 15 + j) + ")").addClass(color + "-last");
+		} else {
+			$("div.chessboard div:eq(" + (i * 15 + j) + ")").addClass(color);
+		}
+	},
+	//玩家是否取胜
+	isPlayerWin: function (i, j) {
+		var nums = 1,	//连续棋子个数
+			chessColor = this.BLACK_CHESS,
+			m, n;
+		//x方向
+		for (m = j - 1; m >= 0; m--) {
+			if (this.chessArr[i][m] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = j + 1; m < 15; m++) {
+			if (this.chessArr[i][m] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			this.playerWin();//玩家胜利
+			return;
+		} else {
+			nums = 1;
+		}
+		//y方向
+		for (m = i - 1; m >= 0; m--) {
+			if (this.chessArr[m][j] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1; m < 15; m++) {
+			if (this.chessArr[m][j] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			this.playerWin();//玩家胜利
+			return;
+		} else {
+			nums = 1;
+		}
+		//左斜方向
+		for (m = i - 1, n = j - 1; m >= 0 && n >= 0; m--, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1, n = j + 1; m < 15 && n < 15; m++, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			this.playerWin();//玩家胜利
+			return;
+		} else {
+			nums = 1;
+		}
+		//右斜方向
+		for (m = i - 1, n = j + 1; m >= 0 && n < 15; m--, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1, n = j - 1; m < 15 && n >= 0; m++, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			this.playerWin();//玩家胜利
+			return;
+		}
+		this.comTurn();//计算机下棋
+	},
+	//玩家获胜
+	playerWin: function () {
+		this.showResult(true);//显示结果
+		this.gameOver();//游戏结束
+	},
+	//计算机下棋
+	comTurn: function () {
+		this.isPlayerTurn = false;
+		var maxX = 0,
+			maxY = 0,
+			maxWeight = 0,
+			i, j, tem;
+		for (i = 14; i >= 0; i--) {
+			for (j = 14; j >= 0; j--) {
+				if (this.chessArr[i][j] !== this.NO_CHESS) {//如果该位置有棋子
+					continue;
+				}
+				tem = this.comWeight(i, j);
+				if (tem > maxWeight) {
+					maxWeight = tem;
+					maxX = i;
+					maxY = j;
+				}
+			}
+		}
+		this.playChess(maxX, maxY, this.comColor);//计算机下棋
+		this.comLastChess = [maxX, maxY];
+		if ((maxWeight >= 100000 && maxWeight < 250000) || (maxWeight >= 500000)) {
+			this.showResult(false);//显示结果
+			this.gameOver();//游戏结束
+			this.isPlayerTurn = true;
+		} else {
+			this.isPlayerTurn = true;
+		}
+	},
+	//显示结果
+	showResult: function(isPlayerWin) {
+		if (isPlayerWin) {
+			var resultDiv = $("<div id='success'></div>");//创建div元素
+            resultDiv.addClass("imgDiv");//为div设置class属性值
+            resultDiv.html("<img src='images/success.png' width='100%' height='100%'>");//为div设置图片
+            $("body").append(resultDiv);//向body中添加div元素
+            setTimeout("$('#success').remove()",3000);//过3秒钟移除div元素
+		} else {
+			var resultDiv = $("<div id='failure'></div>");//创建div元素
+            resultDiv.addClass("imgDiv");//为div设置class属性值
+            resultDiv.html("<img src='images/failure.png' width='100%' height='100%'>");//为div设置图片
+            $("body").append(resultDiv);//向body中添加div元素
+            setTimeout("$('#failure').remove()",3000);//过3秒钟移除div元素
+		}
+		this.isGameOver = true;
+		this.markWinChesses(isPlayerWin);
+	},
+	//标记显示获胜棋子
+	markWinChesses: function (isPlayerWin) {
+		var nums = 1,	//连续棋子个数
+			lineChess = [],	//连续棋子位置
+			i,
+			j,
+			chessColor,
+			m, n;
+		if (isPlayerWin) {
+			chessColor = this.BLACK_CHESS;
+			i = this.playerLastChess[0];
+			j = this.playerLastChess[1];
+		} else {
+			chessColor = this.WHITE_CHESS;
+			i = this.comLastChess[0];
+			j = this.comLastChess[1];
+		}
+		$("div.chessboard div." + this.comColor + "-last").addClass(this.comColor).removeClass(this.comColor + "-last");//设置最后一个计算机下棋子的样式
+		//x方向
+		lineChess[0] = [i,j];//定义第一个数组元素
+		for (m = j - 1; m >= 0; m--) {
+			if (this.chessArr[i][m] === chessColor) {
+				lineChess[nums] = [i,m];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = j + 1; m < 15; m++) {
+			if (this.chessArr[i][m] === chessColor) {
+				lineChess[nums] = [i,m];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			for (k = nums - 1; k >= 0; k--) {
+				this.markChess(lineChess[k][0] * 15 + lineChess[k][1], isPlayerWin ? this.playerColor : this.comColor);
+			}
+			return;
+		}
+		//y方向
+		nums = 1;
+		lineChess[0] = [i,j];
+		for (m = i - 1; m >= 0; m--) {
+			if (this.chessArr[m][j] === chessColor) {
+				lineChess[nums] = [m,j];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1; m < 15; m++) {
+			if (this.chessArr[m][j] === chessColor) {
+				lineChess[nums] = [m,j];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			for (k = nums - 1; k >= 0; k--) {
+				this.markChess(lineChess[k][0] * 15 + lineChess[k][1], isPlayerWin ? this.playerColor : this.comColor);
+			}
+			return;
+		}
+		//左斜方向
+		nums = 1;
+		lineChess[0] = [i,j];
+		for (m = i - 1, n = j - 1; m >= 0 && n >= 0; m--, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				lineChess[nums] = [m,n];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1, n = j + 1; m < 15 && n < 15; m++, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				lineChess[nums] = [m,n];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			for (k = nums - 1; k >= 0; k--) {
+				this.markChess(lineChess[k][0] * 15 + lineChess[k][1], isPlayerWin ? this.playerColor : this.comColor);
+			}
+			return;
+		}
+		//右斜方向
+		nums = 1;
+		lineChess[0] = [i,j];
+		for (m = i - 1, n = j + 1; m >= 0 && n < 15; m--, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				lineChess[nums] = [m,n];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		for (m = i + 1, n = j - 1; m < 15 && n >= 0; m++, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				lineChess[nums] = [m,n];
+				nums++;
+			} else {
+				break;
+			}
+		}
+		if (nums >= 5) {
+			for (k = nums - 1; k >= 0; k--) {
+				this.markChess(lineChess[k][0] * 15 + lineChess[k][1], isPlayerWin ? this.playerColor : this.comColor);
+			}
+		}
+	},
+	//标记棋子样式
+	markChess: function (pos, color) {
+		$("div.chessboard div:eq(" + pos + ")").removeClass(color).addClass(color + "-last");
+	},
+	//统计X方向连子个数并判断两端是否为空
+	numAndSideX: function (i, j, chessColor) {
+		var m, n,
+			nums = 1,
+			side1 = false,
+			side2 = false;
+		for (m = j - 1; m >= 0; m--) {
+			if (this.chessArr[i][m] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[i][m] === this.NO_CHESS) {
+					side1 = true;
+				}
+				break;
+			}
+		}
+		for (m = j + 1; m < 15; m++) {
+			if (this.chessArr[i][m] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[i][m] === this.NO_CHESS) {
+					side2 = true;
+				}
+				break;
+			}
+		}
+		return {"nums": nums, "side1": side1, "side2": side2};
+	},
+	//统计Y方向连子个数并判断两端是否为空
+	numAndSideY: function (i, j, chessColor) {
+		var m, n,
+			nums = 1,
+			side1 = false,
+			side2 = false;
+		for (m = i - 1; m >= 0; m--) {
+			if (this.chessArr[m][j] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][j] === this.NO_CHESS) {
+					side1 = true;
+				}
+				break;
+			}
+		}
+		for (m = i + 1; m < 15; m++) {
+			if (this.chessArr[m][j] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][j] === this.NO_CHESS) {
+					side2 = true;
+				}
+				break;
+			}
+		}
+		return {"nums": nums, "side1": side1, "side2": side2};
+	},
+	//统计左斜方向连子个数并判断两端是否为空
+	numAndSideXY: function (i, j, chessColor) {
+		var m, n,
+			nums = 1,
+			side1 = false,
+			side2 = false;
+		for (m = i - 1, n = j - 1; m >= 0 && n >= 0; m--, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][n] === this.NO_CHESS) {
+					side1 = true;
+				}
+				break;
+			}
+		}
+		for (m = i + 1, n = j + 1; m < 15 && n < 15; m++, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][n] === this.NO_CHESS) {
+					side2 = true;
+				}
+				break;
+			}
+		}
+		return {"nums": nums, "side1": side1, "side2": side2};
+	},
+	//统计右斜方向连子个数并判断两端是否为空
+	numAndSideYX: function (i, j, chessColor) {
+		var m, n,
+			nums = 1,
+			side1 = false,
+			side2 = false;
+		for (m = i - 1, n = j + 1; m >= 0 && n < 15; m--, n++) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][n] === this.NO_CHESS) {
+					side1 = true;
+				}
+				break;
+			}
+		}
+		for (m = i + 1, n = j - 1; m < 15 && n >= 0; m++, n--) {
+			if (this.chessArr[m][n] === chessColor) {
+				nums++;
+			} else {
+				if (this.chessArr[m][n] === this.NO_CHESS) {
+					side2 = true;
+				}
+				break;
+			}
+		}
+		return {"nums": nums, "side1": side1, "side2": side2};
+	},
+	//计算下子权重
+	comWeight: function (i, j) {
+		var weight = 14 - (Math.abs(i - 7) + Math.abs(j - 7)), //基于棋盘位置权重
+			pointInfo = {},	//存储连子个数及两端是否为空的信息
+			chessColor = this.WHITE_CHESS;
+		//x方向
+		pointInfo = this.numAndSideX(i, j, chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, true);//计算机下子权重
+		pointInfo = this.numAndSideX(i, j, -chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, false);//玩家下子权重
+		//y方向
+		pointInfo = this.numAndSideY(i, j, chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, true);//计算机下子权重
+		pointInfo = this.numAndSideY(i, j, -chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, false);//玩家下子权重
+		//左斜方向
+		pointInfo = this.numAndSideXY(i, j, chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, true);//计算机下子权重
+		pointInfo = this.numAndSideXY(i, j, -chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, false);//玩家下子权重
+		//右斜方向
+		pointInfo = this.numAndSideYX(i, j, chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, true);//计算机下子权重
+		pointInfo = this.numAndSideYX(i, j, -chessColor);
+		weight += this.judgeWeight(pointInfo.nums, pointInfo.side1, pointInfo.side2, false);//玩家下子权重
+		return weight;
+	},
+	//判断权重
+	judgeWeight: function (nums, side1, side2, isCom) {
+		var weight = 0;
+		switch (nums) {
+			case 1:
+				if (side1 && side2) {
+					weight = isCom ? 15 : 10;	//一个子两边为空
+				}
+				break;
+			case 2:
+				if (side1 && side2) {
+					weight = isCom ? 100 : 50;	//两个连子两边为空
+				}
+				else if (side1 || side2) {
+					weight = isCom ? 10 : 5;	//两个连子一边为空
+				}
+				break;
+			case 3:
+				if (side1 && side2) {
+					weight = isCom ? 500 : 200;	//三个连子两边为空
+				}
+				else if (side1 || side2) {
+					weight = isCom ? 30 : 20;	//三个连子一边为空
+				}
+				break;
+			case 4:
+				if (side1 && side2) {
+					weight = isCom ? 5000 : 2000;	//四个连子两边为空
+				}
+				else if (side1 || side2) {
+					weight = isCom ? 400 : 100;	//四个连子一边为空
+				}
+				break;
+			case 5:
+				weight = isCom ? 100000 : 10000;
+				break;
+			default:
+				weight = isCom ? 500000 : 250000;
+				break;
+		}
+		return weight;
+	}
+};
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单对象的属性过滤器的实例</title>
+    <script type="text/javascript" src="../../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input:checked").css("display", "none"); //隐藏选中的复选框
+            $("input:disabled").val("我是不可用的"); //为灰色不可用按钮赋值
+        });
+
+        function selectVal() { //下拉菜单变化时执行的函数
+            alert($("select option:selected").val()); //显示选中的值
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        复选框1：<input type="checkbox" checked="checked" value="复选框1" /> 复选框2：
+        <input type="checkbox" checked="checked" value="复选框2" /> 复选框3：
+        <input type="checkbox" value="复选框3" /><br /> 不可用按钮：
+        <input type="button" value="不可用按钮" disabled><br /> 下拉菜单：
+        <select onchange="selectVal()">
+    <option value="菜单项1">菜单项1</option>
+    <option value="菜单项2">菜单项2</option>
+    <option value="菜单项3">菜单项3</option>
+  </select>
+    </form>
+</body>
+
+</html>

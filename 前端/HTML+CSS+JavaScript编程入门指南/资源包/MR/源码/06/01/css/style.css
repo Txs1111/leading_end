@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体布局*/
+.mr-cont{
+	width:  365px;    /*整体大小*/
+	height: 375px;
+	margin: 20px auto;
+	border: 1px solid #f00;
+	background: url(../img/4-2.png);   /*添加背景图片*/
+}
+/*表单整体位置*/
+form{
+	padding: 65px 50px;
+}
+label{
+	color: #fff;
+	display: block;
+	padding-top: 10px;
+	position: relative;
+}
+/*设置单行文本框和密码框的样式*/
+label input{
+	height: 25px;
+	width: 200px;
+	position: absolute;
+}
+label img{
+	height: 28px;
+}
+

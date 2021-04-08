@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算购物车中商品总价</title>
+    <script type="text/javascript">
+        function price(unitPrice,number){//定义函数，将商品单价和商品数量作为参数传递
+	        var totalPrice=unitPrice*number;//计算单个商品总价
+	        return totalPrice;//返回单个商品总价
+        }
+		var phone = price(5000,2);//调用函数，计算手机总价
+	    var computer = price(4000,10);//调用函数，计算笔记本电脑总价
+	    var total=phone+computer;//计算所有商品总价
+	    alert("购物车中商品总价："+total+"元");//输出所有商品总价
+    </script>
+</head>
+<body>
+</body>
+</html>
+

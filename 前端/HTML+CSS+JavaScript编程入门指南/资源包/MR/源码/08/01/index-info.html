@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>css常用选择器</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>如图为商城首页的手机板块部分。</h1>
+
+                <p class="mr-code-info">
+                    元素选择器、类选择器、id选择器、属性选择器都是常用的选择器。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+			    <!-- 这里填写你的HTML代码-->
+       
+              <div id="mr-content">
+				  <div class="mr-top">
+					<h2>手机</h2>							<!--通过<h2>标签添加二级标题-->
+					<p class="mr-p1">手机风暴</p>				<!--通过<p>标签添加文字-->
+					<p class="mr-p2">></p>
+					<p class="mr-p2">更多手机</p>
+					<p class="mr-p2">OPPO</p>
+					<p class="mr-p2">联想</p>
+					<p class="mr-p2">魅族</p>
+					<p class="mr-p2">乐视</p>
+					<p class="mr-p2">荣耀</p>
+					<p class="mr-p2">小米</p>
+				  </div>
+				  <img src="images/8-1.jpg" alt="" class="mr-img1">		<!--通过<img>标签添加图片-->
+				  <div class="mr-right">
+					<img src="images/8-1a.jpg" alt="" att="a">
+					<img src="images/8-1b.jpg" alt="" att="b"><br/>
+					<img src="images/8-1c.jpg" alt="" att="c">
+					<img src="images/8-1d.jpg" alt="" att="d">
+					<img src="images/8-1e.jpg" alt="" att="e">
+					<img src="images/8-1g.jpg" alt="" class="mr-car1">
+					<img src="images/8-1g.jpg" alt="" class="mr-car2">
+					<img src="images/8-1g.jpg" alt="" class="mr-car3">
+					<img src="images/8-1g.jpg" alt="" class="mr-car4">
+					<img src="images/8-1g.jpg" alt="" class="mr-car5">
+					<p class="mr-price1">OPPO R9 Plus<br/><span>3499.00</span></p>
+					<p class="mr-price2">vivo Xplay6<br/><span>4498.00</span></p>
+					<p class="mr-price3">Apple iPhone 7<br/><span>5199.00</span></p>
+					<p class="mr-price4">360 NS4<br/><span>1249.00</span></p>
+					<p class="mr-price5">小米 Note4<br/><span>1099.00</span></p>
+				  </div>
+				</div>
+              
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+
+<div id="mr-content">
+  <div class="mr-top">
+    <h2>手机</h2>							<!--通过<h2>标签添加二级标题-->
+    <p class="mr-p1">手机风暴</p>				<!--通过<p>标签添加文字-->
+    <p class="mr-p2">></p>
+    <p class="mr-p2">更多手机</p>
+    <p class="mr-p2">OPPO</p>
+    <p class="mr-p2">联想</p>
+    <p class="mr-p2">魅族</p>
+    <p class="mr-p2">乐视</p>
+    <p class="mr-p2">荣耀</p>
+    <p class="mr-p2">小米</p>
+  </div>
+  <img src="images/8-1.jpg" alt="" class="mr-img1">		<!--通过<img>标签添加图片-->
+  <div class="mr-right">
+  	<img src="images/8-1a.jpg" alt="" att="a">
+  	<img src="images/8-1b.jpg" alt="" att="b"><br/>
+  	<img src="images/8-1c.jpg" alt="" att="c">
+  	<img src="images/8-1d.jpg" alt="" att="d">
+  	<img src="images/8-1e.jpg" alt="" att="e">
+  	<img src="images/8-1g.jpg" alt="" class="mr-car1">
+  	<img src="images/8-1g.jpg" alt="" class="mr-car2">
+  	<img src="images/8-1g.jpg" alt="" class="mr-car3">
+  	<img src="images/8-1g.jpg" alt="" class="mr-car4">
+  	<img src="images/8-1g.jpg" alt="" class="mr-car5">
+  	<p class="mr-price1">OPPO R9 Plus<br/><span>3499.00</span></p>
+  	<p class="mr-price2">vivo Xplay6<br/><span>4498.00</span></p>
+  	<p class="mr-price3">Apple iPhone 7<br/><span>5199.00</span></p>
+  	<p class="mr-price4">360 NS4<br/><span>1249.00</span></p>
+  	<p class="mr-price5">小米 Note4<br/><span>1099.00</span></p>
+  </div>
+</div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+
+#mr-content{					/*使用ID选择器设置页面布局*/
+	width:1200px;
+	height:540px;
+	border:1px solid red;
+	margin:0 auto;
+	text-align:left; 			/*设置文本对齐方式*/
+	}
+.mr-top{						/*使用类选择器设置页面布局*/
+	width:1200px;
+	height:45px;
+	border-bottom:2px solid; 	/*设置边框*/
+	margin:0 auto; 			/*设置外边距*/
+	}
+h2{
+	display:inline-block;
+	color:#333333;
+	}
+.mr-top .mr-p1{
+	display:inline-block;
+	font-size:10px;
+	color:#666;
+	}
+.mr-top .mr-p2{
+	display:inline-block;
+	font-size:10px;
+	color:#666;
+	float:right;
+	padding:10px 20px 0 0;
+	}
+.mr-img1{					/*使用类选择器设置图片浮动*/
+	float:left;
+	}
+.mr-right{					/*使用类选择器设置页面布局*/
+	width:960px;				/*设置宽度*/
+	height:527px;				/*设置高度*/
+	float:left;				/*设置浮动*/
+	position:relative;		/*设置定位*/
+	}
+[att=a]{ 					/*使用属性选择器设置第1张手机图片位置及大小*/
+	width:180px; 				/*设置宽度*/
+	height:182px; 			/*设置高度*/
+	position:absolute; 		/*设置定位*/
+	left:140px;
+	top:20px;
+	}
+[att=b]{						/*使用属性选择器设置第2张手机图片位置及大小*/
+	width:180px;
+	height:182px;
+	position:absolute;
+	left:700px;
+	top:20px;
+	}
+[att=c]{						/*使用属性选择器设置第3张手机图片位置及大小*/
+	width:180px;
+	height:182px;
+	position:absolute;
+	left:400px;
+	top:180px;
+	}
+[att=d]{						/*使用属性选择器设置第4张手机图片位置及大小*/
+	width:180px;
+	height:182px;
+	position:absolute;
+	left:100px;
+	top:250px;
+	}
+[att=e]{						/*使用属性选择器设置第5张手机图片位置及大小*/
+	width:180px;
+	height:182px;
+	position:absolute;
+	left:650px;
+	top:230px;
+	}
+.mr-car1{					/*使用类选择器设置第1个购物车小图标位置*/
+	position:absolute;
+	left:330px;
+	top:170px;
+	}
+.mr-car2{					/*使用类选择器设置第2个购物车小图标位置*/
+	position:absolute;
+	left:890px;
+	top:170px;
+	}
+.mr-car3{					/*使用类选择器设置第3个购物车小图标位置*/
+	position:absolute;
+	left:590px;
+	top:330px;
+	}
+.mr-car4{					/*使用类选择器设置第4个购物车小图标位置*/
+	position:absolute;
+	left:290px;
+	top:380px;
+	}
+.mr-car5{					/*使用类选择器设置第5个购物车小图标位置*/
+	position:absolute;
+	left:840px;
+	top:380px;
+	}
+.mr-price1{
+	position: absolute;
+	left:50px;
+	top:170px;
+}
+span{
+	font-size: 10px;
+	color: #706A6A;
+}
+.mr-price2{
+	position: absolute;
+	left:620px;
+	top:170px;
+}
+.mr-price3{
+	position: absolute;
+	left:0p;
+	top:350px;
+}	
+.mr-price4{
+	position: absolute;
+	left:350px;
+	top:300px;
+}	
+.mr-price5{
+	position: absolute;
+	left:560px;
+	top:360px;
+}	
+
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

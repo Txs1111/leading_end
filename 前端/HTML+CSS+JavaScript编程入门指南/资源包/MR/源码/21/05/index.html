@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>鼠标指向图片时为图片加边框</title>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#pic").hover(function(){
+        $(this).attr("border",1);//为图片加边框
+    },function(){
+		$(this).attr("border",0);//去除图片边框
+	});
+});
+</script>
+</head>
+
+<body>
+<img id="pic" src="images/mr.gif" />
+</body>
+</html>

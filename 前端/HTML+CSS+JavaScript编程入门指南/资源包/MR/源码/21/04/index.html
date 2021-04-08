@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>模拟用户的操作触发事件</title>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("input:button").bind("click",function(event,msg1,msg2){
+        alert(msg1+msg2);            				//弹出对话框
+    }).trigger("click",["欢迎访问","明日科技"]); 			//页面加载触发单击事件
+});
+</script>
+</head>
+
+<body>
+<input type="button" name="button" id="button" value="普通按钮" />
+</body>
+</html>

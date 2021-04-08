@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>生成指定位数的随机数</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language="javascript">
+function ran(digit){
+	var result="";//声明变量并初始化
+	for(i=0;i<digit;i++){
+		result=result+(Math.floor(Math.random()*10));//将生成的单个随机数连接起来
+	}
+	alert(result);//输出随机数
+}
+</script>
+</head>
+
+<body background="bg.gif">
+请输入要生成随机数的位数：<p>
+<form name="form">
+  <input type="text" name="digit" />
+  <input type="button" value="生成" onclick="ran(form.digit.value)" />
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出乘法口诀表</title>
+</head>
+<body background="bg.jpeg">
+<h3>乘法口诀表</h3>
+<script type="text/javascript">
+var i,j;											//声明变量
+document.write("<pre>");//输出<pre>标记
+for(i=1;i<10;i++){									//定义外层循环
+	for(j=1;j<=i;j++){							//定义内层循环
+		if(j>1) document.write("\t");//如果j大于1就输出一个Tab空格
+		document.write(j+"x"+i+"="+j*i);				//输出乘法算式
+	}
+	document.write("<br>");//输出换行标记
+}
+document.write("</pre>");//输出</pre>标记
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+	border: 0;
+    font-size: 12px;
+	}
+.mr-header{
+    height: 30px;
+    width: 100%;
+    background:#393f52;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+}
+.mr-header .mr-header1{
+    width: 1348px;
+    height: 30px;
+    margin: 0 auto;
+	}
+.mr-hout{
+    width: 100px;
+    height: 28px;
+	float: left;
+	margin-left: 100px;
+    margin-right: 300px;
+	line-height:28px;
+	}
+.mr-hout:hover{
+	color:#F00;
+	}
+nav{
+    width: 780px;
+    height: 30px;
+    float: left;
+	}
+nav .mr-li{
+	width:80px;
+	height:28px;
+    float: left;
+	line-height:28px;
+	text-align:center;
+	cursor:pointer;
+	font-size: 14px;
+	}
+.mr-content{
+	width:1199px;
+	height:332px;
+	margin:0 auto;
+	}
+.mr-content .mr-block{
+	float:left;
+	color:white;
+	font-size:36px;
+	font-weight:bolder;
+	text-align:center;
+	}
+.mr-content .mr-block1{
+	width:280px;
+	height:332px;
+	background:#e36e60;
+	line-height:332px;
+	}
+.mr-content .mr-block2{
+	width:210px;
+	height:160px;
+	margin-left:10px;
+	background:#7ed5c2;
+	line-height:160px;
+	}
+.mr-content .mr-block3{
+	width:293px;
+	height:160px;
+	margin-left:10px;
+	background:#dfb582;
+	line-height:160px;
+	}
+.mr-content .mr-block4{
+	width:191px;
+	height:160px;
+	margin-left:10px;
+	background:#9885cc;
+	line-height:160px;
+	}
+.mr-content .mr-block5{
+	width:185px;
+	height:160px;
+	margin-left:10px;
+	background:#e49275;
+	line-height:160px;
+	}
+.mr-content .mr-block6{
+	width:312px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#6ad87c;
+	line-height:162px;
+	}
+.mr-content .mr-block7{
+	width:276px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#71ade7;
+	line-height:162px;
+	}
+.mr-content .mr-block8{
+	width:301px;
+	height:162px;
+	margin-left:10px;
+	margin-top:10px;
+	background:#ecc75b;
+	line-height:160px;
+	}
+.mr-content .mr-block:hover{		/*伪类选择器*/
+	opacity:0.5;					/*设置透明度*/
+	color:#000;						/*设置字体颜色*/
+	}
+nav .mr-li:hover{
+	background:#646464;				/*设置背景*/
+	color:#FFF;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+

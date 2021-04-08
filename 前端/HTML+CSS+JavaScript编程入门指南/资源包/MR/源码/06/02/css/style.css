@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体布局*/
+.mr-cont{
+	width: 510px;
+	height: 405px;
+	margin: 20px auto;
+	border: 1px solid #f00;
+	background:url(../img/4-4.jpg);
+}
+/*通过内边距调整表单位置*/
+form{
+	padding-top: 10px;
+}
+/*属性选择器设置复选框样式*/
+[type="checkbox"]{
+	display: block;
+	height: 125px;
+}

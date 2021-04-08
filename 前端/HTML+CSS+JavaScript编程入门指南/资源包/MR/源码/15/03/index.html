@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出考试成绩对应的等级</title>
+
+<script type="text/javascript">
+var grade = "";//定义表示等级的变量
+var score = 85;    				//定义表示分数的变量score值为85
+if(score>=90){ 					//如果分数大于等于90
+	grade = "优秀";//将"优秀"赋值给变量grade
+}else if(score>=75){ 				//如果分数大于等于75
+	grade = "良好";//将"良好"赋值给变量grade
+}else if(score>=60){	 			//如果分数大于等于60
+	grade = "及格";//将"及格"赋值给变量grade
+}else{							//如果score的值不符合上述条件
+	grade = "不及格";//将"不及格"赋值给变量grade
+}
+alert("周星星的考试成绩"+grade);//输出考试成绩对应的等级
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

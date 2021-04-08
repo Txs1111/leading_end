@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试for...in语句</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var object = {
+                user: "小月",
+                sex: "女",
+                age: 23,
+                interest: "运动、唱歌"
+            }
+            // 直接定义对象
+        for (var example in object) {
+            document.write("属性：" + example + "=" + object[example] + "<br>")
+        }
+    </script>
+</body>
+
+</html>

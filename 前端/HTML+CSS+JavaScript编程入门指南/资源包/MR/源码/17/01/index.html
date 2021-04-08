@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>应用构造函数创建自定义对象</title>
+<style type="text/css">
+*{
+font-size:18px;
+line-height:30px;}
+</style>
+</head>
+<body background="bg.jpeg">
+<h1 style="font-size:24px;">梅西</h1>
+<script type="text/javascript">
+function Player(height,weight,sport,team,character){
+	this.height = height;						//对象的height属性
+	this.weight = weight;						//对象的weight属性
+	this.sport = sport;						//对象的sport属性
+	this.team = team;						//对象的team属性
+	this.character = character;						//对象的character属性
+}
+var player1 = new Player("170厘米","67千克","足球","巴塞罗那","技术出色，意识好");	//创建一个新对象player1
+document.write("球员身高："+player1.height+"<br>");	//输出height属性值
+document.write("球员体重："+player1.weight+"<br>");	//输出weight属性值
+document.write("运动项目："+player1.sport+"<br>");	//输出sport属性值
+document.write("所属球队："+player1.team+"<br>");	//输出team属性值
+document.write("专业特点："+player1.character+"<br>");	//输出character属性值
+</script>
+</body>
+</html>

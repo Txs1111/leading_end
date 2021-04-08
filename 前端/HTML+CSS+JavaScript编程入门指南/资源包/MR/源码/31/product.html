@@ -1,0 +1,602 @@
+<!doctype html>
+	<head>
+		<title>明日学院</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--meta info-->
+		<link rel="icon" type="image/ico" href="images/fav.ico">
+		<!--stylesheet include-->
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.fancybox-1.3.4.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.custom-scrollbar.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+		<!--font include-->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!--wide layout-->
+		<div class="wide_layout relative">
+			<!--markup header-->
+			<header role="banner">
+				<!--header bottom part-->
+				<section class="h_bot_part container">
+					<div class="clearfix row">
+						<div class="col-lg-6 col-md-6 col-sm-4 t_xs_align_c">
+							<a href="index.html" class="logo m_xs_bottom_15 d_xs_inline_b">
+								<img src="images/logo.png" alt="">
+							</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-8">
+							<div class="row clearfix">
+								<div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c m_xs_bottom_15">
+									<dl class="l_height_medium">
+										<dt class="f_size_small">咨询电话</dt>
+										<dd class="f_size_ex_large color_dark"><b>400 675 1066</b></dd>
+									</dl>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<form class="relative type_2" role="search">
+										<input type="text" placeholder="搜索" name="search"
+											   class="r_corners f_size_medium full_width">
+										<button class="f_right search_button tr_all_hover f_xs_none">
+											<i class="fa fa-search"></i>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--main menu container-->
+				<div class="container">
+					<section class="menu_wrap type_2 relative clearfix t_xs_align_c m_bottom_20">
+						<!--button for responsive menu-->
+						<button id="menu_button" class="r_corners centered_db d_none tr_all_hover d_xs_block m_bottom_15">
+							<span class="centered_db r_corners"></span>
+							<span class="centered_db r_corners"></span>
+							<span class="centered_db r_corners"></span>
+						</button>
+						<!--main menu-->
+						<nav role="navigation" class="f_left f_xs_none d_xs_none t_xs_align_l">
+							<ul class="horizontal_list main_menu clearfix">
+								<li class="current relative f_xs_none m_xs_bottom_5">
+									<a href="index.html" class="tr_delay_hover color_light tt_uppercase"><b>首页</b>
+									</a>
+									<!--sub menu-->
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="#"
+																				class="tr_delay_hover color_light tt_uppercase"><b>图书</b></a>
+									<!--sub menu-->
+									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
+										<ul class="sub_menu">
+											<li><a class="color_dark tr_delay_hover" href="#">Java系列</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index.html">C语言系列</a></li>
+											<li><a class="color_dark tr_delay_hover" href="index.html">Python系列</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="#"
+																				class="tr_delay_hover color_light tt_uppercase"><b>电子书</b></a>
+									<!--sub menu-->
+
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="#"
+																				class="tr_delay_hover color_light tt_uppercase"><b>电器</b></a>
+									<!--sub menu-->
+									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
+										<ul class="sub_menu">
+											<li><a class="color_dark tr_delay_hover" href="#">洗衣机</a></li>
+											<li><a class="color_dark tr_delay_hover" href="#">家电</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="#"
+																				class="tr_delay_hover color_light tt_uppercase"><b>家居</b></a>
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5"><a href="#"
+																				class="tr_delay_hover color_light tt_uppercase"><b>文具</b></a>
+									<!--sub menu-->
+									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
+										<ul class="sub_menu">
+											<li><a class="color_dark tr_delay_hover" href="#">画具画材</a></li>
+											<li><a class="color_dark tr_delay_hover" href="#">文房用品</a></li>
+										</ul>
+									</div>
+								</li>
+
+
+							</ul>
+						</nav>
+
+						<ul class="f_right horizontal_list clearfix t_align_l t_xs_align_c site_settings d_xs_inline_b f_xs_none">
+							<!--like-->
+							<li class="d_sm_none d_xs_block">
+								<a role="button" href="#"
+								   class="button_type_1 color_dark d_block bg_light_color_1 r_corners tr_delay_hover box_s_none"><i
+										class="fa fa-heart-o f_size_ex_large"></i><span class="count circle t_align_c">12</span></a>
+							</li>
+							<li class="m_left_5 d_sm_none d_xs_block">
+								<a role="button" href="#"
+								   class="button_type_1 color_dark d_block bg_light_color_1 r_corners tr_delay_hover box_s_none"><i
+										class="fa fa-files-o f_size_ex_large"></i><span class="count circle t_align_c">3</span></a>
+							</li>
+							<!--shopping cart-->
+							<li class="m_left_5 relative container3d" id="shopping_button">
+								<a role="button" href="#"
+								   class="button_type_3 color_light bg_scheme_color d_block r_corners tr_delay_hover box_s_none">
+									<span class="d_inline_middle shop_icon">
+										<i class="fa fa-shopping-cart"></i>
+										<span class="count tr_delay_hover type_2 circle t_align_c">3</span>
+									</span>
+									<b>$355</b>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</header>
+
+			<!--content-->
+			<div class="page_content_offset">
+				<div class="container">
+					<div class="clearfix m_bottom_30 t_xs_align_c">
+						<div class="photoframe type_2 shadow r_corners f_left f_sm_none d_xs_inline_b product_single_preview relative m_right_30 m_bottom_5 m_sm_bottom_20 m_xs_right_0 w_mxs_full">
+							<span class="hot_stripe"><img src="images/sale_product.png" alt=""></span>
+							<div class="relative d_inline_b m_bottom_10 qv_preview d_xs_block">
+								<img id="zoom_image" src="images/16.jpg" data-zoom-image="images/16.jpg" class="tr_all_hover" alt="">
+								<a href="images/16.jpg" class="d_block button_type_5 r_corners tr_all_hover box_s_none color_light p_hr_0">
+									<i class="fa fa-expand"></i>
+								</a>
+							</div>
+							<!--carousel-->
+							<div class="relative qv_carousel_wrap">
+								<button class="button_type_11 bg_light_color_1 t_align_c f_size_ex_large bg_cs_hover r_corners d_inline_middle bg_tr tr_all_hover qv_btn_single_prev">
+									<i class="fa fa-angle-left "></i>
+								</button>
+								<ul class="qv_carousel_single d_inline_middle">
+									<a href="#" data-image="images/13.jpg" data-zoom-image="images/13.jpg"><img src="images/13.jpg" alt=""></a>
+									<a href="#" data-image="images/8.jpg" data-zoom-image="images/8.jpg"><img src="images/8.jpg" alt=""></a>
+									<a href="#" data-image="images/9.jpg" data-zoom-image="images/9.jpg"><img src="images/9.jpg" alt=""></a>
+									<a href="#" data-image="images/10.jpg" data-zoom-image="images/10.jpg"><img src="images/10.jpg" alt=""></a>
+									<a href="#" data-image="images/11.jpg" data-zoom-image="images/11.jpg"><img src="images/11.jpg" alt=""></a>
+									<a href="#" data-image="images/12.jpg" data-zoom-image="images/12.jpg"><img src="images/12.jpg" alt=""></a>
+								</ul>
+								<button class="button_type_11 bg_light_color_1 t_align_c f_size_ex_large bg_cs_hover r_corners d_inline_middle bg_tr tr_all_hover qv_btn_single_next">
+									<i class="fa fa-angle-right "></i>
+								</button>
+							</div>
+						</div>
+						<div class="p_top_10 t_xs_align_l">
+							<!--description-->
+							<h2 class="color_dark fw_medium m_bottom_10">零基础学Java</h2>
+							<div class="m_bottom_10">
+								<!--rating-->
+								<ul class="horizontal_list d_inline_middle type_2 clearfix rating_list tr_all_hover">
+									<li class="active">
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+										<i class="fa fa-star active tr_all_hover"></i>
+									</li>
+									<li class="active">
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+										<i class="fa fa-star active tr_all_hover"></i>
+									</li>
+									<li class="active">
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+										<i class="fa fa-star active tr_all_hover"></i>
+									</li>
+									<li class="active">
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+										<i class="fa fa-star active tr_all_hover"></i>
+									</li>
+									<li>
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+										<i class="fa fa-star active tr_all_hover"></i>
+									</li>
+								</ul>
+								<a href="#" class="d_inline_middle default_t_color f_size_small m_left_5"> </a>
+							</div>
+							<hr class="m_bottom_10 divider_type_3">
+							<table class="description_table m_bottom_10">
+								<tr>
+									<td>出版社:</td>
+									<td><a href="#" class="color_dark">吉林大学出版社</a></td>
+								</tr>
+								<tr>
+									<td>ISBN:</td>
+									<td><span class="color_green">9787569205688</td>
+								</tr>
+								<tr>
+									<td>丛书名:</td>
+									<td>和外星人一起学系列</td>
+								</tr>
+							</table>
+
+							<table class="description_table m_bottom_5">
+								<tr>
+									<td>页数:</td>
+									<td><span class="color_dark">418</span></td>
+								</tr>
+								<tr>
+									<td>附件:</td>
+									<td>小白实战手册 光盘</td>
+								</tr>
+							</table>
+							<hr class="divider_type_3 m_bottom_10">
+							<p class="m_bottom_10">《零基础学Java》从零基础学习者的角度出发，通过通俗易懂的语言、流行有趣的实例，
+								详细地介绍了使用Java语言进行程序开发需要掌握的知识和技术。全书共分16章，
+								包括初识Java、Java语言基础、流程控制、数组、面向对象编程基础、异常处理、Java常用类和枚举类型、泛型与集合类及坦克大战游戏等。
+								书中所有知识都结合具体实例进行讲解，设计的程序代码给出了详细的注释，可以使读者轻松领会Java程序开发的精髓，快速提高开发技能。 </p>
+							<hr class="divider_type_3 m_bottom_15">
+							<div class="m_bottom_15">
+								<s class="v_align_b f_size_ex_large">79.80元</s><span class="v_align_b f_size_big m_left_5 scheme_color fw_medium">69.80元</span>
+							</div>
+							<table class="description_table type_2 m_bottom_15">
+
+								<tr>
+									<td class="v_align_m">购买数量:</td>
+									<td class="v_align_m">
+										<div class="clearfix quantity r_corners d_inline_middle f_size_medium color_dark">
+											<button class="bg_tr d_block f_left" data-direction="down">-</button>
+											<input type="text" name="" readonly value="1" class="f_left">
+											<button class="bg_tr d_block f_left" data-direction="up">+</button>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<div class="d_ib_offset_0 m_bottom_20">
+								<button class="button_type_12 r_corners bg_scheme_color color_light tr_delay_hover d_inline_b f_size_large">添加到购物车</button>
+								</div>
+							<div class="d_inline_middle m_left_5 addthis_widget_container">
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+								<a class="addthis_button_preferred_1"></a>
+								<a class="addthis_button_preferred_2"></a>
+								<a class="addthis_button_preferred_3"></a>
+								<a class="addthis_button_preferred_4"></a>
+								<a class="addthis_button_compact"></a>
+								<a class="addthis_counter addthis_bubble_style"></a>
+								</div>
+								<!-- AddThis Button END -->
+							</div>
+						</div>
+					</div>
+					<!--tabs-->
+					<div class="tabs m_bottom_45">
+						<!--tabs navigation-->
+						<nav>
+							<ul class="tabs_nav horizontal_list clearfix">
+								<li class="f_xs_none"><a href="#tab-1" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">内容简介</a></li>
+								<li class="f_xs_none"><a href="#tab-2" class="bg_light_color_1 color_dark tr_delay_hover r_corners d_block">图书详情</a></li>
+								</ul>
+						</nav>
+						<section class="tabs_content shadow r_corners">
+							<div id="tab-1">
+								<p class="m_bottom_10">
+									《零基础学Java》从零基础学习者的角度出发，通过通俗易懂的语言、流行有趣的实例，
+									详细地介绍了使用Java语言进行程序开发需要掌握的知识和技术。全书共分16章，
+									包括初识Java、Java语言基础、流程控制、数组、面向对象编程基础、异常处理、Java常用类和枚举类型、泛型与集合类及坦克大战游戏等。
+									书中所有知识都结合具体实例进行讲解，设计的程序代码给出了详细的注释，可以使读者轻松领会Java程序开发的精髓，快速提高开发技能。
+								</p>
+
+							</div>
+							<div id="tab-2">
+								<img src="images/17.jpg">
+
+							</div>
+
+						</section>
+					</div>
+					<div class="clearfix">
+						<h2 class="color_dark tt_uppercase f_left m_bottom_15 f_mxs_none">相关图书</h2>
+						<div class="f_right clearfix nav_buttons_wrap f_mxs_none m_mxs_bottom_5">
+							<button class="button_type_7 bg_cs_hover box_s_none f_size_ex_large t_align_c bg_light_color_1 f_left tr_delay_hover r_corners rp_prev"><i class="fa fa-angle-left"></i></button>
+							<button class="button_type_7 bg_cs_hover box_s_none f_size_ex_large t_align_c bg_light_color_1 f_left m_left_5 tr_delay_hover r_corners rp_next"><i class="fa fa-angle-right"></i></button>
+						</div>
+					</div>
+					<div class="related_projects product_full_width m_bottom_15">
+						<figure class="r_corners photoframe shadow relative d_inline_b d_md_block d_xs_inline_b tr_all_hover">
+							<!--product preview-->
+							<a href="#" class="d_block relative pp_wrap">
+								<!--hot product-->
+								<span class="hot_stripe type_2"><img src="images/hot_product_type_2.png" alt=""></span>
+								<img src="images/8.jpg" class="tr_all_hover" alt="">
+								<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">预览</span>
+							</a>
+							<!--description and price of product-->
+							<figcaption class="t_xs_align_l">
+								<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">零基础学PHP</a></h5>
+								<div class="clearfix">
+									<p class="scheme_color f_left f_size_large m_bottom_15">79.80元</p>
+									<!--rating-->
+									<ul class="horizontal_list f_right clearfix rating_list tr_all_hover">
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li>
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+									</ul>
+								</div>
+								<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">添加到购物车</button>
+							</figcaption>
+						</figure>
+						<figure class="r_corners photoframe shadow relative d_inline_b d_md_block d_xs_inline_b tr_all_hover">
+							<!--product preview-->
+							<a href="#" class="d_block relative pp_wrap">
+								<!--hot product-->
+								<span class="hot_stripe type_2"><img src="images/hot_product_type_2.png" alt=""></span>
+								<img src="images/9.jpg" class="tr_all_hover" alt="">
+								<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">预览</span>
+							</a>
+							<!--description and price of product-->
+							<figcaption class="t_xs_align_l">
+								<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">零基础学HTML+CSS3</a></h5>
+								<div class="clearfix">
+									<p class="scheme_color f_left f_size_large m_bottom_15">79.80元</p>
+									<!--rating-->
+									<ul class="horizontal_list f_right clearfix rating_list tr_all_hover">
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li>
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+									</ul>
+								</div>
+								<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">添加到购物车</button>
+							</figcaption>
+						</figure>
+						<figure class="r_corners photoframe shadow relative d_inline_b d_md_block d_xs_inline_b tr_all_hover">
+							<!--product preview-->
+							<a href="#" class="d_block relative pp_wrap">
+								<!--hot product-->
+								<span class="hot_stripe type_2"><img src="images/hot_product_type_2.png" alt=""></span>
+								<img src="images/10.jpg" class="tr_all_hover" alt="">
+								<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">预览</span>
+							</a>
+							<!--description and price of product-->
+							<figcaption class="t_xs_align_l">
+								<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">零基础学Oracle</a></h5>
+								<div class="clearfix">
+									<p class="scheme_color f_left f_size_large m_bottom_15">79.80元</p>
+									<!--rating-->
+									<ul class="horizontal_list f_right clearfix rating_list tr_all_hover">
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li>
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+									</ul>
+								</div>
+								<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">添加到购物车</button>
+							</figcaption>
+						</figure>
+						<figure class="r_corners photoframe shadow relative d_inline_b d_md_block d_xs_inline_b tr_all_hover">
+							<!--product preview-->
+							<a href="#" class="d_block relative pp_wrap">
+								<!--hot product-->
+								<span class="hot_stripe type_2"><img src="images/hot_product_type_2.png" alt=""></span>
+								<img src="images/11.jpg" class="tr_all_hover" alt="">
+								<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">预览</span>
+							</a>
+							<!--description and price of product-->
+							<figcaption class="t_xs_align_l">
+								<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">零基础学JavaScript</a></h5>
+								<div class="clearfix">
+									<p class="scheme_color f_left f_size_large m_bottom_15">79.80元</p>
+									<!--rating-->
+									<ul class="horizontal_list f_right clearfix rating_list tr_all_hover">
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li>
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+									</ul>
+								</div>
+								<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">添加到购物车</button>
+							</figcaption>
+						</figure>
+						<figure class="r_corners photoframe shadow relative d_inline_b d_md_block d_xs_inline_b tr_all_hover">
+							<!--product preview-->
+							<a href="#" class="d_block relative pp_wrap">
+								<!--hot product-->
+								<span class="hot_stripe type_2"><img src="images/hot_product_type_2.png" alt=""></span>
+								<img src="images/12.jpg" class="tr_all_hover" alt="">
+								<span data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">预览</span>
+							</a>
+							<!--description and price of product-->
+							<figcaption class="t_xs_align_l">
+								<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">零基础学C#</a></h5>
+								<div class="clearfix">
+									<p class="scheme_color f_left f_size_large m_bottom_15">79.80元</p>
+									<!--rating-->
+									<ul class="horizontal_list f_right clearfix rating_list tr_all_hover">
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li class="active">
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+										<li>
+											<i class="fa fa-star-o empty tr_all_hover"></i>
+											<i class="fa fa-star active tr_all_hover"></i>
+										</li>
+									</ul>
+								</div>
+								<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">添加到购物车</button>
+							</figcaption>
+						</figure>
+					</div>
+					<hr class="divider_type_3 m_bottom_15">
+				</div>
+			</div>
+			<!--markup footer-->
+			<footer id="footer" class="type_2">
+				<div class="footer_top_part">
+
+					<hr class="divider_type_4 m_bottom_50">
+					<div class="container">
+						<div class="row clearfix">
+							<div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+								<h3 class="color_light_2 m_bottom_20">关于我们</h3>
+								<p class="m_bottom_15">叮叮商城，是吉林省明日科技有限公司倾力打造的在线购物平台，
+									该平台于2016年正式上线。</p>
+
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 m_xs_bottom_30">
+								<h3 class="color_light_2 m_bottom_20">服务</h3>
+								<ul class="vertical_list">
+									<li><a class="color_light tr_delay_hover" href="#">我的账户<i
+											class="fa fa-angle-right"></i></a></li>
+									<li><a class="color_light tr_delay_hover" href="#">我的订单<i
+											class="fa fa-angle-right"></i></a></li>
+
+								</ul>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 m_xs_bottom_30">
+								<h3 class="color_light_2 m_bottom_20">资讯</h3>
+								<ul class="vertical_list">
+									<li><a class="color_light tr_delay_hover" href="#">学院新闻<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li><a class="color_light tr_delay_hover" href="#">发现课程<i class="fa fa-angle-right"></i></a>
+									</li>
+									<li><a class="color_light tr_delay_hover" href="#">服务条例<i
+											class="fa fa-angle-right"></i></a></li>
+								</ul>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 m_xs_bottom_30">
+								<h3 class="color_light_2 m_bottom_20">目录</h3>
+								<ul class="vertical_list">
+									<li><a class="color_light tr_delay_hover" href="#">新上图书<i
+											class="fa fa-angle-right"></i></a></li>
+									<li><a class="color_light tr_delay_hover" href="#">图书排行榜<i
+											class="fa fa-angle-right"></i></a></li>
+									<li><a class="color_light tr_delay_hover" href="#">特别推荐<i class="fa fa-angle-right"></i></a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3">
+								<h3 class="color_light_2 m_bottom_20">联系我们</h3>
+								<ul class="c_info_list">
+									<li class="m_bottom_10">
+										<div class="clearfix m_bottom_15">
+											<i class="fa fa-map-marker f_left"></i>
+											<p class="contact_e">吉林省长春市南关区财富领域</p>
+										</div>
+									</li>
+									<li class="m_bottom_10">
+										<div class="clearfix m_bottom_10">
+											<i class="fa fa-phone f_left"></i>
+											<p class="contact_e">0431-84978981</p>
+										</div>
+									</li>
+									<li class="m_bottom_10">
+										<div class="clearfix m_bottom_10">
+											<i class="fa fa-envelope f_left"></i>
+											<a class="contact_e color_light" href="mailto:#">mingrisoft@mingrisoft.com</a>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--copyright part-->
+				<div class="footer_bottom_part">
+					<div class="container clearfix t_mxs_align_c">
+						<p class="f_left f_mxs_none m_mxs_bottom_10">&copy; Design by<a href="http://www.mingrisoft.com/" target="_blank" title="模板之家">
+							明日学院</a> .
+						</p>
+
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+		<!--scripts include-->
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/retina.js"></script>
+		<script src="js/elevatezoom.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.tweet.min.js"></script>
+		
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.custom-scrollbar.js"></script>
+		<script src="js/jquery.fancybox-1.3.4.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

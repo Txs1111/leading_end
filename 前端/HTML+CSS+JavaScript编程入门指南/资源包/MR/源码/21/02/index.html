@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>对元素值操作的实例</title>
+<style>
+body{
+	font-size:12px;
+}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+		$("select").val(['列表项1','列表项2']);//设置多行列表框的值
+		alert($("select").val());//获取并输出多行列表框的值
+   });
+</script>
+</head>
+<body background="bg.gif">
+<select name="like" size="3" multiple="multiple" id="like">
+  <option>列表项1</option>
+  <option selected="selected">列表项2</option>
+  <option selected="selected">列表项3</option>
+</select>
+</body>
+</html>

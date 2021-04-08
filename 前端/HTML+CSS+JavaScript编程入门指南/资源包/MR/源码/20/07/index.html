@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>prev + next选择器的实例</title>
+<style type="text/css">
+	body{
+		font-size:12px;/*设置字体大小*/
+	}
+	.background{
+		background:#cef;/*设置背景颜色*/
+	}
+</style>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("label+p").addClass("background");//为匹配的元素添加CSS类
+	});
+</script>
+</head>
+<body>
+<div>
+    <label>第一个label</label>
+    <p>第一个p</p>
+    <fieldset>
+        <label>第二个label</label>
+        <p>第二个p</p>
+    </fieldset>
+</div>
+<p>div外面的p</p>
+</body>
+</html>

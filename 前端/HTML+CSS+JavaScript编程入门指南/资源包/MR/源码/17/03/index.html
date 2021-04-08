@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算圆的周长和面积</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+function Circle(r){
+	this.r=r;//设置对象的r属性
+}
+Circle.prototype.pi=3.14;//添加对象的pi属性
+Circle.prototype.circumference=function(){//添加计算圆周长的circumference()方法
+	return 2*this.pi*this.r;
+}
+Circle.prototype.area=function(){//添加计算圆面积的area()方法
+	return this.pi*this.r*this.r;
+}
+var c=new Circle(10);//创建一个新对象c
+document.write("圆的半径为"+c.r+"<br>");//输出圆的半径
+document.write("圆的周长为"+parseInt(c.circumference())+"<br>");//输出圆的周长
+document.write("圆的面积为"+parseInt(c.area()));//输出圆的面积
+</script>
+</body>
+</html>
+

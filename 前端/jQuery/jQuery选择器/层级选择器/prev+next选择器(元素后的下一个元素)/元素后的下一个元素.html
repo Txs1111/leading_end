@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素后的下一个元素</title>
+    <script type="text/javascript" src="../../../jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("label+p").addClass("background")
+        })
+    </script>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+        
+        .background {
+            background: #cef;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="">第一个</label>
+        <p>第一个</p>
+        <fieldset>
+            <label for="">第二个</label>
+            <p>第二个</p>
+        </fieldset>
+    </div>
+    <p>div外面</p>
+</body>
+
+</html>

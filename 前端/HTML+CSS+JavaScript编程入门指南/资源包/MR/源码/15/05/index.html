@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出奖项级别和获得的奖品</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var grade="";//定义表示奖项级别的变量
+var prize="";//定义表示奖品的变量
+var code=3;//定义表示中奖号码的变量值为3
+switch(code){
+    case 1://如果中奖号码为1
+        grade="一等奖";//定义奖项级别
+		prize="华为手机";//定义获得的奖品
+		break;//退出switch语句
+    case 2://如果中奖号码为2
+        grade="二等奖";//定义奖项级别
+		prize="光波炉";//定义获得的奖品
+		break;//退出switch语句
+    case 3://如果中奖号码为3
+        grade="三等奖";//定义奖项级别
+		prize="电饭煲";//定义获得的奖品
+		break;//退出switch语句
+	default://如果中奖号码为其他号码
+		grade="安慰奖";//定义奖项级别
+		prize="16G-U盘";//定义获得的奖品
+		break;//退出switch语句
+}
+document.write("该员工获得了"+grade+"<br>奖品是"+prize);//输出奖项级别和获得的奖品
+</script>
+</body>
+</html>

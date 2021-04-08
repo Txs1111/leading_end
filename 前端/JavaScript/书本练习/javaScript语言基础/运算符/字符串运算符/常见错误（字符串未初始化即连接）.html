@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见错误（字符串未初始化即连接）</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var a
+        a += "helloworld"
+        document.write("a += 'helloworld'" + "a += 'helloworld'")
+        document.write("<br>a += 'helloworld'" + a + 'helloworld')
+            // document.write("a += 'helloworld'" + a += 'helloworld')此处错误是因为识别不出来“+”是添加连接字符串还是“+=”的作用
+        document.write("<br>" + 'a += "helloworld"')
+    </script>
+</body>
+
+</html>

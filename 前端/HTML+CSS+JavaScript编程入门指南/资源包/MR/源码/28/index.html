@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页--游戏公园</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body> 
+<!--header-->	
+<div class="header" >
+	<div class="header-top">
+		<div class="container">
+			<div class="head-top">
+				<div class="logo">
+					<h1><a href="index.html">游戏<span>公园</span></a></h1>
+				</div>
+			<div class="top-nav">		
+			  <span class="menu"><img src="images/menu.png"> </span>
+				<ul>
+						<li class="active"><a  href="index.html">主页</a></li>
+                        <li><a  href="blog.html">博客</a></li>
+						<li><a  href="about.html">关于我们</a></li>
+						<div class="clearfix"> </div>
+					</ul>
+					<!--script-->
+				</div>
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--banner-->
+<!--banner-->
+<div class="banner">
+    <div class="container">
+        <h2>推荐游戏</h2>
+        <div class="banner-matter">
+            <div class="slider">
+                <style>
+                    ul {
+                        list-style:none;
+                    }
+                    #wrap {
+                        position:relative;
+                        width:1000px;
+                        height:400px;
+                        margin:10px auto;
+                        overflow:hidden;
+                        box-sizing: content-box;
+                    }
+                    #slider {
+                        width:300%;
+                        height:100%;
+                        font:100px/400px Microsoft Yahei;
+                        text-align:center;
+                        color:#fff;
+                        margin-left:0;
+                        -webkit-animation:slide1 5s ease-out infinite;
+                    }
+                    #slider li {
+                        float:left;
+                        width:1000px;
+                        height:100%;
+                    }
+                    /*创建三种动画策略*/
+                    @keyframes slide1 {
+                        0% { margin-left:0;}
+                        23% { margin-left:0;}
+                        33% { margin-left:-1000px;}
+                        56% { margin-left:-1000px;}
+                        66% { margin-left:-2000px;}
+                        90% { margin-left:-2000px;}
+                        100% {margin-left:0;}
+                    }
+
+                    @keyframes slide2 {
+                        0% { margin-left:-1000px;}
+                        23% { margin-left:-1000px;}
+                        33% { margin-left:-2000px;}
+                        56% { margin-left:-2000px;}
+                        66% { margin-left:0;}
+                        90% { margin-left:0;}
+                        100% {margin-left:-1000px;}
+                    }
+
+                    @keyframes slide3 {
+                        0% { margin-left:-1000px;}
+                        23% { margin-left:-1000px;}
+                        33% { margin-left:0;}
+                        56% { margin-left:0;}
+                        66% { margin-left:-1000px;}
+                        90% { margin-left:-1000px;}
+                        100% {margin-left:-2000px;}
+                    }
+
+                    /*修改动画名称*/
+                    #l01:checked ~ #wrap #slider {
+                        -webkit-animation-name:slide1;
+                    }
+
+                    #l02:checked ~ #wrap #slider {
+                        -webkit-animation-name:slide2;
+                    }
+
+                    #l03:checked ~ #wrap #slider {
+                        -webkit-animation-name:slide3;
+                    }
+
+
+                    /*短暂地取消动画名称，模拟重启动画*/
+                    #l01:active ~ #wrap #slider {
+                        -webkit-animation-name:none;
+                        margin-left:0;
+                    }
+
+                    #l02:active ~ #wrap #slider {
+                        -webkit-animation-name:none;
+                        margin-left:-1000px;
+                    }
+
+                    #l03:active ~ #wrap #slider {
+                        -webkit-animation-name:none;
+                        margin-left:-2000px;
+                    }
+
+                    #opts {
+                        width:600px;
+                        height:40px;
+                        margin-left:500px;
+                        color:#fff;
+                        text-align:center;
+                        font:20px/40px Microsoft Yahei;
+                    }
+
+                    #opts label {
+                        float:left;
+                        width:50px;
+                        height:40px;
+                        margin-right:4px;
+                        background:#01254a;
+                        cursor:pointer;
+                        border-radius: 50px;
+                    }
+
+                    #opts label:hover {
+                        background:#405871;
+                    }
+
+                    /* 隐藏Input按钮*/
+                    #l01, #l02, #l03 {
+                        display:none;
+                    }
+
+                </style>
+
+                <div id="wrap">
+
+                    <ul id="slider">
+                        <li><img src="images/slider.png" /></li>
+                        <li><img src="images/slider.png" /></li>
+                        <li><img src="images/slider.png" /></li>
+                    </ul>
+                </div>
+                <input type="radio" checked name="slider" id="l01">
+                <input type="radio" name="slider" id="l02">
+                <input type="radio" name="slider" id="l03">
+
+                <div id="opts">
+                    <label for="l01">1</label>
+                    <label for="l02">2</label>
+                    <label for="l03">3</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--games-->
+<div class="container">
+		<div class="games">
+		<h3 >最新游戏</h3>
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" >
+							<img src="images/a1.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a2.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a3.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a4.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a5.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a6.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a7.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a1.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+                                <h5>Games</h5>
+                                <span>领先的在线休闲游戏平台</span>
+                            </div>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" rel="title" class="b-link-stripe b-animate-go  thickbox" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<img src="images/a3.jpg" alt="" />
+                            <div style="left: -100%; display: block; top: 0px; transition: all 300ms ease;">
+								<h5>Games</h5>
+								<span>领先的在线休闲游戏平台</span>
+							</div>
+						</a>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+			</section>
+	</div>
+</div>
+<!--//games-->
+<!--footer-->		
+<div class="footer">
+		<div class="container">
+			<ul class="footer-grid">
+                <li class="active"><a  href="index.html"  >主页</a></li>
+                <li><a  href="blog.html"  >博客</a></li>
+                <li><a  href="about.html" >关于我们</a></li>
+			</ul>
+			<p> 游戏公园  | 设计 by  <a href="http://www.mingrisoft.com/" target="_blank">吉林省明日科技有限公司</a></p>
+		</div>
+	</div>
+
+<script>
+    // 鼠标滑入
+    function mouseOver(obj){
+        var menu=obj.children;      //获取对象子节点
+        menu[1].style.left='0px';  //节点的样式属性left值设置为0px
+    }
+    // 鼠标滑出
+    function mouseOut(obj){
+        var menu=obj.children;      //获取对象子节点
+        menu[1].style.left='-100%';//节点的样式属性left值设置为-100%
+    }
+</script>
+</body>
+</html>

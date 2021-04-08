@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>记录运动轨迹</title>
+	<script type="text/javascript" src="http://map.qq.com/api/js?v= 2.exp"></script>
+</head>
+<style type="">
+	html, body {
+		height: 100%;
+		margin: 0px;
+		padding: 0px
+	}
+	#container {
+		width: 100%;
+		height: 100%
+	}
+	#bar {
+		position: relative;
+		z-index: 99;
+		left: 0%;
+		top: 75%;
+		text-align: center;
+		vertical-align: middle;
+		height: 25%;
+		font-size: 1.2em;
+		background-color: white;
+	}
+	#btn {
+		position: relative;
+		background-color: #00FD00;
+		border: none;
+		outline: none;
+		width: 30%;
+		margin-top: 25px;
+		padding:10px;
+	}
+	#info {
+		margin: 10px;
+		padding: 10px;
+	}
+</style>
+<body>
+<div id="container">
+	<div id="bar">
+		<button id="btn" onclick="toggle()">
+			开始跑步
+		</button>
+		<div id="info">
+			总时长： <span id="time">00:00:00</span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var status = "stop";
+	var btn = document.getElementById('btn');
+	var time = document.getElementById('time');
+	var h = 0;
+	var m = 0;
+	var s = 0;
+	var path = [];
+	var center;
+	var timer;
+	var watchID;
+	function toggle() {
+		if (status == "stop") {
+			status = "start";
+			btn.innerHTML = "结束跑步";
+			start();
+		} else if (status == "start") {
+			status = "stop";
+			btn.innerHTML = "开始跑步";
+			stop();
+		}
+	}
+	function start() {
+		path = [];
+		h = 0,
+		m = 0,
+		s = 0;
+		timer = setInterval("startTime()",1000);
+		navigator.geolocation.getCurrentPosition(showPosition);
+		watchID = navigator.geolocation.watchPosition(showPosition,showError,options);
+	}
+	function stop() {
+		navigator.geolocation.clearWatch(watchID);
+		clearInterval(timer);
+	}
+	function showPosition(position) {
+		var lat = position.coords.latitude;
+		var long = position.coords.longitude;
+		center = new qq.maps.LatLng(lat , long);
+		path.push(new qq.maps.LatLng(lat , long));
+		drawMap();
+	}
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+			  alert ("用户拒绝了地理定位请求。");
+			  break;
+			case error.POSITION_UNAVAILABLE:
+			  alert ("位置信息不可用。");
+			  break;
+			case error.TIMEOUT:
+			  alert ("请求超时。");
+			  break;
+			case error.UNKNOWN_ERROR:
+			  alert ("未知错误发生。");
+			  break;
+		}
+	}
+	var options = {
+		enableHighAccuracy : true,
+		maximumAge : 2000,
+		timeout : 2000
+	};
+	function drawMap() {
+		var map = new qq.maps.Map(document.getElementById('container'),{
+			center : center,
+			zoom : 14
+		});
+		var polygon = new qq.maps.Polyline({
+			map : map,
+			path : path ,
+			strokeColor : "#00FF00",
+			StrokeWeight : 10
+		});
+	}
+	function startTime() {
+		s = parseInt(s);
+		m = parseInt(m);
+		h = parseInt(h);
+		s++;
+		if (s == 60) {
+			s = 0;
+			m++;
+		}
+		if (m == 60) {
+			m = 0;
+			h++;
+		}
+		if (h < 10)
+			h = "0" + h;
+		if (m <10)
+			m = "0" + m;
+		if (s < 10)
+			s = "0" + s;
+		time.innerHTML = h + ":" + m + ":" +s;
+	}
+</script>
+</body>
+</html>

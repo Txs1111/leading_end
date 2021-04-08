@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递归函数</title>
+    <script type="text/javascript">
+        function jiecheng(i) {
+            if (i < 2) return 1
+            else return jiecheng(--i) * i
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var j = jiecheng(10)
+        document.write(j)
+    </script>
+</body>
+
+</html>
