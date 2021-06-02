@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="path/to/sortable.min.css">
+    <script src="path/to/sortable.min.js"></script>
+</head>
+
+<body>
+    <!-- 1st step -->
+    <ul>
+        <li>
+            <a data-sjslink="food"> [...] </a>
+        </li>
+        <li>
+            <a data-sjslink="development"> [...] </a>
+        </li>
+    </ul>
+
+    <!-- 3st step -->
+    <div id="sortable" class="sjs-default">
+
+        <!-- 2nd step -->
+        <div data-sjsel="food"> [...] </div>
+        <div data-sjsel="development"> [...] </div>
+        <div data-sjsel="development"> [...] </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.querySelector('#sortable').sortablejs()
+</script>
+
+</html>
