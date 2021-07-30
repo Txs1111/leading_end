@@ -1,0 +1,92 @@
+[
+    {
+        "name":"恋爱循环",
+        "singer":"hanser",
+        "album":"无",
+        "time":"01:30",
+        "link_url":"./audio/hanser - 恋爱循环.mp3",
+        "cover":"./audio/hanser.jpg",
+        "link_lrc":"./audio/hanser - 恋爱循环.txt"
+    },
+    {
+        "name":"室内系的TrackMaker",
+        "singer":"hanser",
+        "album":"无",
+        "time":"03:22",
+        "link_url":"./audio/hanser - 室内系的TrackMaker.mp3",
+        "cover":"./audio/hanser.jpg",
+        "link_lrc":"./audio/hanser - 室内系的TrackMaker.txt"
+    },
+    {
+        "name":"Bunny Jump",
+        "singer":"hanser",
+        "album":"无",
+        "time":"03:44",
+        "link_url":"./audio/hanser - Bunny Jump (bronya电音曲).mp3",
+        "cover":"./audio/hanser.jpg",
+        "link_lrc":"./audio/hanser - Bunny Jump (bronya电音曲).txt"
+    },
+    {
+        "name":"POP/STARS",
+        "singer":"茶理理理子",
+        "album":"POP/STARS",
+        "time":"03:11",
+        "link_url":"./audio/茶理理理子 - POP_STARS.mp3",
+        "cover":"./audio/kda.jpg",
+        "link_lrc":"./audio/茶理理理子 - POP_STARS.txt"
+    },
+    {
+        "name":"Lemon",
+        "singer":"茶理理理子",
+        "album":"Lemon",
+        "time":"04:07",
+        "link_url":"./audio/茶理理理子 - Lemon.mp3",
+        "cover":"./audio/lemon.jpg",
+        "link_lrc":"./audio/茶理理理子 - Lemon.txt"
+    },
+    {
+        "name":"ECHO",
+        "singer":"茶理理理子",
+        "album":"无",
+        "time":"03:53",
+        "link_url":"./audio/茶理理理子 - ECHO.mp3",
+        "cover":"./audio/chalili.jpg",
+        "link_lrc":"./audio/茶理理理子 - ECHO.txt"
+    },
+    {
+        "name":"Reburn",
+        "singer":"茶理理理子",
+        "album":"崩坏3-Impact- Original Soundtrack",
+        "time":"03:00",
+        "link_url":"./audio/茶理理理子 - Reburn.mp3",
+        "cover":"./audio/bh3.jpg",
+        "link_lrc":"./audio/茶理理理子 - Reburn.txt"
+    },
+    {
+        "name":"魑魅魍魉",
+        "singer":"茶理理理子",
+        "album":"无",
+        "time":"03:31",
+        "link_url":"./audio/茶理理理子 - 魑魅魍魉.mp3",
+        "cover":"./audio/chalili.jpg",
+        "link_lrc":"./audio/茶理理理子 - 魑魅魍魉.txt"
+    },
+    {
+        "name":"Moments CSGO",
+        "singer":"Faith",
+        "album":"CSGO音乐盒原声大碟",
+        "time":"02:50",
+        "link_url":"./audio/Faith - Moments CSGO.mp3",
+        "cover":"./audio/csgo.jpg",
+        "link_lrc":"./audio/Faith - Moments CSGO.txt"
+    },
+    {
+        "name":"Hotline Miami",
+        "singer":"Faith",
+        "album":"CSGO音乐盒原声大碟",
+        "time":"04:49",
+        "link_url":"./audio/Faith - Hotline Miami.mp3",
+        "cover":"./audio/csgo.jpg",
+        "link_lrc":"./audio/Faith - Hotline Miami.txt"
+    }
+]

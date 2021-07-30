@@ -1,0 +1,203 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+.header{
+    width: 100%;
+    height: 45px;
+    background: purple;
+}
+.header .logo{
+    float: left;
+    margin-left: 20px;
+    opacity: 0.5;  
+}
+.header .logo a{
+    display: inline-block;
+    width: 78px;
+    height: 21px;
+    background: url("../images/player_logo.png") no-repeat 0 0;
+}
+.header .logo:hover{
+    opacity: 1; 
+}
+.register{  
+    list-style: none;
+    line-height: 45px;
+    float: right;
+}
+/* 对于伪元素:hover,两个要针对相同的对象 */
+.register li{
+    float: left;
+    margin-right: 20px;
+    color: #fff; 
+    opacity: 0.5;
+}
+.register li:hover{
+    opacity: 1; 
+}
+.content{
+    width: 100%;
+    height: 460px;
+    background: royalblue;
+}
+.content_in{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.content_left{
+    float: left;
+    width: 800px;
+    height: 100%;
+}
+.content_right{
+    float: right;
+    width: 400px;
+    height: 100%;
+    background-color: rgb(150, 221, 103);
+
+}
+.content_toolbar{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(20, 18, 18);
+}
+.content_toolbar span{
+    display: inline-block;
+    width: 122px;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.5;
+}
+.content_toolbar span:hover{
+    opacity: 1;
+}
+.content_toolbar span i{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/icon_sprite.png") no-repeat 0 0;
+    margin-right: 10px;
+    /* 对齐父元素的中部 这里 middle 或 -5px*/
+    vertical-align: middle;
+/*对齐图标和文本用 vertical-align
+    不能用 margin-top: 10px; 用了两个都会 不齐地 下移*/
+}
+.content_toolbar span:nth-child(1) i{
+    background-position: -60px -20px;
+}
+.content_toolbar span:nth-child(2) i{
+    background-position: -20px -20px;
+}
+.content_toolbar span:nth-child(3) i{
+    background-position: -40px -240px;
+}
+.content_toolbar span:nth-child(4) i{
+    background-position: -100px -20px;
+}
+.content_toolbar span:nth-child(5) i{
+    background-position: -40px -300px;
+}
+.content_list{
+    width: 100%;
+    height: 420px;
+    background-color: rgb(221, 213, 103);
+}
+.content_list li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    user-select: none;/*用户无法选中*/
+}
+.content_list li div{
+    float: left;
+    opacity: 0.5;
+}
+.content_list .list_check{
+    width: 50px;
+    height: 100%;
+    text-align: center;   
+}
+.content_list .list_check i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+}
+.content_list .list_checked i{
+    background: url("../images/icon_sprite.png") no-repeat -60px -80px;
+}
+
+.content_list .list_number{
+    width: 20px;
+    height: 100%;
+}
+.content_list .list_name{
+    width: 50%;
+    height: 100%;
+}
+.list_name .list_menu{
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    display: none;
+}
+.list_menu a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat 0 0;
+}
+.list_menu a:nth-child(1){
+    background-position: -120px 0;
+}
+.list_menu a:nth-child(2){
+    background-position: -120px -80px;
+}
+.list_menu a:nth-child(3){
+    background-position: -120px -120px;
+}
+.list_menu a:nth-child(4){
+    background-position: -120px -40px;
+}
+.list_time a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat -120px -160px;
+    float: left;
+    margin-top: 5px;  
+    display: none;
+}
+.content_list .list_singer{
+    width: 20%;
+    height: 100%;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: sandybrown;
+}
+.footer_in{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: slateblue;
+}
