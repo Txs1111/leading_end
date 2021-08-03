@@ -1,0 +1,205 @@
+                                    emment语法
+1.生成标签直接输入标签名按tab键即可。
+2.“标签名*数量”生成数量个便签
+3.父子级用“父标签>子标签” eg：ul>li
+5.兄弟关系用“标签名+标签名”。
+6.  a、“#名字+tab”默认生成带id=名字的div标签，“.名字+tab”默认生成带class=名字的div标签
+    b、可以修改为“p.名字”则生成带class=名字的p标签
+7.自增“$*数字”。
+8.生成带有默认文字的标签“标签+{}”
+                                    复合选择器
+1.后代选择器
+，不管是儿子还是孙子都会选择
+选择ol里面的li
+eg：“ol li”使用空格
+2.子选择器
+只能选择亲儿子
+使用“>”
+3.并集选择器
+同时选择多个标签
+使用“，”
+4.链接伪类选择器。注意以LVHA顺序书写
+“a:link”没有点击的链接
+“a:visitd”点击过的链接
+“a:hover”鼠标经过的链接
+“a:avtive”正在点击的链接
+5.focus的伪类选择器
+“input：focus”把获得光标的input的表单选取出来
+
+                                    元素的显示模式
+块状元素：
+1.自己独占一行
+2.高度，宽度，外边距以及内边距都是可以控制的
+3.宽度默认是容器的100%
+4.是一个容器及盒子，里面可以放行内或者块状元素
+注意：
+·文字类的元素不能使用块级元素
+·<p>标签主要用于存放文字，因此<p>里面不能放块级元素,特别是不能放<div>
+·同理，<h1>~<h6>等，都是文字类块状标签，里面不能放其他块状标签
+
+行内元素
+1.相邻行内元素在一行上，一行可以显示多个。
+2.高、宽直接设置是无效的。
+3.默认宽度就是本身内容的宽度。
+4.行内元素只能容纳文本或其他行内元素。
+注意：
+·链接里面不能再放链接。
+·特殊情况链接里面可以放块级元素，但是给链接转换一下块级模式最安全。
+
+行内块元素（img，input，td）
+1.和相邻行内元素（行内块）在同一行上，但是他们之间会有空白的缝隙，一行可以显示逗哥（行内元素特点）。
+2.默认宽度就是它本身内容的宽度（行内元素特点）。
+3.高度，行高，外边距内边距都是可以控制的。（块状元素特点）。
+
+注意：行内元素与块状元素的转换
+“display:block”转化为块状元素
+“display：inline”转换为行内元素
+“display：inline-block”转化为行内块元素
+
+display：none；隐藏东西
+visibility：hidden；隐藏东西，但是会占原来的位置
+overflow：visible/hidden/scroll/auto；
+
+                                文字垂直
+使用行高“line-height=heigh”
+
+                                背景
+背景颜色
+“background-color：#***;”
+背景图片
+“background-image:url（***）；”
+背景平铺
+“background-repeat：repeat/no-repeat/repeat-x/repeat-y；”
+背景图片位置
+“background-position：x y;”
+背景图像固定
+“background-attachment：scroll/fixed；”
+背景透明的写法
+“background：rgba（*，*，*，*）；”
+                                CSS的三大特性
+层叠性
+·样式冲突，遵循的原则是就近原则，那个样式离结构近，就执行哪个样式
+·样式不冲突，不会层叠
+继承性
+·行高可以跟单位也可以不带单位。不带单位则是当前文字的多少倍
+优先级
+·注意！important
+                                            盒子模型
+border
+“border-width”边框粗细
+“border-style：solid实线/dashed虚线/dotted点线”边框样式
+“border-color”
+复合写法没有顺序
+“border-collapse：collapse；”合并相邻的边框
+会影响盒子实际大小
+
+padding，
+“padding-left”
+“padding-right”
+“padding-top”
+“padding-bottom”
+会影响盒子实际大小
+
+margin
+“margin-left”
+“margin-right”
+“margin-top”
+“margin-bottom”
+
+
+外边距合并-嵌套块元素塌陷
+·可以为父元素定义上边框
+·可以为父元素定于上内边距
+·可以为父元素添加overflow：hidden；
+
+去掉无序列表的小圆点
+“list_style：none”
+
+圆角边框
+“border-radius：**px/**%；”
+
+盒子阴影
+“box-shadow：h-shadow水平阴影位置 v-shadow垂直阴影位置 blur模糊距离 spread阴影尺寸 color阴影颜色 inset内部阴影”
+
+                                                    清除浮动
+
+1.额外标签法也称隔墙法，w3c推荐（新增的盒子必须是块状元素）
+“clear：both；”
+2.给父级添加overflow
+“overflow：hideen；”
+3.：after方式
+.clearfix:after{
+    content:""；
+    display:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix{
+    /*IE6,7 专有*/
+    *zoom:1;
+}
+4.双伪元素清除浮动
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table；
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}
+注意：浮动元素不会压住标准流的文字定位
+
+
+                                                定位
+静态定位（默认定位）
+{position：static；}
+相对定位（根据原来的定位来说的）
+{position：relative；}
+绝对定位
+{position：absolute；}
+固定定位
+{position：fixed；}
+粘性定位
+{position：sticky；}
+
+z-index选择器
+数值越大盒子等级越高
+
+
+                                                        精灵图
+
+
+                                                        鼠标样式
+“{cursor：pointer小手/default小白默认/move移动/text文本/not-allowed禁止；}”
+
+                                                        轮廓线
+“{outline：0/none；}
+
+                                                        文本域
+“{resize：none；}
+
+                                                        图片或文字的垂直居中
+“{vertical-align:baseline默认放在父元素的基线上|top把元素的顶端与行中最高元素的顶端对齐|middle把此元素放在父元素的中部|bottom把元素的顶端与行中最低元素的顶端对齐;}”
+注意：只针对于行内元素，行内块元素
+
+                                                        单行文字溢出省略号显示
+“{
+    white-space：nowrap强制一行显示；
+    overflow：hidden超出部分隐藏；
+    text-overflow：ellipsis超出部分用省略号代替；
+}”
+                                                        单行文字溢出省略号显示
+“{
+    overflow：hidden；/*超出部分隐藏*/
+    text-overflow：ellipsis；/*超出部分用省略号代替*/
+    display：-webkit-box；/*弹性伸缩盒子模型显示*/
+    -webkit-line-clamp:2;/*限制在一个块元素显示的文本的行数*/
+    -webkit-box-orient：vertical；/*设置或检索伸缩盒子对象的子元素的排列方式*/
+}
+
+
+
+
+

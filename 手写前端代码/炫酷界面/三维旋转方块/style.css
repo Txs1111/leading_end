@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #000 url('images/bg.jpg');
+  background-size: cover;
+  position: relative;
+}
+.container .box {
+  position: absolute;
+  /* 实现水平垂直居中效果 */
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 400px;
+  background: #ccc;
+  transform-style: preserve-3d; /* 定义3D渲染环境 */
+  /* transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px); */
+  /* 定义旋转初始值（x, y, z）, 在空间的位置(x, y, z) */
+  transform: rotateX(-21deg) rotateY(38deg) rotateZ(0deg) translate3d(38px, 0px, 200px);
+  /* 旋转一个合适的角度，使得正方体在平面的投影不是正投影，便于调整具体的面值 */
+}
+.container .box > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.container .box > div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 1px solid #000;
+  background: #ccc;
+  user-select: none; /* 禁止用户选择 */
+}
+.container .box > div span img {
+  /* 设置高宽，加上object-fit属性，图片即可保持原比例，由浏览器自动选择中间部分进行展示 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+* 把span在3D空间内修改为一个正方体
+* span的1-6对应6个面
+* 正方体边长为400px
+*/
+/* 前四个面用一个角度即可，后面两个面需要换一个角度才能更好的看到关系 */
+.container .box > div span:nth-child(1) {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+}
+.container .box > div span:nth-child(2) {
+  transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -200px, 200px);
+}
+.container .box > div span:nth-child(3) {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, -400px);
+}
+.container .box > div span:nth-child(4) {
+  transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -200px, -200px);
+}
+/* 第五面与第六面，旋转角度一致，唯一不一样的是在空间的位置，调整位置 */
+.container .box > div span:nth-child(5) {
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(-200px, 0px, 200px);
+}
+.container .box > div span:nth-child(6) {
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(-200px, 0px, -200px);
+}
