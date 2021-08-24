@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>统计考试分数</title>
+<script type="text/javascript">
+function Student(math,Chinese,English,physics,chemistry){
+	this.math = math;			//对象的math属性
+	this.Chinese = Chinese;				//对象的Chinese属性
+	this.English = English;			//对象的English属性
+	this.physics = physics;			//对象的physics属性
+	this.chemistry = chemistry;			//对象的chemistry属性
+	this.totalScore = function(){		//对象的totalScore方法
+		document.write("数学："+this.math);
+		document.write("<br>语文："+this.Chinese);
+		document.write("<br>英语："+this.English);
+		document.write("<br>物理："+this.physics);
+		document.write("<br>化学："+this.chemistry);
+		document.write("<br>------------------");
+		document.write("<br>总分："+(this.math+this.Chinese+this.English+this.physics+this.chemistry));
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var Student1 = new Student(66,80,65,85,93);		//创建对象Student1
+Student1.totalScore();
+</script>
+</body>
+</html>
+

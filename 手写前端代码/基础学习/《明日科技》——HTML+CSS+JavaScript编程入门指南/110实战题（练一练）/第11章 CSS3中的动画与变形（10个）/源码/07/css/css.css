@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*css document*/
+.cont{
+    width: 1200px;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+    width: 600px;
+}
+.left>div{
+    float: left;
+}
+.left>div>div{
+    height: 182px;
+    border: 1px solid #F6E1DC;
+}
+.left>div>div>div img{
+    width: 150px;
+}
+.left>div>div p{
+    float: left;
+    padding: 15px 0 0 20px;
+    width: 200px;
+}
+.left>div>div p span{
+    display: block;
+    color: #FF815A;
+    padding-top: 10px;
+}
+.left>div>div p :first-child{
+    font-size: 25px;
+}
+.left>div>div p :last-child{
+    margin-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    background: #FF815A;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+}
+.left>div>div div{
+    float: left;
+}
+.right>div>div p span{
+    color: #00f;
+}
+.right>div>div p :last-child{
+    background: #00f;
+}

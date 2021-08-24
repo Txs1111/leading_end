@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体布局*/
+.mr-cont {
+	width: 952px;
+	margin: 20px auto;
+}
+/*买家评论信息的间隔*/
+.mr-cont div {
+	margin: 20px;
+}

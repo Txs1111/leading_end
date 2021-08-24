@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+	.mr-cont{
+		height: 700px;
+		width: 100%;
+		margin: 20px auto;
+		background:#d1ccc7;
+	}
+	form{
+		height: 670px;
+		width: 323px;
+		position: relative;
+		margin: 0 auto;
+		background: url(../img/mobile.png);
+	}
+	h3{
+		margin-left: 30px;
+	}
+	.cont{
+		width: 323px;
+		height: 504px;
+		position: absolute;
+		top:113px;
+		left: 0px;
+		background: #f7f5f5;
+	}
+	label{
+		display: block;
+		height: 35px;
+		padding: 10px 30px;
+		line-height: 35px;
+		border-top:1px solid rgba(219,212,212,1.00);
+	}
+	[type="text"],[type="password"]{
+		background: #f7f5f5;
+		border:1px solid rgba(219,212,212,1.00);
+	}
+	.btn{
+		border-bottom:1px solid rgba(219,212,212,1.00);
+	}
+	[type="reset"],[type="submit"]{
+		margin: 30px 30px;
+		width: 90px;
+		height: 30px;
+	}

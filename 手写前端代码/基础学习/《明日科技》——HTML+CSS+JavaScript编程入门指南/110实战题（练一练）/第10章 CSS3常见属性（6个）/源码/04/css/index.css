@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 900px;
+	margin: 0 auto;
+}
+/*第一、二、三、四部分*/
+.mr-cont>div{
+	position:relative;     /*设置定位方式为相对定位 */
+	height: 400px;        /*设置页面大小*/
+	width: 400px;
+	float: left;          /*设置浮动*/
+	margin: 20px          /*设置外边距*/
+}
+/*动过子类选择器选中第一、二、三、四部分的手机信息部分*/
+.mr-cont>div>div{
+	position:absolute;    /*设置定位方式为绝对定位*/
+	height: 400px;         /*设置大小*/
+	width: 400px;
+	background:rgba(0,0,0,0.5)   /*设置背景颜色*/
+}
+/*第一部分内容的背景图片*/
+.part1{
+	background: url(../image/img4.jpg) 100% 100%;
+	background-size: 100% 130%;
+}
+/*第二部分内容的背景图片*/
+.part2{
+	background: url(../image/img2.jpg);
+}
+/*第三部分内容的背景图片*/
+.part3{
+	background: url(../image/img3.jpg);
+}
+/*第四部分内容的背景图片*/
+.part4{
+	background: url(../image/img1.jpg);
+}
+/*每一部分的标题文字样式*/
+.txt1{
+	color: #fff;      /*设置字体颜色*/
+	margin:60px 100px;  /*设置外边距*/
+	font-size: 24px;     /*设置字号*/
+	font-weight: bold;   /*字体加粗*/
+}
+/*每一部分的手机信息文字样式*/
+.txt2{
+	margin:10px 50px;
+	width:300px;
+	height:30px;
+	line-height:30px;
+	background:rgba(204,255,255,1);
+	}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体大小*/
+.mr-cont{
+	width: 1200px;
+	height: 635px;
+	margin: 0 auto;
+	text-align: center;
+}
+.cont{
+	margin: 20px;
+}
+/*左右边内容的公共样式*/
+.mr-left,.mr-right{
+	float: left;   /*设置左浮动*/
+	height: 550px;   /*设置大小*/
+	width: 550px;    
+	margin: 0 10px;    /*设置外边距*/
+}
+.mr-left{     /*左边内容的背景图片*/
+	background: url(../image/l1.jpg);
+}
+/*右边上下两部分的公共样式*/
+.hot,.gift{
+	height: 250px;
+	width: 550px;
+	position: relative;     /*定位方式为相对定位*/
+	margin-left: 20px;      /*设置左边距*/
+}
+.hot{              /*为右上边内容添加背景图片*/
+	background: url(../image/r1.jpg);
+}
+.gift{      /*右下边内容的外边距以及背景图片*/
+	margin-top: 45px;
+	background: url(../image/r2.jpg);
+}
+/*左边正文内容样式*/
+.match{
+	height: 300px;     /*设置大小*/
+	width: 400px;      
+	margin: 120px 75px;    /*设置外边距*/
+	border: double 7px rgba(255,255,255,0.5);     /*设置线条*/
+	background: rgba(0,0,0,0.5);     /*设置背景颜色*/
+}
+/*右边两部分内容的公共样式*/
+.hot div,.gift div{
+	height: 180px;    /*设置大小*/
+    width: 400px;
+    position: absolute;   /*设置定位方式为绝对定位*/
+    top: 38px;
+    left: 80px;
+	border: double 7px rgba(255,255,255,0.5);   /*设置边框*/
+    background: rgba(0,0,0,0.5);                 /*设置背景图片*/
+} 
+/*设置左右边标题样式*/
+.txt1{
+	font-size: 30px;    /*设置字体*/
+	color: #fff;           /*设置字体颜色*/
+	width: 300px;        /*设置宽度*/
+}
+.lin1{
+	padding: 18% 13% 0;   
+}
+.lin2{
+	padding: 5% 13% 0;    
+} 
+.txt2{
+	background: #fff;      /*左右边内容的公共样式*/
+	font-size: 20px;        /*左右边内容的公共样式*/
+	width: 250px;            /*左右边内容的公共样式*/
+	margin-left: 75px;      /*左右边内容的公共样式*/
+}

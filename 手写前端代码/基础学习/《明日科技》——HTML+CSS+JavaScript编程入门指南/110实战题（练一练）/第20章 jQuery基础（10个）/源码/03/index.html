@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>单击超链接输出链接文本</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("a").click(function(){
+			alert($(this).text());
+		});
+	});
+</script>
+</head>
+<body background="bg.gif">
+<a href="#">零基础学JavaScript</a><br />
+<a href="#">零基础学HTML</a>
+</body>
+</html>

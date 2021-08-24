@@ -1,0 +1,53 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0
+}
+.mr-cont {
+	width: 1000px;
+	margin: 0 auto;
+}
+/*logo图片左浮动*/
+[att="logo"] {
+	float: left;
+}
+/*导航无序列表*/
+.mr-cont ul {
+	line-height: 58px;
+	list-style: none;
+	font-size: 22px;
+	margin-left: 150px;
+}
+/*子类选择器实现控制一级导航菜单的样式*/
+.mr-cont>ul>li {
+	float: left;
+	width: 120px;
+	text-align: center;
+	position: relative;
+}
+.mr-cont>ul>li:hover {
+	background: rgba(153,204,255,1)
+}
+.trans {
+	position: absolute;
+	top: 55px;
+	left: -150px;
+	width: 120px;
+	display: none;
+}
+ul>li .trans li {
+	background: rgba(255,153,51,1);
+	border: 1px solid rgba(177,169,170,1.00);
+}
+ul li:hover .trans {
+	display: block;
+}
+.trans li:hover{
+	background: rgba(182,237,160,1.00);
+}
+/*广告图片的大小*/
+[att="banner"] {
+	width: 1000px;
+	height: 400px;
+}

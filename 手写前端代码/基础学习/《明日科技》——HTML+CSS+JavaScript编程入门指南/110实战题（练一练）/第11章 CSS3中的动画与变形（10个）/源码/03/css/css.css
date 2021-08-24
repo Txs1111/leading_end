@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*css document*/
+.cont{
+    height: 738px;
+    width: 1312px;
+    margin: 0 auto;
+    background: url("../img/phone3.jpg");
+}
+.txt{
+    padding: 390px 50px 50px 177px;;
+    width: 335px;
+    height: 200px;
+    /*background: #ffff00;*/
+}
+span{
+    display: block;
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+}
+.try{
+    padding: 15px 20px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 5px;
+}

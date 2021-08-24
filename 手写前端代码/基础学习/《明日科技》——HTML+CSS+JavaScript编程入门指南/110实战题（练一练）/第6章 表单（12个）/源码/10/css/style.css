@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:rgba(222,246,248,1.00);
+}
+.mr-cont{
+	height: 664px;
+	width: 320px;
+	background:url(../img/mobile.png);
+	margin: 0 auto;
+}
+.none{
+	height:60px;
+}
+.top{
+	padding:20px 0 14px 0; 
+}
+
+.top input{
+	display: block;
+	float: left;
+	height: 25px;
+	width: 50px;
+	color: #fff;
+	background:#19ad17;
+	border: 1px solid #19ad17;
+}
+.top :first-child{
+	margin-left: 30px;
+}
+.top :first-child~input{
+	margin-left: 160px;
+}
+.cont{
+	margin: 20px 0;
+	background: #fff;
+}
+.cont textarea{
+	display: block;
+	border: 1px solid #fff;
+}
+label{
+	display: block;
+	padding-left: 30px;
+}
+.bottom label{
+	padding:15px 0 15px 30px;
+	margin-top:10px; 
+	background: #fff;
+}

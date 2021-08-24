@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断空气污染程度</title>
+</head>
+
+<body background="bg.jpeg">
+<script type="text/javascript">
+var api = 165;
+var result = "";
+if(api >=0 && api <=100){
+	result = "良好";
+}else if(api >=101 && api <=200){
+	result = "轻度污染";
+}else if(api >=201 && api <=300){
+	result = "中度污染";
+}else if(api > 300){
+	result = "重度污染";
+}
+document.write("空气污染指数："+api);
+document.write("<br>空气质量状况："+result);
+</script>
+</body>
+</html>

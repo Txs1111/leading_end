@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>将考试成绩进行升序排列</title>
+</head>
+
+<body background="bg.gif">
+<table cellspacing="1" bgcolor="#0000FF">
+  <tr height="30" bgcolor="#FFFFFF">
+   <td align="center" width="60">学科</td>
+   <td align="center" width="60">分数</td>
+  </tr>
+<script type="text/javascript">
+var subjectArr=new Array("数学","语文","英语","物理","化学");
+var scoreArr=new Array(80,85,76,91,88);
+var sortArr=new Array(80,85,76,91,88);
+function ascOrder(x,y){
+	if(x>y){
+		return 1;
+	}else{
+		return -1;
+	}
+}
+sortArr.sort(ascOrder);
+for(var i=0; i<sortArr.length; i++){
+	for(var j=0; j<sortArr.length; j++){
+		if(sortArr[i]==scoreArr[j]){
+			document.write("<tr height=26 bgcolor='#FFFFFF'>");
+			document.write("<td align='center'>"+subjectArr[j]+"</td>");
+			document.write("<td align='center'>"+sortArr[i]+"分</td>");
+			document.write("</tr>");
+		}
+	}
+}
+</script>
+</table>
+</body>
+</html>

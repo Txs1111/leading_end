@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+ 	margin:0; 
+ 	padding:0
+}
+body{ 
+	font-size:12px; 
+}
+.title{
+font-size:18px;
+line-height:50px;
+margin-left:150px;}
+.one{ 
+	margin:10px 0;
+}
+.one label{ 
+	width:100px; 
+	float:left; 
+	text-align:right;
+ 	height:20px; 
+ 	line-height:20px;
+}
+.one input{
+ 	border:1px solid #999;
+  	height:20px;
+}
+.two{
+ 	padding-left:150px;
+}
+.red{
+ 	color:#F00
+}
+.error{ 
+	width:100px; 
+	height:20px; 
+	padding:2px; 
+	line-height:20px;
+ 	background:url(images/error.gif) no-repeat; 
+ 	padding-left:25px; 
+ 	margin-left:5px;
+}
+.right{
+ 	width:100px; 
+ 	height:20px; 
+ 	padding:2px; 
+ 	line-height:20px; 
+ 	background:url(images/ok.gif) no-repeat; 
+ 	padding-left:25px; 
+ 	margin-left:5px;
+}
+

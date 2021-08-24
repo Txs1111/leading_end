@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <title>加载视频</title> 
+</head>
+<body>
+<!--例中简单的方法，向我们演示了如何使用 <video> 元素，读取并设置属性，以及如何调用方法。
+   例子调用了两个方法：play() 和 pause()。它同时使用了两个属性：paused 和 width。
+实例 1
+为视频创建简单的播放/暂停以及调整尺寸控件：-->
+<div style="text-align:center">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br>
+    <video id="video1" width="420">
+        <source src="HorribleHistories.mp4" type="video/mp4">
+        <source src="BadgerWatch.webm" type="video/webm">
+        您的浏览器不支持 HTML5 video 标签。
+    </video>
+</div>
+
+<script>
+    var myVideo=document.getElementById("video1");
+
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=560;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+</script>
+
+</body>
+</html>

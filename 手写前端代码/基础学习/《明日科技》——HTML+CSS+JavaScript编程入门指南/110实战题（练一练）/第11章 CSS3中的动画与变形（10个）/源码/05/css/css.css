@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*css document*/
+*{
+    padding: 0;
+    margin: 0;
+}
+.cont{
+    width: 630px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #f00;
+}
+h3{
+    padding-top: 30px;
+}
+label,p{
+    display: block;
+    margin: 20px 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px dashed #F6E1DC;
+}
+p label{
+    display: inline-block;
+    border: none;
+    margin: 0;
+}
+[type="button"]{
+    height: 40px;
+    width: 200px;
+    background: #FF815A;
+    margin-bottom: 30px;
+}

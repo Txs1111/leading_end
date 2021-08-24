@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出歌曲对象属性</title>
+<style type="text/css">
+*{
+font-size:18px;
+line-height:30px;}
+</style>
+</head>
+<body background="bg.gif">
+<h1 style="font-size:20px;">电影《泰坦尼克号》主题曲</h1>
+<script type="text/javascript">
+function Song(name,original,time,style){
+	this.name = name;						//对象的name属性
+	this.original = original;						//对象的original属性
+	this.time = time;						//对象的time属性
+	this.style = style;						//对象的style属性
+}
+var Song1 = new Song("我心永恒","席琳·迪翁","1997年12月","流行音乐");	//创建一个新对象Song1
+document.write("歌曲名称："+Song1.name+"<br>");	//输出name属性值
+document.write("歌曲原唱："+Song1.original+"<br>");	//输出original属性值
+document.write("发行时间："+Song1.time+"<br>");	//输出time属性值
+document.write("音乐风格："+Song1.style+"<br>");	//输出style属性值
+</script>
+</body>
+</html>

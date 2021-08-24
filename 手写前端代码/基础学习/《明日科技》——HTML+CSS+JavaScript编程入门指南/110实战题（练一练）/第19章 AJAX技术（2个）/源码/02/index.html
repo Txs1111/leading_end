@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Ajax读取XML</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var xmlHttp;				           		//定义XMLHttpRequest对象
+function createXmlHttpRequestObject(){
+	if(window.ActiveXObject){
+		try{
+			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			xmlHttp=false;
+		}
+	}else{			               		//如果在Mozilla或其他的浏览器下运行
+		try{
+			xmlHttp=new XMLHttpRequest();
+		}catch(e){
+			xmlHttp=false;
+		}
+	}
+	if(!xmlHttp)
+		alert("返回创建的对象或显示错误信息");
+	else
+		return xmlHttp;
+}
+function ReqXML(){
+	createXmlHttpRequestObject();
+	xmlHttp.onreadystatechange=StatHandler;		//指定回调函数
+	xmlHttp.open("GET","index.xml",true);	     	//调用index.xml文件
+	xmlHttp.send(null);
+}
+function StatHandler(){
+	if(xmlHttp.readyState==4 && xmlHttp.status==200){
+		var xmlRoot=xmlHttp.responseXML.documentElement;
+		var xmlItem=xmlRoot.getElementsByTagName("item");
+		var xmlName=xmlItem[0].getElementsByTagName("name");
+		var xmlNumber=xmlItem[0].getElementsByTagName("number");
+		var xmlTel=xmlItem[0].getElementsByTagName("tel");
+		var txt="用户名称：";
+		txt+=xmlName[0].firstChild.nodeValue;
+		txt+=" 编号：";
+		txt+=xmlNumber[0].firstChild.nodeValue;
+		txt+=" 电话：";
+		txt+=xmlTel[0].firstChild.nodeValue;
+		document.getElementById("webpage").innerHTML=txt;
+	}
+}
+</script>
+<!--创建超链接-->
+<a href="#" onclick="ReqXML();">通过XMLHttpRequest对象请求XML文件</a><p>
+<!--通过div标签输出请求内容-->
+<div id="webpage"></div>
+</body>
+</html>

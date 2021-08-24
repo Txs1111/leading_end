@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: rgba(229,239,240,1.00);
+}
+.mr-cont {
+	height: 666px;
+	width: 500px;
+	margin: 0 auto;
+	background: url(../img/bg.jpg);
+}
+form {
+	padding: 160px 0;
+}
+.op1 {
+	height: 60px;
+	border-bottom: 1px solid rgba(204,204,204,1);
+}
+form >:first-child, .op {
+	border-top: 1px solid rgba(204,204,204,1);
+}
+select {
+	width: 100%;
+	margin-top: 15px;
+	border: 0;
+	font-size: 20px;
+}
+.op {
+	margin-top: 30px;
+}

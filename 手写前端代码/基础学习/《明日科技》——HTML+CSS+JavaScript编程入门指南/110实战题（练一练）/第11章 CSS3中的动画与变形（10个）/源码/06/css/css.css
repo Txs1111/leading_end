@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*css document*/
+h2{
+    border-bottom: 1px solid #447BD3;
+    margin-left: 40px;
+    width: 100px;
+}
+.cont{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+.cont ul li{
+    float: left;
+    list-style: none;
+    width: 150px;
+    padding: 20px 30px;
+    border: 1px dashed #ff00ff;
+}

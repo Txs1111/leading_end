@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*页面整体内容*/
+.mr-cont{
+	height: 500px;     /*设置大小*/
+	width: 1300px;
+	margin: 0 auto;
+	position: relative;/*设置定位方式为相对定位*/
+	background: url(../img/bg.jpg);    /*页面背景图片*/
+}
+/*登录界面的样式*/
+.cont{
+	width:300px;     /*设置大小*/
+	height:350px;
+	position: absolute;    /*设置定位方式*/
+	left: 500px;
+	top:30px;
+	border:1px solid #f00;   /*设置边框*/
+	background:url(../img/bg1.png) top right;    /*页面背景图片*/
+	}
+/*图片logo样式*/
+img{
+	margin: 20px;
+	height: 50px;
+}
+p{
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-left: 30px;
+}
+.txt{
+	width: 150px;
+	border: 1px rgba(140,134,134,1.00) solid;
+}
+.ok{
+	width: 200px;
+	margin-left: 50px;
+	text-align: center;
+	background: rgba(241,131,133,1.00)
+}

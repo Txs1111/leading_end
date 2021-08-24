@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+/*设置页面内容的位置*/
+	div{
+		width: 1080px;
+		margin: 0 auto;
+		border:1px solid #f00;
+	}

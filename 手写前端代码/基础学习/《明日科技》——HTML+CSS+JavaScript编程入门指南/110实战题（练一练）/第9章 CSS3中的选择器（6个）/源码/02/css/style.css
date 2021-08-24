@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*css document*/
+/*清除标签的默认边距*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*ID选择器设置主体内容的大小位置以及背景颜色*/
+#cont {
+	height: 1000px;
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgba(222,184,135,0.6);
+}
+/*ID选择器设置顶部内容的位置*/
+#top {
+	height: 150px;
+	margin-left: 260px;
+}
+/*设置顶部文字的共同样式*/
+.txt1, .txt2, .txt3 {
+	margin-top: 50px;
+	float: left;
+	font-weight: 900;
+	font-size: 35px;
+	color: darksalmon;
+	font-family: "华文新魏";
+}
+
+.txt2 {
+	font-size: 50px;
+	color: yellowgreen;
+}
+.txt3 {
+	margin-top: 5px;
+}
+/*第一部分的高度和对齐方式*/
+.cont1 {
+	text-align: left;
+	height: 240px;
+}
+/*ID选择器实现主体内容的大小*/
+#content {
+	height: 705px;
+	margin-top: 20px;
+}
+/*类选择器设置图片外边距*/
+.pic {
+	float: left;
+	margin: 10px 15px;
+}
+/*设置每一版块标题的对齐方式*/
+.title {
+	text-align: left;
+}
+/*类选择器结合元素设置图片的大小*/
+.pic img {
+	width: 170px;
+}
+/*ID选择器实现底部联系方式的样式*/
+#bottom {
+	height: 100px;
+	margin-top: 20px;
+	line-height: 30px;
+	font-weight: bolder;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>获取文本域中输入的值</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+		$("input[type='button']").click(function(){
+			var textValue = $("#intro").val();
+	 		alert(textValue);
+		});
+   });
+</script>
+
+</head>
+
+<body background="bg.gif">
+  自我评价：
+  <textarea id="intro" rows="5"></textarea>
+  <input type="button" value="输出"/>
+</body>
+</html>

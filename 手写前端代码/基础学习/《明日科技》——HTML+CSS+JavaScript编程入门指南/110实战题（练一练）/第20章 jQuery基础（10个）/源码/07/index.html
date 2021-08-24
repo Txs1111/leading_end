@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>为表格和图片加边框</title>
+<style type="text/css">
+.bd{
+float:left;
+margin:5px;
+border:1px solid #0000FF;}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("table,img").addClass("bd");
+});
+</script>
+
+</head>
+
+<body>
+<table width="150" height="100">
+  <tr>
+    <td width="40" align="center">1</td>
+	<td>飞狐外传</td>
+  </tr>
+  <tr>
+    <td width="40" align="center">2</td>
+	<td>雪山飞狐</td>
+  </tr>
+  <tr>
+    <td width="40" align="center">3</td>
+	<td>连城诀</td>
+  </tr>
+  <tr>
+    <td width="40" align="center">4</td>
+	<td>天龙八部</td>
+  </tr>
+</table>
+<img src="2.jpg" />
+</body>
+</html>

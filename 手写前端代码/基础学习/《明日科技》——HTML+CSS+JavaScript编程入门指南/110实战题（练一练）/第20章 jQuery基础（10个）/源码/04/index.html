@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>单击更换图片</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("img").click(function(){
+			$(this).get(0).src="images/2.jpg";
+		});
+	});
+</script>
+</head>
+<body background="bg.gif">
+<img src="images/1.jpg" />
+</body>
+</html>

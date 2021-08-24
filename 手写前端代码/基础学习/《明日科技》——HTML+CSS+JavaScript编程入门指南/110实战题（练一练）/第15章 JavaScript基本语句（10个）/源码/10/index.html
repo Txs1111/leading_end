@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>应用switch语句判断当前是星期几</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var now=new Date();				//获取系统日期
+var day=now.getDay();				//获取星期
+var week;
+switch(day){
+    case 1:
+    	week="星期一";
+		break;
+	case 2:
+    	week="星期二";
+		break;
+	case 3:
+    	week="星期三";
+		break;
+	case 4:
+    	week="星期四";
+		break;
+	case 5:
+    	week="星期五";
+		break;
+	case 6:
+    	week="星期六";
+		break;
+	default:
+    	week="星期日";
+   		break;
+}
+alert("今天是"+week);	//输出中文的星期
+</script>
+</body>
+</html>

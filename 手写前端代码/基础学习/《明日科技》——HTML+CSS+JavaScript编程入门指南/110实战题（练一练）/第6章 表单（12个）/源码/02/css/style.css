@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 1000px;
+	height: 500px;
+	margin: 20px auto;
+	position: relative;
+	background:url(../img/bg.png);
+}
+form{
+	position: absolute;
+	top:150px;
+	left: 285px;
+	height: 280px;
+	width: 260px;
+	background: rgba(0, 0, 0,0.1);
+	padding: 12px 45px;
+}
+form label{
+	display: block;
+	margin-top: 20px;
+	background: #fff;
+	width: 255px;
+	height: 40px;
+}
+[type="Email"],[type="text"]{
+	height: 20px;
+	margin-top: 10px;
+	border: 1px solid #fff;
+}
+form label img{
+	vertical-align: middle;
+	margin-left: 20px;
+	height: 30px;
+}
+.btn{
+	margin-top: 30px;
+	background: url(../img/btn1.png);
+	height: 40px;
+	width: 260px;
+	text-align: center;
+	line-height: 40px;
+}

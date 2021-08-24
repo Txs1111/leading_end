@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无序列表制作商品预览效果</title>
+</head>
+<style>
+	.mr-box{
+		width:1000px;
+		margin:0 auto;
+		position:relative;  /*相对定位*/
+	}
+li {
+	list-style:none;
+	
+}
+	.imgbox {
+    position: absolute; /*设置定位方式*/
+    top: 50px;
+    left: 200px;
+    z-index: 100;
+}
+	li div{
+		display:none;
+	}
+	li:hover div{   /*鼠标滑过列表时*/
+		display:block
+	}
+</style>
+<body>
+<div class="mr-box">
+	<div><img src="images/header.png"></div>
+  <ul>
+    <li>
+    <img src="images/01.jpg">
+		<div class="imgbox"><img src="images/1.jpg"></div>
+    </li>
+    <li>
+    <img src="images/02.jpg">
+    <div class="imgbox"><img src="images/2.jpg"></div>
+    </li>
+    <li>
+    <img src="images/03.jpg">
+    <div class="imgbox"><img src="images/3.jpg"></div>
+    </li>
+    
+    <li>
+    <img src="images/04.jpg">
+    <div class="imgbox"><img src="images/4.jpg"></div>
+    </li>
+    <li>
+    <img src="images/05.jpg">
+    <div class="imgbox"><img src="images/5.jpg"></div>
+    </li>
+    <li>
+    <img src="images/06.jpg">
+    <div class="imgbox"><img src="images/6.jpg"></div>
+    </li>
+    <li>
+    <img src="images/07.jpg">
+    <div class="imgbox"><img src="images/7.jpg"></div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

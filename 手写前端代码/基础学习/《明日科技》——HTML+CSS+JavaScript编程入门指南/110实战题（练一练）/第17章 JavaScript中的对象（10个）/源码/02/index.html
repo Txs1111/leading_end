@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出商品对象属性</title>
+<style type="text/css">
+*{
+font-size:18px;
+line-height:30px;}
+</style>
+</head>
+<body background="bg.gif">
+<img src="car.jpg" align="left" hspace="10" />
+<h1 style="font-size:20px;">儿童玩具</h1>
+<script type="text/javascript">
+function Shop(name,type,brand,price){
+	this.name = name;						//对象的name属性
+	this.type = type;						//对象的type属性
+	this.brand = brand;						//对象的brand属性
+	this.price = price;						//对象的price属性
+}
+var Shop1 = new Shop("爆裂飞车","玩具类","小当家","99元");	//创建一个新对象Shop1
+document.write("商品名称："+Shop1.name+"<br>");	//输出name属性值
+document.write("商品类别："+Shop1.type+"<br>");	//输出type属性值
+document.write("商品品牌："+Shop1.brand+"<br>");	//输出brand属性值
+document.write("商品价格："+Shop1.price+"<br>");	//输出price属性值
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: #f7f5f5;
+	padding: 0;
+	margin: 0;
+}
+.mr-cont {
+	width: 320px;
+	height: 660px;
+	margin: 0 auto;
+	background: url(../img/mobile.png)
+}
+.none {
+	height: 113px;
+}
+.bom {
+	height: 503px;
+	background: #f7f5f5;
+	border: 1px solid rgba(219,212,212,1.00);
+}
+.head {
+	height: 250px;
+	position: relative;
+}
+
+.head >:first-child .back {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+.back~span {
+	position: absolute;
+	top: 15px;
+	left: 265px;
+}
+.head >:first-child~div {
+	position: absolute;
+	top: 110px;
+	left: 100px;
+}
+.head-text {
+	margin: 0 0 0 20px;
+}
+.head-text span {
+	font-size: 15px;
+	line-height: 45px;
+}
+.head-text img {
+	vertical-align: middle;
+}
+.head-text p {
+	margin: 0 0 0 15px;
+	padding: 0px 0 0 0px;
+}
+
+.cont [att="small"] {
+	height: 70px;
+}
+.cont [att="tit"] {
+	height: 62px;
+	vertical-align: middle;
+}
+.cont >div {
+	border-bottom: 1px solid rgba(219,212,212,1.00)
+}
+.cont >:first-child {
+	border-top: 1px solid rgba(219,212,212,1.00)
+}
+.bottom {
+	margin: 35px 0 0 10px;
+}
+.bottom div {
+	float: left;
+	margin-left: 30px;
+}
+.btn {
+	position: relative;
+}
+[type="button"] {
+	height: 30px;
+	width: 100px;
+	border: 1px solid #2ab0f7;
+	background: #2ab0f7;
+}
+[type="file"] {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 30px;
+	width: 100px;
+	opacity: 0;
+}

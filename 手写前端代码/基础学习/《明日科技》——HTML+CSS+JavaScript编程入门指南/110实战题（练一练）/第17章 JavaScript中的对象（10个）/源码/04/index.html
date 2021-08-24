@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出图书的书名、类型及价格</title>
+<script type="text/javascript">
+function Book(name,type,price){
+	this.name = name;			//对象的name属性
+	this.type = type;				//对象的type属性
+	this.price = price;			//对象的price属性
+	this.show = function(){		//对象的show方法
+		document.write("书名："+this.name+" 类型："+this.type+" 价格："+this.price);
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var book1 = new Book("JavaScript从入门到精通","JavaScript",60);		//创建一个新对象book1
+book1.show();
+document.write("<p>");
+var book2 = new Book("HTML从入门到精通","HTML",50);			//创建一个新对象book2
+book2.show();
+</script>
+</body>
+</html>
+

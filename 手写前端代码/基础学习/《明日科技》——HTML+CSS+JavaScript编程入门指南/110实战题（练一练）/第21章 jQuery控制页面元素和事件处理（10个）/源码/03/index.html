@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断用户两次输入密码是否一致</title>
+<style type="text/css">
+body{
+font-size:14px;
+}
+span{
+margin-left:10px;
+}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("input[type='button']").click(function(){
+			var pwd = $("input[name='pwd']").val();
+			var pwd2 = $("input[name='pwd2']").val();
+			if(pwd != "" && pwd2 != ""){
+				if(pwd != pwd2){
+					alert("两次输入的密码不一致！");
+				}else{
+					alert("两次输入的密码一致！");
+				}
+			}
+		});
+   	});
+</script>
+<table width="300" height="157" bgcolor="#1170FF" border="0" cellpadding="0" cellspacing="1">
+  <form name="form1">
+	<tr>
+      <td height="25" colspan="2" bgcolor="#B5D3FF"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="100" height="25" bgcolor="#FFFFFF"><div align="center">用户昵称：</div></td>
+      <td width="200" bgcolor="#FFFFFF">&nbsp;<input type="text" name="username" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">注册密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><div align="center">确认密码：</div></td>
+      <td height="25" bgcolor="#FFFFFF">&nbsp;<input type="password" name="pwd2" size="23"></td>
+	  
+    </tr>
+    <tr>
+      <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="center"><input type="button" value="注册">&nbsp;&nbsp;<input type="reset" value="重写"></div></td>
+    </tr>
+  </form> 
+</table>
+</body>
+</html>

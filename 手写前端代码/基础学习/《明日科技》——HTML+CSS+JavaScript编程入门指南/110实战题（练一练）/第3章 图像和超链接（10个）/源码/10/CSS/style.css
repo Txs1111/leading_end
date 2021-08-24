@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除所有元素的默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*页面整体大细小和布局*/
+div {
+	width: 1200px;
+	margin: 20px auto;
+	text-align: center;
+}
+/*导航文字样式*/
+h3{
+	height: 50px;
+	color: #fff;
+	line-height: 50px;
+	background:#f00;;
+	}
+/*水平线样式*/
+hr{
+	margin-left: 41%;
+}

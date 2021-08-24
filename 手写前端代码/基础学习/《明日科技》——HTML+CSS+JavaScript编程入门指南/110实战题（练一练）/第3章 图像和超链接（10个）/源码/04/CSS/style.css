@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除默认样式*/
+* {
+	margin: 0;
+}
+/*设置页面位置*/
+div {
+	width: 750px;
+	margin: 50px auto;
+}
+/*导航文字样式*/
+h3 {
+	line-height: 30px;
+	height: 30px;
+}
+/*导航首页的背景颜色*/
+div :first-child {
+	float: left;
+	background: #f00;
+}

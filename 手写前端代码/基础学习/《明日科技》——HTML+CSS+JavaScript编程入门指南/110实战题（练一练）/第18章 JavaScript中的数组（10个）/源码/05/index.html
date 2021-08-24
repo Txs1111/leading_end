@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出数组中元素的最大值</title>
+</head>
+
+<body background="bg.jpeg">
+<script type="text/javascript">
+var arr = new Array(1,3,6,2,9,5);
+var maxValue = arr[0];
+Array.prototype.outMax=function(){
+	for(var i=1;i<this.length;i++){
+		if(maxValue<this[i]){
+			maxValue = this[i];
+		}
+	}
+	return maxValue;
+}
+document.write("数组中的元素："+arr);
+document.write("<br>数组中元素的最大值为："+arr.outMax());
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除所有标签的内外边距*/
+* {
+	margin: 0;
+	padding: 0
+}
+/*使用ID选择器实现页面的整体大小*/
+#cont {
+	height: 500px;    /*设置页面的整体大小*/
+	width: 800px;
+	margin: 0 auto;   /*页面的位置*/
+	background: no-repeat url(../img/bg.jpg);/*页面的背景图片*/
+}
+/*类选择器顶部署名*/
+.top {
+	padding: 75px 150px;   /*内边距*/
+	font-weight: 800;
+	font-size: 25px;      /*字体*/
+}
+/*类选择器，选中贺卡的主体内容*/
+.left, .right, .happy {
+	font: 25px/25px bold;   /*字号 加粗*/
+	font-family: "华文新魏";   /*字体*/
+	line-height: 30px;    /*行高*/
+}
+/*使用类选择器实现左边文字的浮动与边距*/
+.left {
+	float: left;    /*设置浮动*/
+	margin: 20px 50px;   /*设置外边距*/
+} 
+/*使用类选择器实现右边文字的样式*/
+.right {
+	float: right;
+	margin: 20px 50px;    /*设置外边距*/
+	text-align: right;     /*设置对齐方式*/
+}
+/*使用类选择器实现底部生日快乐的文字样式*/
+.happy {
+	text-align: center;
+	margin-top: 230px;
+	font-size: 35px;
+}
+/*类选择器选择底部署名*/
+.bottom {
+	text-align: right;
+	font-weight: 800;
+	font-size: 25px;
+	margin-right: 50px;
+}

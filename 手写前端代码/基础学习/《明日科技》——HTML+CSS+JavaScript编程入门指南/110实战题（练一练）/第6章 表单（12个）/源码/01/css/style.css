@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+	.mr-cont{
+		width: 500px;
+		margin: 50px auto;
+		border: 1px solid #f00;
+	}
+	.top{
+		height: 170px;
+		background: #2ab0f7;
+	}
+	.top img{
+		margin: 50px 160px;
+	}
+	.top~div{
+	height:200px;
+	background: rgb(235,242,249)
+	}
+	.bom{
+		padding: 40px 40px;
+	}
+	.bom img,.bom form{
+		float: left;
+	}
+	.bom form{
+		margin: -10px 50px;
+	}
+	form label{
+		display: block;
+		margin-top: 20px;
+	}
+	.btn{
+		margin-top: 20px;
+	}

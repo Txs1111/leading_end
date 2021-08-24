@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出商品信息以及所有商品合计金额</title>
+<style type="text/css">
+div{
+	float:left;
+	margin-right:30px;
+}
+</style>
+</head>
+
+<body background="bg.gif">
+<table cellspacing="1" bgcolor="#CC00FF">
+  <tr height="30" bgcolor="#FFFFFF">
+    <td align="center" width="100">商品名称</td>
+	<td align="center" width="100">商品单价</td>
+	<td align="center" width="100">商品数量</td>
+	<td align="center" width="100">商品总价</td>
+  </tr>
+<script type="text/javascript">
+var name=new Array("华为荣耀5c","电饭煲","华硕笔记本");//定义商品名称数组
+var unitprice=new Array("999","166","3600");//定义商品单价数组
+var number=new Array("3","2","2");//定义商品数量数组
+for(var i=0; i<name.length; i++){//定义for循环语句
+	document.write("<tr height=26 bgcolor='#FFFFFF'>");//输出<div>开始标记
+   	document.write("<td align='center'>"+name[i]+"</td>");//输出商品名称
+	document.write("<td align='center'>&yen;"+unitprice[i]+"</td>");//输出商品单价
+	document.write("<td align='center'>"+number[i]+"</td>");//输出商品数量
+	document.write("<td align='center'>&yen;"+unitprice[i]*number[i]+"</td>");//输出商品总价
+	document.write("</tr>");//输出</div>结束标记
+}
+var totalPrice=0;
+for(var i=0; i<name.length; i++){//定义for循环语句
+   	totalPrice+=unitprice[i]*number[i];
+}
+document.write("<tr height=36 bgcolor='#FFFFFF'>");
+document.write("<td style='padding-right:10px' colspan=4 align='right'>合计：&yen;"+totalPrice+"</td>");
+document.write("</tr>");
+</script>
+</table>
+</body>
+</html>

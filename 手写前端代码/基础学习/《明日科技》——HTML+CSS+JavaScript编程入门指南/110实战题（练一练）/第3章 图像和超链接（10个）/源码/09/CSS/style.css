@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除所有标签的默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*设置页面的整体大小和布局*/
+div {
+	width: 1200px;
+	margin: 20px auto;
+}
+/*设置导航和超链接的样式*/
+h3, a {
+	height: 50px;
+	color: #fff;
+	line-height: 50px;
+	background: #2c3947;
+	text-decoration: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出1000以内所有能同时被3和5整除的正整数</title>
+<script type="text/javascript">
+var getNum=function(num){
+	if(num%3==0 && num%5==0){
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+</head>
+<body background="bg.jpeg">
+<h3>1000以内能同时被3和5整除的正整数</h3>
+<pre>
+<script type="text/javascript">
+	var n=0;
+	for(var i=1; i<=1000; i++){
+		if(getNum(i)){
+			n++;
+			document.write(i+"\t");
+			if(n%6==0){
+				document.write("<br>");
+			}
+		}
+	}
+</script>
+</pre>
+</body>
+</html>
+

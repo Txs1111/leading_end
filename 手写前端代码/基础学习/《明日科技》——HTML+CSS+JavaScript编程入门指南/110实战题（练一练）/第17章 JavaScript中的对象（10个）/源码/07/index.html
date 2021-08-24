@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var ball = new Object();		//创建一个空对象
+//设置对象的属性
+ball.type="篮球";
+ball.color="黄色";
+ball.price=50;
+//定义对象的方法
+ball.getBallInfo = getBallInfo;
+function getBallInfo(){
+	alert("球的类型："+ball.type+"\n球的颜色："+ball.color+"\n球的价格："+ball.price);
+}
+//调用对象的方法
+ball.getBallInfo();
+</script>
+</body>
+</html>

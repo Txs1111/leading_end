@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>将数组元素按字符串长度从小到大的顺序进行输出</title>
+<script type="text/javascript">
+var arr=new Array("JavaScript","HTML","C#","PHP");			//定义数组
+document.write('原数组：'+arr+'<br>');		//输出原数组
+function ascOrder(x,y){
+	if(x.length>y.length){
+		return 1;
+	}else{
+		return -1;
+	}
+}
+arr.sort(ascOrder);					//对数组进行排序
+document.write('排序后的数组：'+arr);		//输出排序后的数组
+</script>
+</head>
+
+<body background="bg.jpeg">
+</body>
+</html>

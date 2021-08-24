@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link href="reg.css" type="text/css" rel="stylesheet" />
+<title>滑动门效果</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	color: #333333;
+}
+body,td,th {
+	font-size: 14px;
+	font-family:"微软雅黑";
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.f_td {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #333333;
+	background-color: #FFFFFF;
+	font-size:14px;
+}
+ul.tabs{
+list-style:none;
+margin-left:70px;
+}
+ul.tabs li{
+margin: 0;
+padding: 0;
+float:left;
+width:50px;
+height: 26px; 
+line-height: 26px;
+font-size:16px;
+}
+ul.tabs li a.active{
+display:block;
+width:50px;
+height: 26px; 
+line-height: 26px;
+background-color:#66CCFF;
+color:#FFFFFF;
+cursor:pointer;}
+</style>
+<script type="text/javascript" src = "JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {		
+	$(".tab_content").hide();							//将class值为tab_content的div隐藏
+	$("ul.tabs li a:first").addClass("active"); 				//为第一个选项卡添加样式
+	$(".tab_content:first").show(); 						//将第一个class值为tab_content的div显示
+	$("ul.tabs li a").hover(function() {						//将鼠标移到某选项卡上
+		$("ul.tabs li a").removeClass("active"); 				//移除样式
+		$(this).addClass("active"); 						//为当前的选项卡添加样式
+		$(".tab_content").hide(); 						//将所有class值为tab_content的div隐藏
+		var activeTab = $(this).attr("name"); 		//获取当前选项卡的name属性值
+		$(activeTab).show();							//将相同id值的div显示
+	});
+});
+</script>
+</head>
+
+<body>
+<table align="center" width="300" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left" height="50" style="font-size:22px;" valign="bottom">电影排行</td>
+		<td align="center" valign="bottom">
+		  <ul class="tabs">
+		  	<li><a name="#tab1">热播</a></li>
+			<li><a name="#tab2">经典</a></li>
+		  </ul>
+		</td>
+	</tr>
+</table>
+<div id="tab1" class="tab_content">
+<table align="center" width="300" border="0" cellpadding="0" cellspacing="0">
+<script>
+	var num = 1;
+	var nameArr = new Array("终结者5","飓风营救","我是传奇","一线声机","罗马假日","史密斯夫妇","午夜邂逅");
+	var dnumArr = new Array("阿诺德.施瓦辛格","连姆.尼森","威尔.史密斯","杰森.斯坦森","格里高利.派克","布拉德.皮特","克里斯.埃文斯");
+	for(var i=0; i<nameArr.length; i++){
+		document.write('<tr height="43">');
+		document.write('<td width="26" align="center" class="f_td">'+(num++)+'</td>');
+		document.write('<td width="75" align="left" class="f_td"><a href="#">'+nameArr[i]+'</td>');
+		document.write('<td width="90" align="right" class="f_td">'+dnumArr[i]+'</td></tr>');
+	}
+</script>
+	</table>
+</div>
+<div id="tab2" class="tab_content">
+<table align="center" width="300" border="0" cellpadding="0" cellspacing="0">
+<script>
+	var num = 1;
+	var nameArr = new Array("机械师2：复活","变形金刚","暮光之城","怦然心动","电话情缘","超凡蜘蛛侠","雷神");
+	var dnumArr = new Array("杰森.斯坦森","希亚.拉博夫","克里斯汀.斯图尔特","玛德琳.卡罗尔","杰西.麦特卡尔菲","安德鲁.加菲尔德","克里斯.海姆斯沃斯");
+	for(var i=0; i<nameArr.length; i++){
+		document.write('<tr height="43">');
+		document.write('<td width="26" align="center" class="f_td">'+(num++)+'</td>');
+		document.write('<td width="75" align="left" class="f_td"><a href="#">'+nameArr[i]+'</td>');
+		document.write('<td width="90" align="right" class="f_td">'+dnumArr[i]+'</td></tr>');
+	}
+</script>
+</table>
+</div>
+</body>
+</html>

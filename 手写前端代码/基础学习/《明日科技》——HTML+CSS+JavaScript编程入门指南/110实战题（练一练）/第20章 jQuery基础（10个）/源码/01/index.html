@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>设置页面的背景颜色</title>
+<script src="JS/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("input[type='button']").click(function(){
+		var bgcolor = $("#color").val(); 
+	 	document.bgColor = bgcolor;
+	});
+})
+</script>
+<select id="color">
+  <option value="">请选择背景颜色</option>
+  <option value="red">红色</option>
+  <option value="green">绿色</option>
+  <option value="blue">蓝色</option>
+</select>
+<input type="button" value="更换背景">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--指定页面编码格式-->
+    <meta charset="UTF-8">
+    <!--指定页头信息-->
+    <title>使用CSS技术，控制响应式图片</title>
+    <style>
+        /*当屏幕宽度大于641像素时*/
+        @media screen and (min-width: 641px) {
+            .changeImg {
+                background-image:url(large.jpg);
+                background-repeat: no-repeat;
+                height: 440px;
+            }
+        }
+        /*当屏幕宽度小于641像素时*/
+        @media screen and (max-width: 640px) {
+            .changeImg {
+                background-image:url(small.png);
+                background-repeat: no-repeat;
+                height: 440px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="changeImg"></div>
+</body>
+</html>

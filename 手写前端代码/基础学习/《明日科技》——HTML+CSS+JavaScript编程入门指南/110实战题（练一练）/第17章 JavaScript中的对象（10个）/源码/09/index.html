@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>生成指定位数的1~6之间的随机数</title>
+<script language="javascript">
+function ran(digit){
+	var result="";
+	for(i=0;i<digit;i++){
+		result=result+(Math.floor(Math.random()*6)+1);
+	}
+	alert(result);
+}
+</script>
+</head>
+
+<body background="bg.jpeg">
+请输入要生成随机数的位数：<p>
+<form name="form">
+  <input type="text" name="digit" />
+  <input type="button" value="生成" onclick="ran(form.digit.value)" />
+</form>
+</body>
+</html>

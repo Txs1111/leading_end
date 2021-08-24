@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding: 0; margin: 0;}
+.mr-cont{
+	height: 850px;
+	width: 800px;
+	margin: 20px auto;
+	background: url(../img/bg.jpg);
+}
+.cont{
+	height: 700px;
+	width: 550px;
+	margin: 50px 130px;
+	background: rgba(0,0,0,0.1);
+}
+form{
+	padding-top: 140px;
+}
+form>div>div,form>div>label{
+	float: left;
+	width: 250px;
+	height: 40px;
+	display: block;
+	margin-top: 10px;
+}
+form>div{
+	height: 48px;
+}
+form>div>:first-child{
+	margin-left: 40px;
+}
+select{
+	width: 173px;
+}
+.text{
+	height: 160px;
+	margin-left: 40px;
+}
+.text :first-child{
+	margin-left: 0px;
+}

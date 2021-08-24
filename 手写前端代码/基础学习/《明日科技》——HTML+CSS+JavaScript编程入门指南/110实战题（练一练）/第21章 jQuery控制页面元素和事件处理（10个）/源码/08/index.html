@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link href="css/edit.css" type="text/css" rel="stylesheet" />
+<title>可编辑的表格</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>  
+<script type="text/javascript">
+$(document).ready(function(){       
+    $("tbody>tr:even").css("background-color","#ECE9D8");   //找到表格的内容区域中所有的奇数行         
+    var numTd = $("tr>td:even");   //找到有学号的单元格
+    numTd.click(function(){           
+        var tdobj = $(this);   //找到当前鼠标点击的td      
+        if(tdobj.children("input").length>0){   //要是td中有子节点input
+            return false;   //返回false
+        }             
+        var tdtext = tdobj.html();   //获取选择的td的值           
+        tdobj.html("");   //清空td中的内容            
+        var inputobj = $("<input type='text'>");   //创建一个文本框       
+        inputobj.appendTo(tdobj);    //将创建的文本框追加到td中去          
+        inputobj.width(tdobj.width());    //将文本框的长度设置为td的长度           
+        inputobj.css("border-width","0");   //将文本框的边框去掉   
+        inputobj.css("background-color",tdobj.css("background-color"));    //将文本框的背景颜色设置和td的一样            
+        inputobj.val(tdtext);    //将td中的值放到input中去         
+        inputobj.css("font-size","16px");    //将input中的字体设置和原来的一样   
+        inputobj.trigger("focus").trigger("select");   //设置文本框插入之后就被选中  
+        //处理文本框上回车和esc按键的操作   
+        inputobj.keyup(function(event){                  
+            var keycode = event.which;   //获取当前按下键盘的键值          
+            if(keycode == 13){            //当按下回车键时              
+                var inputvalue = $(this).val();    //获取当前文本框中的内容  
+                tdobj.html(inputvalue);   //将td的值设置为文本框的内容
+            }                
+            if(keycode == 27){           //当按下esc键时   
+                tdobj.html(tdtext);    //将td中的内容还原成text   
+            }   
+        });   
+    });   
+});
+</script>  
+</head>
+
+<body>
+	<table>  
+        <thead>  
+            <tr>  
+                <th colspan="2">单击学号编辑表格</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+                <tr>  
+                    <th>学号</th>  
+                    <th>姓名</th>  
+                </tr>  
+                <tr>  
+                    <td>001</td>  
+                    <td>张三</td>  
+                </tr>  
+               <tr>  
+                    <td>002</td>  
+                    <td>李四</td>  
+               </tr>  
+               <tr>  
+                    <td>003</td>  
+                    <td>王五</td>  
+                </tr>  
+              <tr>  
+                  <td>004</td>  
+                   <td>赵六</td>  
+               </tr>  
+       </tbody>  
+   </table>
+</body>
+</html>

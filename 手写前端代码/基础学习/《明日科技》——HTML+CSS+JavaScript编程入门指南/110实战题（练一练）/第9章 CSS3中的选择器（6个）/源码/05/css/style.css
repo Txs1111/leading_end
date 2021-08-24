@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* css document*/
+/*ID选择器,主体内容宽度*/
+#conter {
+	margin: 20px auto;
+	width: 1300px;
+}
+/*上面导航部分*/
+.top, .center, .right {
+	float: left;
+}
+.top {
+	height: 290px;   /*设置高度*/
+	background: url(../img/bg2.jpg);   /*设置页面背景*/
+	width: 100%;
+}
+/*头像*/
+.top img {    
+	width: 150px;    /*头像大小*/
+	float: left;      /*头像浮动*/
+	margin: 100px 60px 0 0;     /*头像外边距*/
+}
+/*无序列表实现导航*/
+.top ul { 
+	list-style: none;   /*清除列表样式*/
+	font-family: 宋体;       /*列表字体*/
+	font-weight: bolder;
+	padding-top: 150px;    /*列表内边距*/
+}
+.top ul li {
+	text-align: center;    /*对齐方式*/
+	float: left;
+	width: 160px;        /*设置宽度*/
+	display: block;
+}
+/*改变导航中第一项无序列表的字体颜色*/
+.firstli {
+	color: #f00;
+}
+/*设置水平线的样式*/
+hr {
+	margin-top: 30px;   /*设置水平线外边距*/
+	width: 100%;            /*设置水平线长短粗细*/
+	height: 4px;
+	text-align: center;     /*设置水平线对齐方式*/
+	background-color: #0066FF;     /*设置水平线的颜色*/
+}
+/*左右两边内容*/
+.left, .right {   
+	width: 230px;            /*设置其宽度*/
+	float: left;
+	margin: 90px 10px 10px;
+}
+/*鼠标滑过无序列表项时变色*/
+.firstli~li:hover,.mypage li:hover {
+	color: #f00;        
+}
+/*设置左右两边"我的主页"的样式*/
+.mypage {  
+	width: 180px;        /*设置大小*/
+	height: 300px;
+	border: #A4FFFF solid 5px;    /*设置边框*/
+	text-align: center;    /*设置文字居中对齐*/
+	padding-top: 20px;
+}
+.mypage li {
+	list-style: none;
+	height: 35px;
+	line-height: 35px;    /*设置行高*/
+}
+marquee {   /*设置滚动文字样式*/
+	width: 220px;
+	height: 50px;
+}
+/*元素选择器,"我的小心情"和"我的相册"的样式*/
+h3 {
+	font-family: 宋体;
+	font-size: 14px;
+	color: #09F;
+	margin: 35px 10px;
+}
+/*属性选择器*/
+[type=text] {
+	width: 650px;
+	height: 100px;
+	border: 0;
+}
+.border {
+	border: 2px solid #A4FFFF;
+}
+.center {
+	width: 760px;
+	margin: 20px 10px;
+}
+[att=photo] {
+	float: right;
+	width: 80px;
+	height: 102px;
+	margin-left: 10px;
+	cursor:context-menu
+}
+/*类选择器,选中相册*/
+.tp {
+	height: 120px;
+	width: 110px;
+	padding-left: 60px;
+	cursor: all-scroll
+}
+

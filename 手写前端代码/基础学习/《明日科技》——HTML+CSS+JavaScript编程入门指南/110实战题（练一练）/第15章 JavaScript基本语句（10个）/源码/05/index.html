@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>检测体温</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var temperature = 39.6;
+var result = "";
+if(temperature < 36.5){
+	result = "体温偏低";
+}else if(temperature >= 36.5 && temperature <= 37.5){
+	result = "体温正常";
+}else if(temperature > 37.5){
+	result = "体温偏高";
+}
+document.write("您的体温是："+temperature+"度");
+document.write("<br>检测结果为："+result);
+</script>
+</body>
+</html>

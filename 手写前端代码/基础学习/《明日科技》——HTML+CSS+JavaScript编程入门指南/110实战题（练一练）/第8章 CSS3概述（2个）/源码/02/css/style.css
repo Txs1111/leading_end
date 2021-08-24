@@ -1,0 +1,83 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*清除所有标签的默认样式*/
+* {
+	padding: 0;
+	margin: 0;
+}
+/*背景区域的整体大小*/
+[att=cont] {
+	margin: 0 auto;
+	height: 825px;
+	width: 700px;
+	background: url(../image/bg.png);
+}
+/*页面内容的大小以及外边距*/
+[att=bom] {
+	height: 850px;
+	width: 650px;
+	margin: 25px;
+}
+/*简历标题的位置，字体和字号*/
+[att=title] {
+	text-align: center;
+	padding-top: 50px;
+	font: 700 30px/30px "华文新魏";
+}
+/*简历内容的位置，字体和字号*/
+[att=mess] {
+	width: 650px;
+	float: left;
+	margin-top: 50px;
+}
+[att=txt] {
+	float: left;
+	text-align: center;
+	height: auto;
+	width: 500px;
+}
+/*输入提示项和输入框的大小以及外边距*/
+[att=txt1], [att=list] {
+	height: 20px;    /*输入提示项和输入框的大小*/
+	width: 100px;
+	margin: 10px 5px;    /*输入提示项和输入框的外边距*/
+}
+/*输入提示项的左边距*/
+[att=list] {
+	margin-left: 20px;
+}
+/*输入框*/
+[att=txt1] {
+	opacity: 0.5;     /*设置输入框的透明度*/
+	border: 1px solid rgba(96,90,90,1.00)  /*输入框的边框设置*/
+}
+
+[att=txt] p {
+	float: left;
+	margin: 10px;
+}
+[att=photo] {
+	float: left;
+	margin: -127px 520px;
+}
+/*校园经历*/
+[att=schoolexe] {
+	height: 240px;
+	margin: 200px 0 0 26px;
+}
+/*社会经历*/
+[att=socalexe] {
+	height: 240px;
+	width: 624px;
+	margin-left: 23px;
+}
+/*校园经历和社会经历的标题样式*/
+[att=tit] {
+	height: 20px;
+	line-height: 20px;
+}
+/*校园经历和社会经历的文本区域*/
+[att=txtarea] {
+	height: 200px;
+	border: 1px solid rgba(96,90,90,1.00)
+}

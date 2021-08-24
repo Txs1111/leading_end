@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.mr-shop {
+	width: 1048px;
+	margin: 0 auto;
+	background: #f3f0f0;
+	height: 490px;
+}
+.mr-shop-box {
+	width: 1101px;
+	height: 238px;
+	margin: 0 auto;
+	margin-left: 35px;
+}
+.mr-shop-box li {
+	list-style: none;
+	float: left;   /*设置浮动方向*/
+	width: 230px;
+	height: 230px;
+	margin-left: 13px;     /*距左边外边距*/
+}

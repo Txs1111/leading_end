@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*css document*/
+body{
+    background: #f7f7f5;
+}
+.cont{
+    margin: 0 auto;
+    width: 1250px;
+
+}
+.top,.bottom{
+    width: 1250px;
+}
+ul{
+    margin-top: 80px;
+    height: 50px;
+    list-style: none;
+}
+ul>:first-child{
+    font-size: 30px;
+    width: 500px;
+    text-align: center;
+    padding-left: 230px;
+}
+li{
+    float: left;
+    margin-left: 30px;
+    text-align: right;
+    line-height: 50px;
+}
+dl{
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #acacac;
+}
+dt img{
+    height: 250px;
+    width: 250px;
+}
+dd{
+    margin-top: 10px;
+}
+.name{
+    font-size:22px ;
+}
+.price{
+    padding-bottom: 20px;
+}

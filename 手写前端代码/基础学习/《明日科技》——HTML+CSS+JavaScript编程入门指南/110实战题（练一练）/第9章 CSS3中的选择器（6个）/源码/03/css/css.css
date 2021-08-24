@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*css document*/
+*{
+    padding: 0;
+    margin: 0;
+}
+.cont{
+    width: 1250px;
+    margin: 0 auto;
+}
+img{
+    height: 250px;
+    margin-top: 50px;
+}
+dl{
+    width: 300px;
+    height: 470px;
+    text-align: center;
+    float: left;
+    border:1px dashed #ff00ff;
+}
+dd{
+    height: 30px;
+    line-height: 30px;
+}
+dt img:hover{
+    height: 300px;
+}
+.type{
+    margin-top: 30px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:link{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: underline;
+    color: #ff00ff;
+}
+a:active{
+    text-decoration:underline;
+    color: #00f;
+}
+.num{
+    color: #acacac;
+}
+span{
+    color: #f00;
+    padding-left: 10px;
+}

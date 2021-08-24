@@ -1,0 +1,18 @@
+﻿@CHARSET "UTF-8";   
+table{   
+    border: 1px solid black;   
+    /*修正单元格之间的边框不能合并*/  
+    border-collapse: collapse;   
+    width: 400px;   
+}   
+table th {   
+    border: 1px solid black;   
+    width: 50%;   
+}   
+table td {   
+    border: 1px solid black;   
+    width: 50%;   
+}   
+tbody th {   
+    background-color: #A3BAE9;     
+} 

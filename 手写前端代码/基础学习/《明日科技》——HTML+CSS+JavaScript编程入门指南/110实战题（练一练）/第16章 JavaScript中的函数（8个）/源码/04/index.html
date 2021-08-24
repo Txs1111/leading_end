@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出一个自定义的表格</title>
+<script type="text/javascript">
+function createTable(row,col,width,height){
+	var tableStr="";
+	tableStr+=("<table width="+width+" height="+height+" align=center border=1>");
+	var bgcolor;										//声明背景颜色的变量
+	for(var i=0; i<row; i++){										//指定外层循环
+		if(i%2 == 0){									//设置奇数行和偶数行的背景颜色
+			bgcolor = "#FFFFFF";
+		}else{
+			bgcolor = "#EEEEEE";
+		}
+		tableStr+=("<tr bgcolor="+bgcolor+">");
+		for(var j=0; j<col; j++){									//指定内层循环
+			tableStr+=("<td width=50 align=center></td>");
+		}
+		tableStr+=("</tr>");
+	}
+	tableStr+=("</table>");
+	return tableStr;
+}
+</script>
+</head>
+<body background="bg.gif">
+<center><h2>输出表格</h2></center>
+<script type="text/javascript">
+	document.write(createTable(5,6,500,150));	//调用函数并传递参数
+</script>
+</body>
+</html>

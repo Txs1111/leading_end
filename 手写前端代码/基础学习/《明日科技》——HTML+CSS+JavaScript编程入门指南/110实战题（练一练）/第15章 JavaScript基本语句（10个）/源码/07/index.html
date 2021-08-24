@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>计算会员的实际消费</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var totalPrice = 260;
+var card = true;
+var cost = 0;
+if(totalPrice >= 200){
+	if(card == true){
+		cost = (totalPrice-20)*0.95;
+	}else{
+		cost = totalPrice-20;
+	}
+}else{
+	cost = totalPrice;
+}
+document.write("该超市会员购物总价："+totalPrice+"元");
+document.write("<br>该会员实际消费："+cost+"元");
+</script>
+</body>
+</html>

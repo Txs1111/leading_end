@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*css document*/
+*{
+    margin: 0; padding: 0;
+}
+.cont{
+    width: 1090px;
+    margin: 20px auto;
+    height: 290px;
+    background:  url("../img/bg.png") repeat;
+}
+.left,.center{
+    float: left;
+    border:5px groove #B49668;
+    margin: 20px 0 0 30px;
+    background: #F6E1DC;
+}
+.left{
+    width: 300px;
+}
+ul{
+    margin:20px 30px ;
+    height: 135px;
+    list-style: none;
+}
+h3{
+    margin: 20px 30px 10px;
+}
+.left ul li{
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    text-align: center;
+    margin: 20px 20px 0;
+    display: block;
+    background: #FFD07D;
+}
+.center ul li{
+    height: 25px;
+    line-height: 25px;
+}
+.center ul li:hover{
+    text-decoration:underline;
+}
+.right div{
+    margin-top: 20px;
+}
+.right>:first-child{
+    margin-top: 10px;
+}
+.right{
+    float: left;
+    margin: 20px 0 0 30px;
+}

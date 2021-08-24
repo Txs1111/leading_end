@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>判断考生成绩是否达到本科分数线</title>
+<script type="text/javascript">
+function getTotalScore(math,chinese,english,comprehensive){
+	var totalScore=math+chinese+english+comprehensive;
+	return totalScore;
+}
+function getResult(math,chinese,english,comprehensive){
+	var result=getTotalScore(math,chinese,english,comprehensive);
+	document.write("该考生高考总分为："+result+"分<br>");
+	if(result>=550){
+		document.write("该考生成绩达到了本科分数线");
+	}else{
+		document.write("该考生成绩未达到本科分数线");
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+	getResult(106,116,123,236);
+</script>
+</body>
+</html>
+

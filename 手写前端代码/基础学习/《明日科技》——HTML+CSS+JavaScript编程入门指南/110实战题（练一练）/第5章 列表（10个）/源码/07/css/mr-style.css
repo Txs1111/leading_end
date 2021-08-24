@@ -1,0 +1,53 @@
+.mr-box {
+	width: 1066px;
+	height: 496px;
+	margin: 0 auto;
+	background-image: url(../images1/1.jpg);
+	background-repeat: no-repeat;
+	background-size: 90% 100%;
+	background-position: 200px 0;
+}
+.mr-shop {
+	width: 201px;
+	height: 496px;
+	background: #ccc;
+}
+ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+.mr-shop li:hover {
+	background: #D8CACA;
+}
+li {
+	list-style-type: none;
+	width: 202px;
+	height: 31px;
+	text-align: center;
+	background: #ddd;
+	line-height: 31px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	position: relative;
+}
+.mr-shop li .mr-shop-items {
+	width: 864px;
+	height: 496px;
+	background:#eee;
+	position: relative;
+	left: 202px;
+	top: 0;
+	display: none;
+}
+.mr-shop li:hover .mr-shop-items {
+	display: block;
+}
+.mr-item {
+	padding-top: 50px;
+}
+.mr-border {
+	width: 1150px;
+	height: 560px;
+	border: 2px solid red;
+	margin: 0 auto;
+}

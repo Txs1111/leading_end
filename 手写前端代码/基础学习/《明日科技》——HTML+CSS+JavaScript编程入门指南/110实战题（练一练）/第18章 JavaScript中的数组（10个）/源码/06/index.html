@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出考试成绩</title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var arr = new Array(80,85,93);
+var totalScore=0;
+Array.prototype.sum=function(){
+	for(var i=0;i<this.length;i++){
+		totalScore+=arr[i];
+	}
+	return totalScore;
+}
+document.write("3科考试成绩分别为："+arr);
+document.write("<br>总成绩为："+arr.sum());
+</script>
+</body>
+</html>

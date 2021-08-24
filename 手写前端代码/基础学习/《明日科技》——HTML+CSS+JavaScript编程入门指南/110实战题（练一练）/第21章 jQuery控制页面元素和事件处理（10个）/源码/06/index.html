@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>歌曲置顶和删除</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("input[value='置顶']").click(function(){
+			$(this).parent().parent().prependTo($("table"));
+		});
+		$("input[value='删除']").click(function(){
+			$(this).parent().parent().remove();
+		});
+   	});
+</script>
+</head>
+<body background="bg.gif">
+<h3>点歌系统</h3>
+<table>
+    <tr>
+	  <td>画心</td>
+	  <td><input type="button" value="置顶" /><input type="button" value="删除" /></td>
+	</tr>
+	<tr>
+	  <td>十年</td>
+	  <td><input type="button" value="置顶" /><input type="button" value="删除" /></td>
+	</tr>
+	<tr>
+	  <td>江南</td>
+	  <td><input type="button" value="置顶" /><input type="button" value="删除" /></td>
+	</tr>
+	<tr>
+	  <td>爱情转移</td>
+	  <td><input type="button" value="置顶" /><input type="button" value="删除" /></td>
+	</tr>
+	<tr>
+	  <td>你的样子</td>
+	  <td><input type="button" value="置顶" /><input type="button" value="删除" /></td>
+	</tr>
+</table>
+
+</body>
+</html>
+

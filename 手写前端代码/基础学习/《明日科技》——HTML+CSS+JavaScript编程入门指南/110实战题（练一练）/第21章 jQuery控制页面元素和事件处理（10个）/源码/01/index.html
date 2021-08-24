@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>添加影片名称</title>
+<style type="text/css">
+#name{
+font-size:24px;
+color:#9966FF}
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+   		$("input[type='button']").click(function(){    
+      		var moviename = $(".moviename").val();    	
+      		$("#name").text(moviename);							
+   	});
+});
+
+</script>
+</head>
+<body background="bg.gif">
+	<div id="name"></div><p>
+	影片讲述了富豪刘轩和为了拯救同族前往刺杀他的美人鱼珊珊坠入爱河，谱写了一段人鱼爱情童话的故事。
+	
+	<p>
+	<form id="form" name="form">
+	请输入影片名称：<input type="text" class="moviename" />
+	<input type="button" value="添加名称" />
+	</form>
+</body>
+</html>

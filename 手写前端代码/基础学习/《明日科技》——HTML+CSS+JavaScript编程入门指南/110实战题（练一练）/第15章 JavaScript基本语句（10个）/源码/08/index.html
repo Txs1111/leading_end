@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var age = 20;
+var ageGroup = "";
+if(age < 18){
+	if(age > 0 && age <= 6){
+		ageGroup = "童年";
+	}else{
+		ageGroup = "少年";
+	}
+}else{
+	if(age >= 18 && age <= 40){
+		ageGroup = "青年";
+	}else if(age >= 41 && age <= 65){
+		ageGroup = "中年";
+	}else{
+		ageGroup = "老年";
+	}
+}
+alert("20岁正处在"+ageGroup+"时期");
+</script>
+</body>
+</html>

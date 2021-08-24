@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+/*设置p标签的浮动为左浮动*/
+p{
+	float: left;
+}
+/*页面的整体大小和布局*/
+[att=cont]{
+	 width:380px;
+	height: 500px;
+	margin: 0 auto;
+	background:url(../image/bg1.jpg) no-repeat;
+}
+/*页面文字位置*/
+[att=bom]{
+	width: 264px;
+	height: 400px;
+	padding: 80px 50px;
+}
+/*标题的对齐方式为居中对齐*/
+[att=title]{
+	 text-align: center;
+}
+/*设置输入信息提示*/
+[att=list]{
+	margin: 20px;   /*外边距为20像素*/
+	color:rgb(30,30,28);   /*颜色*/
+	font:800 20px/20px "华文新魏";   /*字体和字号*/
+}
+/*“验证码”的文本样式*/
+[att=list1]{
+	color:rgb(30,30,28);
+	font:800 20px/20px "华文新魏";
+}
+/*输入框的样式*/
+[att=txt]{      /*设置输入框宽高*/
+	height: 30px;
+	width: 140px;
+	float: left;      /*设置输入框向左浮动*/
+	background: #fff;   /*设置输入框背景颜色为白色*/
+	border: 1px solid rgb(73,70,70);    /*设置输入框的边框*/
+}
+/*登录和注册按钮样式*/
+[att=login],[att=register]{
+	 width: 200px;
+	height: 30px;
+	background-color: aquamarine;
+	line-height: 30px;
+	text-align: center;
+	margin: 10px 50px;
+}
+/*验证码输入框样式*/
+[att=test]{
+	height: 30px;
+	width: 50px;
+	background: #fff;
+	border: 1px solid rgb(73,70,70);
+}
+/*图片样式*/
+[att=img]{
+	height: 30px;
+	width: 90px;
+	margin: 18px 20px;
+}

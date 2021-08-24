@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文本域实现留言板</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background: url(img/bg.jpg);
+		
+	}
+	.mr-cont{
+		width: 100%;
+		
+	}
+	.top{
+		height: 100px;
+		width: 800px;
+		margin: 180px 0 0 370px;
+	}
+	.top div,.top ul{
+		float: left;
+	}
+	ul li{
+		float: left;
+		padding-top: 40px;
+		list-style: none;
+		width: 100px;
+		text-align: center;
+	}
+	.cont{
+		width: 800px;
+		height: 500px;
+		margin: 20px 0 0 480px;
+		background: rgba(255,255,255,1.00);
+	}
+	h4,h5{
+		margin-left: 20px;
+		width: 760px;
+		line-height: 39px;
+	}
+	.send{
+		height: 35px;
+		width: 760px;
+		line-height: 35px;
+		border-top: 1px solid rgba(237,124,73,0.5);
+		border-bottom: 1px solid rgba(237,124,73,0.5);
+	}
+	.owner{
+		margin: 20px;
+	}
+	.edit{
+		width: 120px;
+		float: left;
+	}
+	[type="button"]{
+		margin: 0 10px 0 20px;
+		height: 30px;
+		width: 70px;
+		background: rgba(237,124,73,1.00);
+		border: 1px solid rgba(237,124,73,1.00);
+	}
+	</style>
+<body>
+<div class="mr-cont">
+	<div class="top">
+		<div><img src="img/head.png" alt=""></div>
+		<ul>
+			<li>主页</li>
+			<li>日志</li>
+			<li>相册</li>
+			<li>留言板</li>
+			<li>说说</li>
+			<li>个人档案</li>
+		</ul>
+	</div>
+	<div class="cont">
+		<h5>留言板</h5>
+		<h4 class="send">主人寄语</h4>
+		<textarea class="owner" cols="105" rows="8" readonly>欢迎光临我的空间</textarea>
+		<h4 class="edit">发表您的留言 |</h4>
+		<img src="img/gift.png" height="30">
+		<span>送TA礼物</span>
+		<textarea class="owner" cols="105" rows="8"></textarea>
+		<input type="button" value="发表">
+		<label><input type="checkbox">使用签名档 </label>
+		<label> <input type="checkbox">私密留言</label>
+	</div>
+</div>
+</body>
+</html>

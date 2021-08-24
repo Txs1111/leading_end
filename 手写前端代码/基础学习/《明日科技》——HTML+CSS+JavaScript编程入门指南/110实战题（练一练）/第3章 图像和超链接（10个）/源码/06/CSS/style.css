@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+/*设置页面的整体布局大小以及背景图片*/
+	div{
+		width: 1205px;
+		margin: 20px auto;
+		background: url(../img/bg.png) no-repeat;
+		border: 1px solid #f00;
+	}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0
+}
+.mr-cont {
+	height: 520px;
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid #f00;
+}
+/*导航样式*/
+nav {
+	height: 35px;
+	background: rgb(55,52,52);
+	color: #fff;
+}
+/*无序列表的列表项*/
+ul li {
+	list-style: none;
+	float: left;
+	line-height: 35px;
+	width: 200px;
+	text-align: center;
+}
+/*无序列表的第一项*/
+ul :first-child {
+	background-color: brown;
+}
+.show, .phone {
+	margin-top: 5px;
+	height: 700px;
+	float: left;
+}
+/*手机图片和手机详情*/
+.phone {
+	width: 750px;
+	margin-left: 10px;
+}
+.pic {
+	float: left;
+	margin-left: 5px;
+	width: 245px;
+	height: 252px;
+	text-align: center;
+}
+.pic img {
+	width: 180px;
+	height: 180px;
+}
+/*手机详情文字样式*/
+.txt1 {
+	font-size: 12px;    /*设置字体大小*/
+	color: rgba(99,96,96,1.00);       /*设置字体颜色*/
+	letter-spacing: 1px;    /*设置汉字之间的水平间距*/
+}
+/*设置手机价格*/
+.txt2 {
+	text-align: left;       /*设置对齐方式*/
+	margin-left: 50px;          /*设置左边距*/
+	color: rgba(163,9,9,1.00);     /*设置文字颜色*/
+	font-size: 18px;            /*设置字号*/
+}

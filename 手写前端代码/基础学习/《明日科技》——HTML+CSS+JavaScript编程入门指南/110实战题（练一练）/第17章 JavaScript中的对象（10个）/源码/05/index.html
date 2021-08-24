@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出购物车商品</title>
+<style type="text/css">
+div{
+	float:left;
+	margin-right:30px;
+}
+</style>
+<script type="text/javascript">
+function ShoppingCart(name,unitprice,number){
+	this.name = name;			//对象的name属性
+	this.unitprice = unitprice;				//对象的unitprice属性
+	this.number = number;			//对象的number属性
+	ShoppingCart.prototype.show=function(){
+		document.write("<div>");
+   		document.write("商品名称："+this.name);		
+		document.write("<br>商品单价："+this.unitprice);
+		document.write("<br>商品数量："+this.number);
+		document.write("<br>商品总价："+this.unitprice*this.number);
+		document.write("</div>");
+	}
+
+}
+</script>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var shop1 = new ShoppingCart("海尔热水器",2300,1);
+shop1.show();
+//document.write("<p>");
+var shop2 = new ShoppingCart("海信电视",3600,2);
+shop2.show();
+</script>
+</body>
+</html>
+

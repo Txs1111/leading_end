@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function output(y,m,d){
+	alert(y+"年"+m+"月有"+d+"天");
+}
+function days(y,m){
+	if(m == 2){
+		if((y%4 == 0 && y%100 != 0) || (y%400 == 0)){
+			output(y,m,29);
+		}else{
+			output(y,m,28);
+		}
+	}else if(m == 4 || m == 6 || m == 9 || m == 11){
+		output(y,m,30);
+	}else{
+		output(y,m,31);
+	}
+}
+days(2017,6);
+</script>
+</body>
+</html>

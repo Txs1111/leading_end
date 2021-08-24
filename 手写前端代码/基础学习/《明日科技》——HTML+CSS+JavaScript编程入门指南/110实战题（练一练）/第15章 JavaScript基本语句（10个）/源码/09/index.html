@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>应用switch语句判断当前月份属于哪个季节</title>
+</head>
+<body background="bg.gif">
+<script type="text/javascript">
+var now=new Date();				//获取当前日期对象
+var month=now.getMonth()+1;				//获取当前的月份
+var season;
+switch(month){
+    case 1:
+	case 2:
+	case 3:
+    	season="春季";
+		break;
+	case 4:
+	case 5:
+	case 6:
+    	season="夏季";
+		break;
+	case 7:
+	case 8:
+	case 9:
+    	season="秋季";
+		break;
+	default:
+    	season="冬季";
+		break;
+}
+document.write("现在是"+month+"月");	//输出中文的星期
+document.write("<br>当前月份属于"+season);	//输出中文的星期
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面的内容位置*/
+#mr-cent {
+	width: 900px;
+	margin: 0 auto;
+}
+#mr-cent div * {
+	margin-left: 4px;
+}
+/*第一板块的背景颜色以及内边距*/
+.cont1 {
+	padding: 5px 0;
+	background-color: #faebd7
+}
+/*第二板块的背景颜色以及内边距*/
+.cont2 {
+	padding: 5px 0;
+	background-color: rgba(67,107,28,0.3)
+}
+/*第三板块的背景颜色以及内边距*/
+.cont3 {
+	padding: 5px 0;
+	background-color: rgba(0,255,255,0.3)
+}
+/*第四板块的背景颜色以及内边距*/
+.cont4 {
+	padding: 5px 0;
+	background-color: rgba(216,191,216,0.3)
+}

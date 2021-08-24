@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*css document*/
+* {                        /*清除页面中默认的内外边距*/
+	padding: 0;
+	margin: 0;
+}
+.cont {                    /*设置页面的整体样式*/
+	width: 1190px;        /*设置页面的整体大小*/
+	margin: 20px auto;    /*设置页面的整体外边距*/
+}
+.right {                 /*设置右边商品的总宽度*/
+	width: 1100px;
+}
+.right li {              /*设置定义列表的样式*/
+	width: 235px;
+	float: left;
+	list-style: none;
+	border: 1px solid #e6e6e6;/*添加边框*/
+	margin: 10px;  /*改变其外边距*/
+}
+.right div img {      /*设置商品图片的样式*/
+	padding: 20px;/*设置其内边距*/
+}
+.right li>:first-child~div {              /*设置文字内容的样式*/
+	background: #f0f2f7;/*设置文字的背景颜色*/
+	padding: 10px 10px;/*设置文字的内边距*/
+}
+.right li>:last-child {/*设置学分的样式*/
+	color: #f00;
+}
+.right li>:last-child>:first-child {/*设置学分的样式*/
+	font-weight: bold;
+	font-size: 12px;
+}
+right li> :last-child {   /*设置“去兑换”的样式*/
+	float: right;/*设置向右浮动*/
+	color: #447BD3;
+	padding: 4px 6px;
+	border: 1px solid #447BD3;
+}

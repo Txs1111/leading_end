@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出收货地址</title>
+<script type="text/javascript">
+function address(province,city,area,detailed){
+	document.write(province+city+area+detailed);			//在页面中弹出对话框
+}
+</script>
+</head>
+<body background="bg.gif">
+<h2>请核对您的收货地址</h2>
+<script type="text/javascript">
+	address("吉林省","长春市","南关区","卫星路1000号");	//调用函数并传递参数
+</script>
+</body>
+</html>

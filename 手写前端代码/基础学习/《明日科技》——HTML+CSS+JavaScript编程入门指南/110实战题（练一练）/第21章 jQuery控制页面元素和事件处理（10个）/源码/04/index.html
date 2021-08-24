@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>设置默认显示的年份和月份</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("select[name='year']").val(1980);
+	$("select[name='month']").val(9);
+});
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" onsubmit="getInfo()">
+  <table width="460" border="0" align="center" cellspacing="1" bgcolor="#BBBBBB">
+    <tr>
+      <td align="center" height="46" colspan="2" background="images/bg.gif"><h2>请输入你的个人信息</h2></td>
+    </tr>
+    <tr>
+      <td width="80" height="20" align="right" background="images/bg.gif">姓名：</td>
+      <td width="380" height="20" background="images/bg.gif"><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+      <td height="20" align="right" background="images/bg.gif">性别：</td>
+      <td height="20" background="images/bg.gif"><input type="radio" name="sex" value="男" />男
+      &nbsp;&nbsp;<input type="radio" name="sex" value="女" />女</td>
+    </tr>
+     <tr>
+      <td height="20" align="right" background="images/bg.gif">出生年月：</td>
+      <td height="20" background="images/bg.gif">
+	    <select name="year">
+		  <script type="text/javascript">
+			for(var i=1970;i<2000;i++){
+				document.write("<option value='"+i+"'>"+i+"年</option>");
+			}
+		  </script>
+		</select>
+		<select name="month">
+		  <script type="text/javascript">
+			for(var i=1;i<=12;i++){
+				document.write("<option value='"+i+"'>"+i+"月</option>");
+			}
+		  </script>
+        </select>
+	  </td>
+    </tr>
+    <tr>
+      <td height="20" align="right" background="images/bg.gif">爱好：</td>
+      <td height="20" background="images/bg.gif"><input type="checkbox" name="interest" value="看电影" />看电影
+      <input type="checkbox" name="interest" value="听音乐" />听音乐
+      <input type="checkbox" name="interest" value="演奏乐器" />演奏乐器
+      <input type="checkbox" name="interest" value="打篮球" />打篮球
+      <input type="checkbox" name="interest" value="看书" />看书
+      <input type="checkbox" name="interest" value="上网" />上网</td>
+    </tr>
+    <tr>
+      <td background="images/bg.gif">&nbsp;</td>
+      <td background="images/bg.gif"><input type="submit" name="Submit" value="提交" />&nbsp;&nbsp;
+      <input type="reset" name="Submit2" value="重置" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

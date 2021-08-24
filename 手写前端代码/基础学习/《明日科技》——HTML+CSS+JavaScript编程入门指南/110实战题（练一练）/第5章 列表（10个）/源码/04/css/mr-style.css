@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.mr-shop {
+	width: 1099px;
+	margin: 0 auto;
+	background: #f3f0f0;
+	height: 263px;
+	border: 2px solid red;
+}
+.mr-shop-box {
+	width: 1101px;
+	height: 238px;
+	margin: 0 auto;
+}
+.mr-shop-box li {
+	list-style: none;
+	float: left;
+	width: 230px;
+	height: 230px;
+	margin-left: 13px;     /*距左边外边距为13px*/
+	padding: 10px 10px 10px 18px;   /*内边距上右下为10px左边为18px*/
+	border: 1px solid #F1F1F1;
+}
+.mr-shop-box li:hover {
+	border: 1px solid #FE6717;/*边框相关属性*/
+}

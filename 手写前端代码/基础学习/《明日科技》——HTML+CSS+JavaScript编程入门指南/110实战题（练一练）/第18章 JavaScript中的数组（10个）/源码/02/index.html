@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>输出当前的日期和星期</title>
+<script language="javascript">
+
+</script>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var now=new Date();						//创建日期对象
+var year=now.getFullYear();
+var month=now.getMonth()+1;
+var date=now.getDate();
+var day=now.getDay();						//获取当前星期
+var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+alert("今天是："+year+"年"+month+"月"+date+"日 "+week[day]);
+</script>
+</body>
+</html>

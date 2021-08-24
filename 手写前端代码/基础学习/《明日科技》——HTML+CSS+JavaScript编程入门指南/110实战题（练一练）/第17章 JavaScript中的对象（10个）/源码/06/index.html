@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>生成指定行数、列数的表格</title>
+<script type="text/javascript">
+function Table(row,col,width,height){
+	this.row = row;			//对象的row属性
+	this.col = col;				//对象的col属性
+	this.width = width;			//对象的width属性
+	this.height = height;			//对象的height属性
+	Table.prototype.create=function(){
+		var tableStr="";
+		tableStr+=("<table width="+this.width+" height="+this.height+" align=center border=1>");
+		var bgcolor;										//声明背景颜色的变量
+		for(var i=0; i<this.row; i++){										//指定外层循环
+			if(i%2 == 0){									//设置奇数行和偶数行的背景颜色
+				bgcolor = "#FFFFFF";
+			}else{
+				bgcolor = "#EEEEEE";
+			}
+			tableStr+=("<tr bgcolor="+bgcolor+">");
+			for(var j=0; j<this.col; j++){									//指定内层循环
+				tableStr+=("<td width=50 align=center></td>");
+			}
+			tableStr+=("</tr>");
+		}
+		tableStr+=("</table>");
+		document.write(tableStr);
+	}
+}
+</script>
+</head>
+<body background="bg.gif">
+<center><h2>生成指定行数、列数的表格</h2></center>
+<script type="text/javascript">
+var Table1 = new Table(3,6,500,150);		//创建对象Table1
+Table1.create();
+</script>
+</body>
+</html>
+

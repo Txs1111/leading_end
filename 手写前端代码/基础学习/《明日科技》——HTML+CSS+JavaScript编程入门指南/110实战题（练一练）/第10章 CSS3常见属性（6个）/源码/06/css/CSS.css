@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.content{
+	width: 1200px;
+	margin: 0 auto;
+	height: 250px;
+	font-weight: bold;
+	padding-top: 20px;
+	border-top: 1px solid rgb(195,192,192);
+}
+.content h2{
+	float: left;
+	width: 300px;
+}
+.content ul{
+	float: left;
+	width: 700px;
+	color: rgba(187,184,184,1.00);
+	list-style: none;
+}
+.cont>:first-child ul{
+	width: 400px;
+}
+.content ul li{
+	height: 30px;
+	line-height: 30px;
+}
+.cont>.float{
+	height: 100px;
+}
+.cont>.float>ul>li{
+	list-style-type: disc;
+	width: 100px;
+	float: left;
+}

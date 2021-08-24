@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link href="index.css" type="text/css" rel="stylesheet" />
+<title>验证用户注册信息</title>
+</head>
+
+<body>
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<form name="form" method="post">
+  <div class="title">用户注册</div>
+  <div class="one">
+    <label for="name">用户名：</label>
+    <input type="text" id="name" name="name" class="a" />
+    <strong class='red'>*</strong>
+  </div>
+  <div class="one">
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password" class="a" />
+    <strong class='red'>*</strong>
+  </div>
+  <div class="one">
+    <label for="passwords">确认密码：</label>
+    <input type="password" id="passwords" name="passwords"  class="a"/>
+    <strong class='red'>*</strong>
+  </div>
+  <div class="two">
+    <input type="submit" id="send" value="注册" />
+    <input type="reset" id="res" value="重置" />
+  </div>
+</form>
+</body>
+</html>

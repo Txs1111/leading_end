@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0
+}
+/*页面整体位置*/
+.mr-cont {
+	height: 458px;
+	width: 980px;
+	margin: 0 auto;
+	position: relative;      /*设置相对定位*/
+	background: url(../img/bg.png);
+	background-position: right 30%;
+}
+
+ul {
+	width: 180px;
+	position: absolute;
+	padding: 6px 0;
+	margin-top: 36px;
+	text-align: center;
+	background: #2b2b2b;
+}
+h3 {
+	width: 180px;
+	text-align: center;
+	height: 50px;
+	line-height: 30px;
+	position: absolute;
+	top: 0px;
+	background: #d2364c;
+	color: #fff;
+}
+ul li {
+	list-style: none;
+	height: 30px;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	line-height: 30px;
+	font-size: 16px;
+	padding-top: 10px;
+	color: rgba(255,255,255,1)
+}
+ul li:hover {
+	color: #000;
+	background: #fff;
+}
+ul li .pic {
+	position: absolute;    /*图片相对ul的绝对定位*/
+	display: none;
+	width: 200px;
+	left: 180px;
+	top: 0px;
+}
+ul li:hover .pic {       /*鼠标滑过无序列表时，图片出现*/
+	display: block;
+	height: 422px;
+}

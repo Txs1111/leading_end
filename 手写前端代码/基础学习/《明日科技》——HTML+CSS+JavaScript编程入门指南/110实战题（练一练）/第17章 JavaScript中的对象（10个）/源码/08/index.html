@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+
+<body background="bg.gif">
+<script type="text/javascript">
+var user = new Object();		//创建一个空对象
+user.username="mr";//设置对象的username属性
+user.pwd="mrsoft";//设置对象的pwd属性
+user.login = login;//定义对象的方法
+function login(username,pwd){
+	if(user.username != username){//如果用户名不正确
+		alert("登录用户名不正确！");//弹出对话框
+	}else if(user.pwd != pwd){//如果密码不正确
+		alert("登录密码不正确！");//弹出对话框
+	}else{
+		alert("登录成功！");//弹出对话框
+	}
+}
+user.login("mr","mrsoft");//调用对象的方法
+</script>
+</body>
+</html>
